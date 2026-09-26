@@ -42,7 +42,7 @@ INTERVAL_MS = {
 
 
 def universe(quote: str = "USDT") -> list[str]:
-    """Perpetual, currently-trading symbols. ~527 for USDT as of 2026-09."""
+    """Perpetual, currently-trading coin symbols. ~525 for USDT as of 2026-09."""
     info = get_json(f"{FAPI}/fapi/v1/exchangeInfo", budget=FAPI_BUDGET, weight=1)
     return sorted(
         s["symbol"]
@@ -50,6 +50,9 @@ def universe(quote: str = "USDT") -> list[str]:
         if s.get("contractType") == "PERPETUAL"
         and s.get("quoteAsset") == quote
         and s.get("status") == "TRADING"
+        # Only coins. Binance also lists index perpetuals (BTC dominance and
+        # similar, underlyingType "INDEX"), which are not tradable assets.
+        and s.get("underlyingType") == "COIN"
     )
 
 

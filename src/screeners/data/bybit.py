@@ -47,8 +47,17 @@ def _result(payload: object) -> dict:
     return payload.get("result") or {}
 
 
+# Bybit lists tokenized stocks, ETFs, commodities and forex as linear
+# perpetuals right beside crypto, tagged by `symbolType`. As of 2026-09 that
+# was 257 of 777 USDT perps (e.g. AAPLUSDT, BIIBUSDT, MSFUUSDT), and they were
+# reaching the crypto screeners. Allow-list rather than block-list, so a
+# category Bybit adds later is excluded until someone decides otherwise.
+# "" is ordinary crypto; "innovation" is Bybit's zone for new token listings.
+CRYPTO_SYMBOL_TYPES = frozenset({"", "innovation"})
+
+
 def universe(quote: str = "USDT") -> list[str]:
-    """Linear perpetuals currently trading. ~777 for USDT as of 2026-09."""
+    """Crypto linear perpetuals currently trading. ~520 for USDT as of 2026-09."""
     out: list[str] = []
     cursor = None
     while True:
@@ -59,7 +68,8 @@ def universe(quote: str = "USDT") -> list[str]:
         ))
         for i in res.get("list", []):
             if (i.get("quoteCoin") == quote and i.get("status") == "Trading"
-                    and i.get("contractType") == "LinearPerpetual"):
+                    and i.get("contractType") == "LinearPerpetual"
+                    and (i.get("symbolType") or "") in CRYPTO_SYMBOL_TYPES):
                 out.append(i["symbol"])
         cursor = res.get("nextPageCursor")
         if not cursor:
