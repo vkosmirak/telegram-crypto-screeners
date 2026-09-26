@@ -121,12 +121,15 @@ class Screener:
 
         while not stop.is_set():
             started = time.monotonic()
+            # Read before the sweep: the warm-up sweep flips _warm itself, so
+            # checking afterwards flagged every warm-up as an overrun.
+            was_warm = self._warm
             try:
                 self._sweep()
             except Exception as e:
                 log.exception("sweep failed: %s", e)
             elapsed = time.monotonic() - started
-            if self._warm and elapsed > self.sweep_s:
+            if was_warm and elapsed > self.sweep_s:
                 log.warning("sweep took %.0fs, longer than the %.0fs interval",
                             elapsed, self.sweep_s)
             stop.wait(max(0.0, self.sweep_s - elapsed))
