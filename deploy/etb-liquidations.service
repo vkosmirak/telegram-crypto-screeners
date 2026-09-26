@@ -1,0 +1,19 @@
+# Record liquidation feeds. They cannot be backfilled, so this wants to have
+# been running for weeks before the liquidation screener means anything.
+#   sudo cp deploy/*.service /etc/systemd/system/
+#   sudo systemctl enable --now etb-liquidations
+[Unit]
+Description=etb liquidation recorder
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/etb
+Environment=PYTHONPATH=/opt/etb/src
+ExecStart=/usr/bin/python3 -m etb.cli record-liquidations --exchange both
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

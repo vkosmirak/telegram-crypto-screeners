@@ -1,0 +1,65 @@
+binance  oi_growth  5m bars  30d  200 symbols
+  fetching 1/200  NEARUSDT        fetching 107/200  XAIUSDT         fetching 198/200  COLLECTUSDT     fetching 200/200  MANAUSDT      
+saved 752 signals to /Users/vkosmirak/src/experimental-trading-bots/out/signals_binance_oi_growth.json
+
+=== binance / oi_growth ===
+752 trigger firings over 30d across 200 symbols (25/day)
+
+-- forward return at +5m --------------------------------------------
+  BASELINE same-time peer            n=3760   +  5m  hit  48.7%  med  +0.00%  mean  +0.01%  mfe  0.29%  mae  -0.28%
+  trigger only                       n=752    +  5m  hit  49.9%  med  +0.00%  mean  +0.26%  mfe  1.89%  mae  -1.64%
+  + price_up                         n=647    +  5m  hit  49.9%  med  +0.00%  mean  +0.24%  mfe  1.84%  mae  -1.60%
+  + cvd_up                           n=505    +  5m  hit  52.7%  med  +0.09%  mean  +0.38%  mfe  1.92%  mae  -1.48%
+  + volume_up [749/752 eval]         n=624    +  5m  hit  49.7%  med  -0.01%  mean  +0.25%  mfe  1.85%  mae  -1.63%
+  + ordinal                          n=563    +  5m  hit  51.5%  med  +0.06%  mean  +0.33%  mfe  1.79%  mae  -1.52%
+  + flat_before [719/752 eval]       n=556    +  5m  hit  52.2%  med  +0.08%  mean  +0.40%  mfe  1.75%  mae  -1.35%
+  + all filters                      n=304    +  5m  hit  54.9%  med  +0.13%  mean  +0.45%  mfe  1.67%  mae  -1.25%
+
+-- forward return at +15m --------------------------------------------
+  BASELINE same-time peer            n=3755   + 15m  hit  47.8%  med  +0.00%  mean  +0.02%  mfe  0.52%  mae  -0.48%
+  trigger only                       n=751    + 15m  hit  51.3%  med  +0.10%  mean  +0.60%  mfe  3.32%  mae  -2.56%
+  + price_up                         n=646    + 15m  hit  50.9%  med  +0.11%  mean  +0.55%  mfe  3.26%  mae  -2.49%
+  + cvd_up                           n=504    + 15m  hit  54.0%  med  +0.27%  mean  +0.74%  mfe  3.36%  mae  -2.29%
+  + volume_up [749/752 eval]         n=623    + 15m  hit  50.9%  med  +0.08%  mean  +0.55%  mfe  3.24%  mae  -2.53%
+  + ordinal                          n=563    + 15m  hit  52.0%  med  +0.12%  mean  +0.67%  mfe  3.13%  mae  -2.33%
+  + flat_before [719/752 eval]       n=556    + 15m  hit  51.8%  med  +0.11%  mean  +0.68%  mfe  2.98%  mae  -2.12%
+  + all filters                      n=304    + 15m  hit  53.0%  med  +0.18%  mean  +0.67%  mfe  2.81%  mae  -1.89%
+
+-- forward return at +30m --------------------------------------------
+  BASELINE same-time peer            n=3755   + 30m  hit  49.2%  med  +0.00%  mean  +0.06%  mfe  0.78%  mae  -0.68%
+  trigger only                       n=751    + 30m  hit  50.1%  med  +0.04%  mean  +0.85%  mfe  4.57%  mae  -3.32%
+  + price_up                         n=646    + 30m  hit  48.6%  med  -0.13%  mean  +0.70%  mfe  4.42%  mae  -3.25%
+  + cvd_up                           n=504    + 30m  hit  50.6%  med  +0.06%  mean  +0.77%  mfe  4.35%  mae  -3.01%
+  + volume_up [749/752 eval]         n=623    + 30m  hit  48.8%  med  -0.10%  mean  +0.74%  mfe  4.36%  mae  -3.28%
+  + ordinal                          n=563    + 30m  hit  51.2%  med  +0.10%  mean  +1.04%  mfe  4.38%  mae  -2.97%
+  + flat_before [719/752 eval]       n=556    + 30m  hit  50.4%  med  +0.06%  mean  +0.86%  mfe  3.98%  mae  -2.71%
+  + all filters                      n=304    + 30m  hit  50.7%  med  +0.06%  mean  +0.74%  mfe  3.62%  mae  -2.35%
+
+-- forward return at +60m --------------------------------------------
+  BASELINE same-time peer            n=3755   + 60m  hit  50.9%  med  +0.03%  mean  +0.12%  mfe  1.12%  mae  -0.97%
+  trigger only                       n=751    + 60m  hit  48.9%  med  -0.05%  mean  +1.34%  mfe  6.48%  mae  -4.19%
+  + price_up                         n=646    + 60m  hit  47.5%  med  -0.14%  mean  +1.17%  mfe  6.31%  mae  -4.08%
+  + cvd_up                           n=504    + 60m  hit  49.6%  med  +0.00%  mean  +1.23%  mfe  6.14%  mae  -3.86%
+  + volume_up [749/752 eval]         n=623    + 60m  hit  48.2%  med  -0.08%  mean  +1.32%  mfe  6.24%  mae  -4.06%
+  + ordinal                          n=563    + 60m  hit  50.3%  med  +0.04%  mean  +1.73%  mfe  6.30%  mae  -3.73%
+  + flat_before [719/752 eval]       n=556    + 60m  hit  48.7%  med  -0.05%  mean  +1.31%  mfe  5.64%  mae  -3.46%
+  + all filters                      n=304    + 60m  hit  49.0%  med  -0.01%  mean  +1.32%  mfe  5.25%  mae  -2.99%
+
+-- forward return at +240m --------------------------------------------
+  BASELINE same-time peer            n=3685   +240m  hit  52.7%  med  +0.11%  mean  +0.41%  mfe  2.36%  mae  -1.81%
+  trigger only                       n=737    +240m  hit  45.5%  med  -0.64%  mean  +1.45%  mfe 10.50%  mae  -6.27%
+  + price_up                         n=634    +240m  hit  45.0%  med  -0.78%  mean  +1.50%  mfe 10.31%  mae  -6.05%
+  + cvd_up                           n=494    +240m  hit  46.0%  med  -0.55%  mean  +1.19%  mfe  9.73%  mae  -5.89%
+  + volume_up [749/752 eval]         n=614    +240m  hit  45.1%  med  -0.59%  mean  +1.35%  mfe  9.96%  mae  -6.03%
+  + ordinal                          n=556    +240m  hit  45.5%  med  -0.54%  mean  +2.08%  mfe 10.20%  mae  -5.42%
+  + flat_before [719/752 eval]       n=549    +240m  hit  42.4%  med  -0.93%  mean  +1.03%  mfe  8.90%  mae  -5.32%
+  + all filters                      n=301    +240m  hit  43.2%  med  -0.69%  mean  +1.21%  mfe  8.16%  mae  -4.52%
+
+all filters keep 304/752 signals (40%), 10.1/day
+
+edge over random entry (hit-rate percentage points):
+  +  5m  trigger  +1.1pp   all filters  +6.2pp
+  + 15m  trigger  +3.4pp   all filters  +5.1pp
+  + 30m  trigger  +0.8pp   all filters  +1.4pp
+  + 60m  trigger  -2.0pp   all filters  -1.9pp
+  +240m  trigger  -7.2pp   all filters  -9.5pp

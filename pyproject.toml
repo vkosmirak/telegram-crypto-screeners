@@ -1,0 +1,16 @@
+[project]
+name = "experimental-trading-bots"
+version = "0.1.0"
+description = "Market screener bots for Binance/Bybit USDT perps: OI growth, pumps, liquidations."
+requires-python = ">=3.11"
+dependencies = []          # stdlib only, on purpose -- see README
+
+[project.scripts]
+etb = "etb.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

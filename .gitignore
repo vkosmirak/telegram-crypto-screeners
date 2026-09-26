@@ -1,0 +1,16 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# runtime state -- regenerable or machine-local
+data/*.db
+data/*.db-*
+data/*.sqlite
+data/logs/
+data/*.pid
+
+# out/ is kept: backtest reports and signal files are the evidence behind
+# docs/findings.md. Only its run logs are noise.
+out/*.log

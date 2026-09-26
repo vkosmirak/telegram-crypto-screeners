@@ -1,0 +1,17 @@
+# Live screener. Runs as its own unit, separate from the recorder, so a wedged
+# Telegram send can never stall liquidation ingest.
+[Unit]
+Description=etb live screener
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/etb
+Environment=PYTHONPATH=/opt/etb/src
+ExecStart=/usr/bin/python3 -m etb.cli live --exchange binance --rules oi_growth,pump_short --top 60
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

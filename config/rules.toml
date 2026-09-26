@@ -1,0 +1,56 @@
+# Screener thresholds. Defaults are exactly the ones demonstrated in the video
+# (see docs/investigation.md §1); the `filters` blocks encode the read rules he
+# applies by eye after a signal fires.
+#
+# Rules are evaluated PER EXCHANGE -- no cross-venue aggregation of open
+# interest. A symbol listed on both venues can fire twice, independently.
+
+[oi_growth]
+enabled       = true
+side          = "long"
+window_min    = 15      # look back this many minutes
+growth_pct    = 5.0     # fire when OI rose at least this much over the window
+cooldown_min  = 15      # suppress repeats on the same symbol for this long
+reset_tz      = "UTC"   # daily ordinal counter resets at midnight in this tz
+
+  [oi_growth.filters]
+  # Each is independently togglable so the backtest can price its contribution.
+  max_ordinal        = 3     # only the first N signals of the day; 0 disables
+  price_up           = true  # OI up AND price up. OI up + price down = shorts stacking
+  cvd_up             = true  # market buys leading. Binance only; skipped on Bybit
+  volume_up          = true  # volume over the window above the prior baseline
+  flat_before        = true  # require a quiet range before the move
+  flat_lookback_h    = 4.0   # how far back "before" reaches
+  flat_max_runup_pct = 15.0  # reject if price already ran this much in that lookback
+
+[pump]
+enabled       = true
+cooldown_min  = 20
+reset_tz      = "UTC"
+
+  [pump.long]
+  enabled    = true
+  window_min = 2       # "2% within 2 minutes"
+  move_pct   = 2.0
+
+  [pump.short]
+  enabled    = true
+  window_min = 20      # "10% within 20 minutes" -- sliding, fires early if faster
+  move_pct   = 10.0
+
+  [pump.filters]
+  max_ordinal = 0       # his pump reads do not gate on ordinal the way OI does
+  cvd_down    = true    # price pumping while CVD falls = sold into. Binance only
+  oi_down     = true    # open interest falling on the pump = closing, not opening
+
+[liquidation]
+# No historical endpoint exists on either venue -- this rule cannot be
+# backtested, only recorded live. `etb record-liquidations` builds the dataset.
+enabled      = true
+min_usd      = 20000.0
+exclude      = ["BTCUSDT", "ETHUSDT"]   # "for alts, $20k is a lot" -- majors need a higher bar
+cooldown_min = 5
+
+[backtest]
+# Forward-return horizons measured after each signal, in minutes.
+horizons_min = [5, 15, 30, 60, 240]

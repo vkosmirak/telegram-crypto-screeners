@@ -1,0 +1,8297 @@
+[
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1789218180000,
+  "price": 0.135278,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.072498555724628,
+   "window_min": 20.0,
+   "low": 0.122899,
+   "volume": 210960982.0,
+   "cvd_change": -12864992.0,
+   "oi_change_pct": 0.09461412410356473
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789224360000,
+  "price": 0.26555,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.9741318065945,
+   "window_min": 20.0,
+   "low": 0.23929,
+   "volume": 109240866.0,
+   "cvd_change": 9921048.0,
+   "oi_change_pct": 2.02548738154007
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1789238220000,
+  "price": 0.167812,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 19.629872536998462,
+   "window_min": 20.0,
+   "low": 0.140276,
+   "volume": 186241185.0,
+   "cvd_change": 48925079.0,
+   "oi_change_pct": 0.3857126741398931
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789252560000,
+  "price": 0.26806,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 15.037335850999911,
+   "window_min": 20.0,
+   "low": 0.23302,
+   "volume": 55315085.0,
+   "cvd_change": 3438459.0,
+   "oi_change_pct": 0.9732107350185926
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789253760000,
+  "price": 0.28984,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 14.335305719921099,
+   "window_min": 20.0,
+   "low": 0.2535,
+   "volume": 129271845.0,
+   "cvd_change": 10643193.0,
+   "oi_change_pct": -1.2215992384419838
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789254960000,
+  "price": 0.34227,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 23.549796050969206,
+   "window_min": 20.0,
+   "low": 0.27703,
+   "volume": 156576865.0,
+   "cvd_change": 12812791.0,
+   "oi_change_pct": -3.134126429160644
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789259100000,
+  "price": 0.33661,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.891121726239517,
+   "window_min": 20.0,
+   "low": 0.30355,
+   "volume": 85086967.0,
+   "cvd_change": 2470803.0,
+   "oi_change_pct": 0.32423064195876705
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789260600000,
+  "price": 0.37656,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 13.58933365509336,
+   "window_min": 20.0,
+   "low": 0.33151,
+   "volume": 92582683.0,
+   "cvd_change": 4530953.0,
+   "oi_change_pct": 0.5730709691483593
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789261800000,
+  "price": 0.5247,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 43.95456665477793,
+   "window_min": 20.0,
+   "low": 0.36449,
+   "volume": 229640403.0,
+   "cvd_change": 23587255.0,
+   "oi_change_pct": -12.48857536550375
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789263000000,
+  "price": 0.57999,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 18.184411614875184,
+   "window_min": 20.0,
+   "low": 0.49075,
+   "volume": 205866272.0,
+   "cvd_change": 7236006.0,
+   "oi_change_pct": -13.037948954113777
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789264200000,
+  "price": 0.5605,
+  "ordinal": 5,
+  "metrics": {
+   "move_pct": 14.614645318283138,
+   "window_min": 20.0,
+   "low": 0.48903,
+   "volume": 109112652.0,
+   "cvd_change": -102466.0,
+   "oi_change_pct": 1.1721566709085751
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ARKUSDT",
+  "side": "short",
+  "ts": 1789264440000,
+  "price": 0.1486,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 11.144353029169785,
+   "window_min": 20.0,
+   "low": 0.1337,
+   "volume": 10466171.0,
+   "cvd_change": 655827.0,
+   "oi_change_pct": 5.151968690747477
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u725b\u6765USDT",
+  "side": "short",
+  "ts": 1789264560000,
+  "price": 0.15044,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.06731050629206,
+   "window_min": 20.0,
+   "low": 0.13668,
+   "volume": 53564155.0,
+   "cvd_change": 10078405.0,
+   "oi_change_pct": 0.7939133678326993
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789265940000,
+  "price": 0.54057,
+  "ordinal": 6,
+  "metrics": {
+   "move_pct": 10.541491145556424,
+   "window_min": 20.0,
+   "low": 0.48902,
+   "volume": 75873957.0,
+   "cvd_change": 613337.0,
+   "oi_change_pct": 0.14568121590186056
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789267140000,
+  "price": 0.58827,
+  "ordinal": 7,
+  "metrics": {
+   "move_pct": 12.682450293069758,
+   "window_min": 20.0,
+   "low": 0.52206,
+   "volume": 76846810.0,
+   "cvd_change": 303592.0,
+   "oi_change_pct": 1.7675109677360634
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789268340000,
+  "price": 0.74288,
+  "ordinal": 8,
+  "metrics": {
+   "move_pct": 27.454277184915753,
+   "window_min": 20.0,
+   "low": 0.58286,
+   "volume": 163604813.0,
+   "cvd_change": 7404861.0,
+   "oi_change_pct": -1.8683491245926165
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ARKUSDT",
+  "side": "short",
+  "ts": 1789268640000,
+  "price": 0.163,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 11.338797814207657,
+   "window_min": 20.0,
+   "low": 0.1464,
+   "volume": 13899788.0,
+   "cvd_change": 465568.0,
+   "oi_change_pct": 4.8828594162433125
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1789269360000,
+  "price": 0.161513,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.86681951098969,
+   "window_min": 20.0,
+   "low": 0.145682,
+   "volume": 78220370.0,
+   "cvd_change": 9565746.0,
+   "oi_change_pct": -0.960847042113766
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789269540000,
+  "price": 1.07159,
+  "ordinal": 9,
+  "metrics": {
+   "move_pct": 55.75436046511631,
+   "window_min": 20.0,
+   "low": 0.688,
+   "volume": 227804947.0,
+   "cvd_change": 13067831.0,
+   "oi_change_pct": -16.199411044022938
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789270740000,
+  "price": 1.59458,
+  "ordinal": 10,
+  "metrics": {
+   "move_pct": 52.87079734251119,
+   "window_min": 20.0,
+   "low": 1.04309,
+   "volume": 140972511.0,
+   "cvd_change": 9745507.0,
+   "oi_change_pct": -34.474564999942515
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1789271760000,
+  "price": 0.176,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 15.293408623422899,
+   "window_min": 20.0,
+   "low": 0.152654,
+   "volume": 85891115.0,
+   "cvd_change": 18330293.0,
+   "oi_change_pct": -0.2962240285601325
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789272120000,
+  "price": 0.9734,
+  "ordinal": 11,
+  "metrics": {
+   "move_pct": 10.10938542809634,
+   "window_min": 20.0,
+   "low": 0.88403,
+   "volume": 96796919.0,
+   "cvd_change": -2107661.0,
+   "oi_change_pct": -7.105680634348599
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789273320000,
+  "price": 1.08469,
+  "ordinal": 12,
+  "metrics": {
+   "move_pct": 18.0949166566865,
+   "window_min": 20.0,
+   "low": 0.91849,
+   "volume": 93479626.0,
+   "cvd_change": 1731790.0,
+   "oi_change_pct": -0.10963465491089508
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789274520000,
+  "price": 1.13355,
+  "ordinal": 13,
+  "metrics": {
+   "move_pct": 21.5603217158177,
+   "window_min": 20.0,
+   "low": 0.9325,
+   "volume": 57635644.0,
+   "cvd_change": 1188132.0,
+   "oi_change_pct": 2.9685248530128217
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ARKUSDT",
+  "side": "short",
+  "ts": 1789274880000,
+  "price": 0.1674,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 11.155378486055767,
+   "window_min": 20.0,
+   "low": 0.1506,
+   "volume": 8532228.0,
+   "cvd_change": 178666.0,
+   "oi_change_pct": 0.8615876247100696
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789275720000,
+  "price": 1.11037,
+  "ordinal": 14,
+  "metrics": {
+   "move_pct": 10.484577114427873,
+   "window_min": 20.0,
+   "low": 1.005,
+   "volume": 44399810.0,
+   "cvd_change": 228936.0,
+   "oi_change_pct": -1.3133673137755486
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1789277520000,
+  "price": 0.142202,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 10.40613669360786,
+   "window_min": 20.0,
+   "low": 0.128799,
+   "volume": 101900194.0,
+   "cvd_change": -11559264.0,
+   "oi_change_pct": 0.009378607540222461
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789278360000,
+  "price": 0.80862,
+  "ordinal": 15,
+  "metrics": {
+   "move_pct": 10.769863013698643,
+   "window_min": 20.0,
+   "low": 0.73,
+   "volume": 85731477.0,
+   "cvd_change": 503819.0,
+   "oi_change_pct": 6.869329151567172
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789279680000,
+  "price": 0.78179,
+  "ordinal": 16,
+  "metrics": {
+   "move_pct": 10.109716764552612,
+   "window_min": 20.0,
+   "low": 0.71001,
+   "volume": 53751206.0,
+   "cvd_change": -587948.0,
+   "oi_change_pct": 1.7824118532783428
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789280940000,
+  "price": 0.85357,
+  "ordinal": 17,
+  "metrics": {
+   "move_pct": 10.798566940990174,
+   "window_min": 20.0,
+   "low": 0.77038,
+   "volume": 36139351.0,
+   "cvd_change": 2089329.0,
+   "oi_change_pct": 0.07699462658843359
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789282140000,
+  "price": 0.90606,
+  "ordinal": 18,
+  "metrics": {
+   "move_pct": 13.25749999999999,
+   "window_min": 20.0,
+   "low": 0.8,
+   "volume": 65502202.0,
+   "cvd_change": 984786.0,
+   "oi_change_pct": 0.12046895991972839
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789282980000,
+  "price": 0.014836,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.04302032339417,
+   "window_min": 20.0,
+   "low": 0.013482,
+   "volume": 277074839.0,
+   "cvd_change": 21248079.0,
+   "oi_change_pct": 0.3240936902352498
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ARKUSDT",
+  "side": "short",
+  "ts": 1789283520000,
+  "price": 0.1705,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 13.289036544850518,
+   "window_min": 20.0,
+   "low": 0.1505,
+   "volume": 14285813.0,
+   "cvd_change": 431145.0,
+   "oi_change_pct": 1.8983248973518885
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789285860000,
+  "price": 0.80827,
+  "ordinal": 19,
+  "metrics": {
+   "move_pct": 10.124529947136107,
+   "window_min": 20.0,
+   "low": 0.73396,
+   "volume": 36821123.0,
+   "cvd_change": 553687.0,
+   "oi_change_pct": 0.20976953612439342
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1789288200000,
+  "price": 0.144556,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 10.30514837734926,
+   "window_min": 20.0,
+   "low": 0.131051,
+   "volume": 35013324.0,
+   "cvd_change": 6202082.0,
+   "oi_change_pct": 0.25663820676551374
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789288800000,
+  "price": 0.84129,
+  "ordinal": 20,
+  "metrics": {
+   "move_pct": 11.680605336519312,
+   "window_min": 20.0,
+   "low": 0.7533,
+   "volume": 34372630.0,
+   "cvd_change": 1732846.0,
+   "oi_change_pct": 0.0793639117968814
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789294260000,
+  "price": 0.86355,
+  "ordinal": 21,
+  "metrics": {
+   "move_pct": 10.664718772826888,
+   "window_min": 20.0,
+   "low": 0.78033,
+   "volume": 37372151.0,
+   "cvd_change": 1946691.0,
+   "oi_change_pct": -1.4606589927624092
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BTWUSDT",
+  "side": "short",
+  "ts": 1789295100000,
+  "price": 0.55549,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 11.571061299911634,
+   "window_min": 20.0,
+   "low": 0.49788,
+   "volume": 10520148.0,
+   "cvd_change": -306144.0,
+   "oi_change_pct": -0.24366819185684951
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789295460000,
+  "price": 1.11374,
+  "ordinal": 22,
+  "metrics": {
+   "move_pct": 29.002142815775755,
+   "window_min": 20.0,
+   "low": 0.86335,
+   "volume": 98976597.0,
+   "cvd_change": 4968263.0,
+   "oi_change_pct": -4.407827767021077
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789298160000,
+  "price": 0.87104,
+  "ordinal": 23,
+  "metrics": {
+   "move_pct": 11.72192650548325,
+   "window_min": 20.0,
+   "low": 0.77965,
+   "volume": 88099560.0,
+   "cvd_change": -3931506.0,
+   "oi_change_pct": -3.085671639564569
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BTWUSDT",
+  "side": "short",
+  "ts": 1789299600000,
+  "price": 0.66084,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.340451820807782,
+   "window_min": 20.0,
+   "low": 0.59891,
+   "volume": 6373715.0,
+   "cvd_change": 251767.0,
+   "oi_change_pct": -0.06014551432572679
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ARKUSDT",
+  "side": "short",
+  "ts": 1789300020000,
+  "price": 0.1965,
+  "ordinal": 5,
+  "metrics": {
+   "move_pct": 10.269360269360273,
+   "window_min": 20.0,
+   "low": 0.1782,
+   "volume": 38086403.0,
+   "cvd_change": 25477.0,
+   "oi_change_pct": 2.5337299986415207
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789301220000,
+  "price": 0.84727,
+  "ordinal": 24,
+  "metrics": {
+   "move_pct": 12.493859288075736,
+   "window_min": 20.0,
+   "low": 0.75317,
+   "volume": 64311699.0,
+   "cvd_change": -940529.0,
+   "oi_change_pct": -0.9632601791784823
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BTWUSDT",
+  "side": "short",
+  "ts": 1789301880000,
+  "price": 0.69907,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 11.300928210925164,
+   "window_min": 20.0,
+   "low": 0.62809,
+   "volume": 8894828.0,
+   "cvd_change": -109826.0,
+   "oi_change_pct": -0.10959443643085987
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789302420000,
+  "price": 0.95221,
+  "ordinal": 25,
+  "metrics": {
+   "move_pct": 15.067913766434637,
+   "window_min": 20.0,
+   "low": 0.82752,
+   "volume": 53479653.0,
+   "cvd_change": 1640053.0,
+   "oi_change_pct": -3.00760031637084
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BTWUSDT",
+  "side": "short",
+  "ts": 1789303800000,
+  "price": 0.6632,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 13.282317573107406,
+   "window_min": 20.0,
+   "low": 0.58544,
+   "volume": 19309168.0,
+   "cvd_change": 511258.0,
+   "oi_change_pct": -0.9669310683943722
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BTWUSDT",
+  "side": "short",
+  "ts": 1789305120000,
+  "price": 0.6781,
+  "ordinal": 5,
+  "metrics": {
+   "move_pct": 10.061514989206465,
+   "window_min": 20.0,
+   "low": 0.61611,
+   "volume": 7118761.0,
+   "cvd_change": 367141.0,
+   "oi_change_pct": 0.06547350769321447
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789312380000,
+  "price": 0.30035,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 12.892313474910733,
+   "window_min": 20.0,
+   "low": 0.26605,
+   "volume": 4118009.0,
+   "cvd_change": 291311.0,
+   "oi_change_pct": 0.5552030523789941
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789315620000,
+  "price": 1.01221,
+  "ordinal": 26,
+  "metrics": {
+   "move_pct": 10.775376196990427,
+   "window_min": 20.0,
+   "low": 0.91375,
+   "volume": 36952682.0,
+   "cvd_change": 956170.0,
+   "oi_change_pct": -1.5497069418001108
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789335000000,
+  "price": 1.0259,
+  "ordinal": 27,
+  "metrics": {
+   "move_pct": 10.235966646608796,
+   "window_min": 20.0,
+   "low": 0.93064,
+   "volume": 16706037.0,
+   "cvd_change": 1465639.0,
+   "oi_change_pct": -0.47240573052466095
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789343280000,
+  "price": 0.83194,
+  "ordinal": 28,
+  "metrics": {
+   "move_pct": 10.923854348608696,
+   "window_min": 20.0,
+   "low": 0.75001,
+   "volume": 44415944.0,
+   "cvd_change": -313496.0,
+   "oi_change_pct": -2.1939704987502195
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789345800000,
+  "price": 0.72506,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 11.422556206106993,
+   "window_min": 20.0,
+   "low": 0.65073,
+   "volume": 57743303.0,
+   "cvd_change": -76779.0,
+   "oi_change_pct": 1.2186286246220757
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789348080000,
+  "price": 0.80607,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 18.929725423078626,
+   "window_min": 20.0,
+   "low": 0.67777,
+   "volume": 38911076.0,
+   "cvd_change": 1509222.0,
+   "oi_change_pct": 1.2832338580934133
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ARKUSDT",
+  "side": "short",
+  "ts": 1789349100000,
+  "price": 0.1521,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.29731689630169,
+   "window_min": 20.0,
+   "low": 0.1379,
+   "volume": 16033281.0,
+   "cvd_change": 347913.0,
+   "oi_change_pct": 6.040042201779294
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789356480000,
+  "price": 0.36199,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.700305810397538,
+   "window_min": 20.0,
+   "low": 0.327,
+   "volume": 12573857.0,
+   "cvd_change": 994655.0,
+   "oi_change_pct": 3.402855770876112
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ARKUSDT",
+  "side": "short",
+  "ts": 1789366380000,
+  "price": 0.197,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 12.571428571428589,
+   "window_min": 20.0,
+   "low": 0.175,
+   "volume": 18493596.0,
+   "cvd_change": 347990.0,
+   "oi_change_pct": 4.580512333375841
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ARKUSDT",
+  "side": "short",
+  "ts": 1789367760000,
+  "price": 0.2084,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 10.031678986272441,
+   "window_min": 20.0,
+   "low": 0.1894,
+   "volume": 42500262.0,
+   "cvd_change": -1589420.0,
+   "oi_change_pct": 7.038412302766894
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789371180000,
+  "price": 0.94052,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 11.304142011834317,
+   "window_min": 20.0,
+   "low": 0.845,
+   "volume": 22662660.0,
+   "cvd_change": 2170060.0,
+   "oi_change_pct": -0.43306601293851
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789376100000,
+  "price": 0.016804,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 14.367385829987068,
+   "window_min": 20.0,
+   "low": 0.014693,
+   "volume": 215682680.0,
+   "cvd_change": 37887298.0,
+   "oi_change_pct": 0.4669788135285069
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789380060000,
+  "price": 0.47908,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.123207061419649,
+   "window_min": 20.0,
+   "low": 0.43504,
+   "volume": 38514759.0,
+   "cvd_change": 3026707.0,
+   "oi_change_pct": 2.735973186962637
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BTWUSDT",
+  "side": "short",
+  "ts": 1789382640000,
+  "price": 0.6525,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.969387755102034,
+   "window_min": 20.0,
+   "low": 0.588,
+   "volume": 32558511.0,
+   "cvd_change": -2706167.0,
+   "oi_change_pct": 0.10122995201740093
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1789382880000,
+  "price": 0.153166,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 11.393454545454528,
+   "window_min": 20.0,
+   "low": 0.1375,
+   "volume": 34305500.0,
+   "cvd_change": 5739810.0,
+   "oi_change_pct": 0.33251429684821865
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789382880000,
+  "price": 0.78841,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 10.180837386103203,
+   "window_min": 20.0,
+   "low": 0.71556,
+   "volume": 54975873.0,
+   "cvd_change": -127799.0,
+   "oi_change_pct": 5.225285744971031
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BTWUSDT",
+  "side": "short",
+  "ts": 1789384320000,
+  "price": 0.60674,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 11.670623746157949,
+   "window_min": 20.0,
+   "low": 0.54333,
+   "volume": 34144932.0,
+   "cvd_change": -819906.0,
+   "oi_change_pct": 0.02967239039606273
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BTWUSDT",
+  "side": "short",
+  "ts": 1789386120000,
+  "price": 0.63768,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 10.167061140576683,
+   "window_min": 20.0,
+   "low": 0.57883,
+   "volume": 10834614.0,
+   "cvd_change": 265944.0,
+   "oi_change_pct": -0.11556136142618634
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BTWUSDT",
+  "side": "short",
+  "ts": 1789387440000,
+  "price": 0.69565,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 11.670278513524357,
+   "window_min": 20.0,
+   "low": 0.62295,
+   "volume": 8712619.0,
+   "cvd_change": 271533.0,
+   "oi_change_pct": -0.1314275687434141
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789389900000,
+  "price": 0.5774,
+  "ordinal": 5,
+  "metrics": {
+   "move_pct": 10.190839694656484,
+   "window_min": 20.0,
+   "low": 0.524,
+   "volume": 93533542.0,
+   "cvd_change": -1894106.0,
+   "oi_change_pct": 6.896711082239149
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789390020000,
+  "price": 0.51609,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 10.592294175631078,
+   "window_min": 20.0,
+   "low": 0.46666,
+   "volume": 30545377.0,
+   "cvd_change": 1101569.0,
+   "oi_change_pct": -0.4201409125279776
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789391100000,
+  "price": 0.62132,
+  "ordinal": 6,
+  "metrics": {
+   "move_pct": 10.610268461155027,
+   "window_min": 20.0,
+   "low": 0.56172,
+   "volume": 73871236.0,
+   "cvd_change": 1166054.0,
+   "oi_change_pct": -2.577854884612263
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789397640000,
+  "price": 0.41944,
+  "ordinal": 7,
+  "metrics": {
+   "move_pct": 11.606620190516725,
+   "window_min": 20.0,
+   "low": 0.37582,
+   "volume": 129072187.0,
+   "cvd_change": 1537735.0,
+   "oi_change_pct": 2.589222131963065
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1789398060000,
+  "price": 0.169008,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 11.050660358762077,
+   "window_min": 20.0,
+   "low": 0.15219,
+   "volume": 59590202.0,
+   "cvd_change": 8744930.0,
+   "oi_change_pct": 1.4028699741805317
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789399260000,
+  "price": 0.43488,
+  "ordinal": 8,
+  "metrics": {
+   "move_pct": 10.224565316571187,
+   "window_min": 20.0,
+   "low": 0.39454,
+   "volume": 65675293.0,
+   "cvd_change": 491319.0,
+   "oi_change_pct": -0.8935945618200436
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1789399620000,
+  "price": 0.180054,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 10.948572273640345,
+   "window_min": 20.0,
+   "low": 0.162286,
+   "volume": 74654576.0,
+   "cvd_change": 4120938.0,
+   "oi_change_pct": 0.9793777028860307
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789400460000,
+  "price": 0.47648,
+  "ordinal": 9,
+  "metrics": {
+   "move_pct": 11.519917614567255,
+   "window_min": 20.0,
+   "low": 0.42726,
+   "volume": 93722593.0,
+   "cvd_change": 1629441.0,
+   "oi_change_pct": -12.150716588740561
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1789400820000,
+  "price": 0.16236,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 10.648447882236688,
+   "window_min": 20.0,
+   "low": 0.146735,
+   "volume": 186734813.0,
+   "cvd_change": -2644625.0,
+   "oi_change_pct": -0.886947538691707
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789402500000,
+  "price": 0.43745,
+  "ordinal": 10,
+  "metrics": {
+   "move_pct": 12.817537072856222,
+   "window_min": 20.0,
+   "low": 0.38775,
+   "volume": 70736727.0,
+   "cvd_change": -1081185.0,
+   "oi_change_pct": 6.614193387550249
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789403700000,
+  "price": 0.42337,
+  "ordinal": 11,
+  "metrics": {
+   "move_pct": 10.908233568228853,
+   "window_min": 20.0,
+   "low": 0.38173,
+   "volume": 73135228.0,
+   "cvd_change": -285438.0,
+   "oi_change_pct": -1.0357297256127551
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789411860000,
+  "price": 0.43638,
+  "ordinal": 12,
+  "metrics": {
+   "move_pct": 10.096881622767185,
+   "window_min": 20.0,
+   "low": 0.39636,
+   "volume": 41109163.0,
+   "cvd_change": 2718267.0,
+   "oi_change_pct": -2.590359329277514
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BTWUSDT",
+  "side": "short",
+  "ts": 1789435680000,
+  "price": 0.63066,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.53157368946842,
+   "window_min": 20.0,
+   "low": 0.57057,
+   "volume": 3920197.0,
+   "cvd_change": 865795.0,
+   "oi_change_pct": -0.33872254446360994
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BTWUSDT",
+  "side": "short",
+  "ts": 1789436880000,
+  "price": 0.69269,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 14.697067540940179,
+   "window_min": 20.0,
+   "low": 0.60393,
+   "volume": 12969737.0,
+   "cvd_change": 861511.0,
+   "oi_change_pct": -0.24994337372662434
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BTWUSDT",
+  "side": "short",
+  "ts": 1789438080000,
+  "price": 0.70407,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 14.295222480154557,
+   "window_min": 20.0,
+   "low": 0.61601,
+   "volume": 17680859.0,
+   "cvd_change": 320809.0,
+   "oi_change_pct": -0.21833823739403346
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789445460000,
+  "price": 0.46816,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.519357884796987,
+   "window_min": 20.0,
+   "low": 0.4236,
+   "volume": 38430574.0,
+   "cvd_change": -1776854.0,
+   "oi_change_pct": -6.421799842747056
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BTWUSDT",
+  "side": "short",
+  "ts": 1789448940000,
+  "price": 0.65163,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 12.350000000000016,
+   "window_min": 20.0,
+   "low": 0.58,
+   "volume": 12082182.0,
+   "cvd_change": 1105056.0,
+   "oi_change_pct": -0.12916329050337572
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789449540000,
+  "price": 0.40613,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.286490156143913,
+   "window_min": 20.0,
+   "low": 0.36825,
+   "volume": 26600264.0,
+   "cvd_change": 1877110.0,
+   "oi_change_pct": -0.8286804352285126
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789450980000,
+  "price": 0.42215,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.20466767608208,
+   "window_min": 20.0,
+   "low": 0.38306,
+   "volume": 40018787.0,
+   "cvd_change": 105311.0,
+   "oi_change_pct": 0.6157434932434702
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789459080000,
+  "price": 0.018375,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.8931804465902,
+   "window_min": 20.0,
+   "low": 0.01657,
+   "volume": 286651543.0,
+   "cvd_change": -2696013.0,
+   "oi_change_pct": -1.1029467321892472
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789460280000,
+  "price": 0.019298,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.280587462140689,
+   "window_min": 20.0,
+   "low": 0.017499,
+   "volume": 378915138.0,
+   "cvd_change": 16140228.0,
+   "oi_change_pct": 3.366338313762318
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789469700000,
+  "price": 0.021321,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 10.44861168669704,
+   "window_min": 20.0,
+   "low": 0.019304,
+   "volume": 776497745.0,
+   "cvd_change": -27245619.0,
+   "oi_change_pct": -0.7336609054452548
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789471800000,
+  "price": 0.023471,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 12.787121576165305,
+   "window_min": 20.0,
+   "low": 0.02081,
+   "volume": 635282615.0,
+   "cvd_change": 30325875.0,
+   "oi_change_pct": 0.7379063710833744
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789476180000,
+  "price": 0.026296,
+  "ordinal": 5,
+  "metrics": {
+   "move_pct": 10.366826156299847,
+   "window_min": 20.0,
+   "low": 0.023826,
+   "volume": 553743521.0,
+   "cvd_change": 31776107.0,
+   "oi_change_pct": 0.9311800770947176
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789477380000,
+  "price": 0.027266,
+  "ordinal": 6,
+  "metrics": {
+   "move_pct": 10.34399028733306,
+   "window_min": 20.0,
+   "low": 0.02471,
+   "volume": 860825620.0,
+   "cvd_change": 19746372.0,
+   "oi_change_pct": -0.18206358676061685
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789486560000,
+  "price": 0.42936,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 11.043293849893976,
+   "window_min": 20.0,
+   "low": 0.38666,
+   "volume": 34299862.0,
+   "cvd_change": 1178498.0,
+   "oi_change_pct": -1.8098063110099982
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789490820000,
+  "price": 0.02718,
+  "ordinal": 7,
+  "metrics": {
+   "move_pct": 11.943986820428343,
+   "window_min": 20.0,
+   "low": 0.02428,
+   "volume": 1256443410.0,
+   "cvd_change": 1274912.0,
+   "oi_change_pct": -1.8220068712576531
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "SAGAUSDT",
+  "side": "short",
+  "ts": 1789493520000,
+  "price": 0.02392,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.946196660482377,
+   "window_min": 20.0,
+   "low": 0.02156,
+   "volume": 229024806.5,
+   "cvd_change": 14080120.299999952,
+   "oi_change_pct": 1.0174853699514763
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789494300000,
+  "price": 0.027877,
+  "ordinal": 8,
+  "metrics": {
+   "move_pct": 10.207550899387229,
+   "window_min": 20.0,
+   "low": 0.025295,
+   "volume": 388131953.0,
+   "cvd_change": 21688651.0,
+   "oi_change_pct": -0.012045416626516037
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789518960000,
+  "price": 0.36973,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.150151939462537,
+   "window_min": 20.0,
+   "low": 0.33566,
+   "volume": 29210182.0,
+   "cvd_change": 2905300.0,
+   "oi_change_pct": -0.42870847920482014
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789527540000,
+  "price": 0.42198,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.889788195721884,
+   "window_min": 20.0,
+   "low": 0.38054,
+   "volume": 23880639.0,
+   "cvd_change": 1959855.0,
+   "oi_change_pct": -0.20846909613252418
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789529640000,
+  "price": 0.47648,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 10.53681622047975,
+   "window_min": 20.0,
+   "low": 0.43106,
+   "volume": 50308372.0,
+   "cvd_change": 1658386.0,
+   "oi_change_pct": 1.5804636205960954
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789529760000,
+  "price": 0.028179,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.583941605839398,
+   "window_min": 20.0,
+   "low": 0.025482,
+   "volume": 643005452.0,
+   "cvd_change": -8634502.0,
+   "oi_change_pct": -0.34408498278287736
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789531080000,
+  "price": 0.49678,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 10.302411297126879,
+   "window_min": 20.0,
+   "low": 0.45038,
+   "volume": 82146895.0,
+   "cvd_change": -3120053.0,
+   "oi_change_pct": -2.650772625268849
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789532280000,
+  "price": 0.50642,
+  "ordinal": 5,
+  "metrics": {
+   "move_pct": 11.728367824206853,
+   "window_min": 20.0,
+   "low": 0.45326,
+   "volume": 44818876.0,
+   "cvd_change": -1698106.0,
+   "oi_change_pct": 2.924933866006363
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BTWUSDT",
+  "side": "short",
+  "ts": 1789533120000,
+  "price": 0.77467,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.62447341739614,
+   "window_min": 20.0,
+   "low": 0.70027,
+   "volume": 5848531.0,
+   "cvd_change": 769681.0,
+   "oi_change_pct": -0.09941203263214016
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789534020000,
+  "price": 0.51235,
+  "ordinal": 6,
+  "metrics": {
+   "move_pct": 10.296650305691891,
+   "window_min": 20.0,
+   "low": 0.46452,
+   "volume": 31481353.0,
+   "cvd_change": 171717.0,
+   "oi_change_pct": 0.9104428502686668
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1789534140000,
+  "price": 0.234192,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 12.283527990334274,
+   "window_min": 20.0,
+   "low": 0.208572,
+   "volume": 83975557.0,
+   "cvd_change": 17022817.0,
+   "oi_change_pct": 0.5095098016002719
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789535220000,
+  "price": 0.54252,
+  "ordinal": 7,
+  "metrics": {
+   "move_pct": 10.084817986283024,
+   "window_min": 20.0,
+   "low": 0.49282,
+   "volume": 56278661.0,
+   "cvd_change": 185493.0,
+   "oi_change_pct": 0.6082003941772163
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789541220000,
+  "price": 0.028572,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.18472099032046,
+   "window_min": 20.0,
+   "low": 0.025931,
+   "volume": 528749881.0,
+   "cvd_change": 4413433.0,
+   "oi_change_pct": -0.2390893455755494
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789548480000,
+  "price": 0.54846,
+  "ordinal": 8,
+  "metrics": {
+   "move_pct": 12.042654899797745,
+   "window_min": 20.0,
+   "low": 0.48951,
+   "volume": 27634754.0,
+   "cvd_change": 1527874.0,
+   "oi_change_pct": 1.472647886650158
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789549560000,
+  "price": 0.22739,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.020321269595511,
+   "window_min": 20.0,
+   "low": 0.20668,
+   "volume": 8942203.0,
+   "cvd_change": 1917121.0,
+   "oi_change_pct": 0.16715434857730305
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789551300000,
+  "price": 0.25244,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 12.071032186459485,
+   "window_min": 20.0,
+   "low": 0.22525,
+   "volume": 14312890.0,
+   "cvd_change": 1065476.0,
+   "oi_change_pct": -0.4591291140159104
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789552500000,
+  "price": 0.29477,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 18.424330079145058,
+   "window_min": 20.0,
+   "low": 0.24891,
+   "volume": 43549622.0,
+   "cvd_change": 921166.0,
+   "oi_change_pct": 0.5336935813876398
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789554000000,
+  "price": 0.34066,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 15.111171183347993,
+   "window_min": 20.0,
+   "low": 0.29594,
+   "volume": 24383855.0,
+   "cvd_change": 1168655.0,
+   "oi_change_pct": -0.2776888156831192
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789555200000,
+  "price": 0.37362,
+  "ordinal": 5,
+  "metrics": {
+   "move_pct": 11.909183490085674,
+   "window_min": 20.0,
+   "low": 0.33386,
+   "volume": 42652810.0,
+   "cvd_change": 929968.0,
+   "oi_change_pct": 0.2752684736247568
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789555920000,
+  "price": 0.58775,
+  "ordinal": 9,
+  "metrics": {
+   "move_pct": 10.164567401409496,
+   "window_min": 20.0,
+   "low": 0.53352,
+   "volume": 37348070.0,
+   "cvd_change": 1334262.0,
+   "oi_change_pct": -0.5950530162275758
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789556640000,
+  "price": 0.41551,
+  "ordinal": 6,
+  "metrics": {
+   "move_pct": 12.904189989674464,
+   "window_min": 20.0,
+   "low": 0.36802,
+   "volume": 48393957.0,
+   "cvd_change": 487227.0,
+   "oi_change_pct": -0.14602467096551663
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ARKUSDT",
+  "side": "short",
+  "ts": 1789556760000,
+  "price": 0.1579,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.342417889587697,
+   "window_min": 20.0,
+   "low": 0.1431,
+   "volume": 6374812.0,
+   "cvd_change": 1646882.0,
+   "oi_change_pct": -0.15453092694821535
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789557120000,
+  "price": 0.6572,
+  "ordinal": 10,
+  "metrics": {
+   "move_pct": 13.236155622178568,
+   "window_min": 20.0,
+   "low": 0.58038,
+   "volume": 103825311.0,
+   "cvd_change": 1369489.0,
+   "oi_change_pct": -2.543436539309596
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789557840000,
+  "price": 0.51014,
+  "ordinal": 7,
+  "metrics": {
+   "move_pct": 23.946741824189722,
+   "window_min": 20.0,
+   "low": 0.41158,
+   "volume": 69870015.0,
+   "cvd_change": 1891845.0,
+   "oi_change_pct": 4.440693752316882
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789559040000,
+  "price": 0.52228,
+  "ordinal": 8,
+  "metrics": {
+   "move_pct": 10.887473460721875,
+   "window_min": 20.0,
+   "low": 0.471,
+   "volume": 39577519.0,
+   "cvd_change": 798279.0,
+   "oi_change_pct": 1.222914156805266
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789561320000,
+  "price": 0.5654,
+  "ordinal": 9,
+  "metrics": {
+   "move_pct": 12.17363701293548,
+   "window_min": 20.0,
+   "low": 0.50404,
+   "volume": 46295898.0,
+   "cvd_change": 946092.0,
+   "oi_change_pct": 1.0723452855643245
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789565820000,
+  "price": 0.63917,
+  "ordinal": 10,
+  "metrics": {
+   "move_pct": 12.959493849851555,
+   "window_min": 20.0,
+   "low": 0.56584,
+   "volume": 30541466.0,
+   "cvd_change": 3046242.0,
+   "oi_change_pct": 3.369274292871549
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789567020000,
+  "price": 0.5456,
+  "ordinal": 11,
+  "metrics": {
+   "move_pct": 13.942026564196809,
+   "window_min": 20.0,
+   "low": 0.47884,
+   "volume": 101361753.0,
+   "cvd_change": -565783.0,
+   "oi_change_pct": -3.3719308693682892
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789568220000,
+  "price": 0.58292,
+  "ordinal": 12,
+  "metrics": {
+   "move_pct": 10.26159986380919,
+   "window_min": 20.0,
+   "low": 0.52867,
+   "volume": 47283638.0,
+   "cvd_change": 2832754.0,
+   "oi_change_pct": 1.059324879172463
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789569060000,
+  "price": 0.62499,
+  "ordinal": 11,
+  "metrics": {
+   "move_pct": 10.68038535099527,
+   "window_min": 20.0,
+   "low": 0.56468,
+   "volume": 24559891.0,
+   "cvd_change": 1434741.0,
+   "oi_change_pct": 1.0525293979988248
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789574100000,
+  "price": 0.74434,
+  "ordinal": 12,
+  "metrics": {
+   "move_pct": 16.257711831315902,
+   "window_min": 20.0,
+   "low": 0.64025,
+   "volume": 40229417.0,
+   "cvd_change": 1682969.0,
+   "oi_change_pct": 0.21970936407893493
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789576620000,
+  "price": 0.021216,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 14.316504121989325,
+   "window_min": 20.0,
+   "low": 0.018559,
+   "volume": 1779167957.0,
+   "cvd_change": -96281029.0,
+   "oi_change_pct": -3.6266588036171443
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789576740000,
+  "price": 0.79369,
+  "ordinal": 13,
+  "metrics": {
+   "move_pct": 11.316970546984573,
+   "window_min": 20.0,
+   "low": 0.713,
+   "volume": 33933365.0,
+   "cvd_change": 1785157.0,
+   "oi_change_pct": -1.598318276979005
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789578060000,
+  "price": 0.020466,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 10.29911075181893,
+   "window_min": 20.0,
+   "low": 0.018555,
+   "volume": 835799700.0,
+   "cvd_change": 10792524.0,
+   "oi_change_pct": -1.7351933420193366
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789579440000,
+  "price": 0.63645,
+  "ordinal": 13,
+  "metrics": {
+   "move_pct": 10.512059175912892,
+   "window_min": 20.0,
+   "low": 0.57591,
+   "volume": 29781035.0,
+   "cvd_change": 2615247.0,
+   "oi_change_pct": 0.12977463444192594
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789579860000,
+  "price": 0.018531,
+  "ordinal": 5,
+  "metrics": {
+   "move_pct": 10.17241379310343,
+   "window_min": 20.0,
+   "low": 0.01682,
+   "volume": 702401700.0,
+   "cvd_change": 9463858.0,
+   "oi_change_pct": 0.18481069684563867
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789581060000,
+  "price": 0.020397,
+  "ordinal": 6,
+  "metrics": {
+   "move_pct": 14.29451978034293,
+   "window_min": 20.0,
+   "low": 0.017846,
+   "volume": 861419594.0,
+   "cvd_change": 67867372.0,
+   "oi_change_pct": -0.9164809982292965
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789597860000,
+  "price": 0.54709,
+  "ordinal": 14,
+  "metrics": {
+   "move_pct": 10.438451289918849,
+   "window_min": 20.0,
+   "low": 0.49538,
+   "volume": 63271249.0,
+   "cvd_change": 626907.0,
+   "oi_change_pct": -2.3852928968550513
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789599360000,
+  "price": 0.0007344,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 11.104387291981844,
+   "window_min": 20.0,
+   "low": 0.000661,
+   "volume": 1417832389.0,
+   "cvd_change": 57979375.0,
+   "oi_change_pct": 8.14129079079644
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789600560000,
+  "price": 0.0007996,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.396244650006903,
+   "window_min": 20.0,
+   "low": 0.0007243,
+   "volume": 3177979362.0,
+   "cvd_change": -13928168.0,
+   "oi_change_pct": 15.562761402197056
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789600860000,
+  "price": 0.51019,
+  "ordinal": 15,
+  "metrics": {
+   "move_pct": 11.239752311180883,
+   "window_min": 20.0,
+   "low": 0.45864,
+   "volume": 47147319.0,
+   "cvd_change": -164053.0,
+   "oi_change_pct": -2.1893469978414015
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789601760000,
+  "price": 0.0009046,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 13.643216080401999,
+   "window_min": 20.0,
+   "low": 0.000796,
+   "volume": 6703827996.0,
+   "cvd_change": -172819100.0,
+   "oi_change_pct": 12.901315649503275
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789602960000,
+  "price": 0.0010702,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 27.617457667541156,
+   "window_min": 20.0,
+   "low": 0.0008386,
+   "volume": 8866778984.0,
+   "cvd_change": 137353070.0,
+   "oi_change_pct": 4.667532099509608
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789603440000,
+  "price": 0.48284,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.307959426117153,
+   "window_min": 20.0,
+   "low": 0.43772,
+   "volume": 30292022.0,
+   "cvd_change": 1678564.0,
+   "oi_change_pct": 0.04062157336472971
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789604880000,
+  "price": 0.0011156,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 16.184128306602787,
+   "window_min": 20.0,
+   "low": 0.0009602,
+   "volume": 6072791093.0,
+   "cvd_change": 59912599.0,
+   "oi_change_pct": -3.0696650882840126
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789606560000,
+  "price": 0.0009941,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.455555555555552,
+   "window_min": 20.0,
+   "low": 0.0009,
+   "volume": 8351248954.0,
+   "cvd_change": -585790280.0,
+   "oi_change_pct": -4.035305757692431
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789610460000,
+  "price": 0.63054,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 12.30363694653227,
+   "window_min": 20.0,
+   "low": 0.56146,
+   "volume": 41469106.0,
+   "cvd_change": -1435234.0,
+   "oi_change_pct": -0.5250915328437578
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789611900000,
+  "price": 0.020985,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 12.90149028891161,
+   "window_min": 20.0,
+   "low": 0.018587,
+   "volume": 243403330.0,
+   "cvd_change": 26036346.0,
+   "oi_change_pct": -0.40978631729058357
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789613400000,
+  "price": 0.022782,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 11.599882433623975,
+   "window_min": 20.0,
+   "low": 0.020414,
+   "volume": 334425955.0,
+   "cvd_change": 27923745.0,
+   "oi_change_pct": 0.48340201915948455
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789616520000,
+  "price": 0.0011092,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 10.89782043591283,
+   "window_min": 20.0,
+   "low": 0.0010002,
+   "volume": 4361036843.0,
+   "cvd_change": 10160073.0,
+   "oi_change_pct": -0.5970482474042971
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789617720000,
+  "price": 0.0012296,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 14.765727086055636,
+   "window_min": 20.0,
+   "low": 0.0010714,
+   "volume": 7711542715.0,
+   "cvd_change": 95045045.0,
+   "oi_change_pct": 4.99041965205409
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789618560000,
+  "price": 0.02154,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 10.836677987033028,
+   "window_min": 20.0,
+   "low": 0.019434,
+   "volume": 198878980.0,
+   "cvd_change": 20308622.0,
+   "oi_change_pct": -0.07299467944485993
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789636320000,
+  "price": 0.6719,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 30.458419897870037,
+   "window_min": 20.0,
+   "low": 0.51503,
+   "volume": 82473795.0,
+   "cvd_change": 6335883.0,
+   "oi_change_pct": 0.7046352715174287
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789638060000,
+  "price": 0.66031,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 11.676560623742116,
+   "window_min": 20.0,
+   "low": 0.59127,
+   "volume": 34042747.0,
+   "cvd_change": 2759121.0,
+   "oi_change_pct": -0.43982613616972976
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "MARSCOINUSDT",
+  "side": "short",
+  "ts": 1789651560000,
+  "price": 0.12003,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.119266055045873,
+   "window_min": 20.0,
+   "low": 0.109,
+   "volume": 65359195.0,
+   "cvd_change": 5531885.0,
+   "oi_change_pct": 4.712161370159396
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789653540000,
+  "price": 0.0011295,
+  "ordinal": 5,
+  "metrics": {
+   "move_pct": 10.324282086344994,
+   "window_min": 20.0,
+   "low": 0.0010238,
+   "volume": 4344620493.0,
+   "cvd_change": 176069773.0,
+   "oi_change_pct": 2.087922010446719
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789654800000,
+  "price": 0.0012457,
+  "ordinal": 6,
+  "metrics": {
+   "move_pct": 10.97550111358574,
+   "window_min": 20.0,
+   "low": 0.0011225,
+   "volume": 10972206090.0,
+   "cvd_change": 303645414.0,
+   "oi_change_pct": 5.1426975327939495
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BTWUSDT",
+  "side": "short",
+  "ts": 1789655040000,
+  "price": 0.7426,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.129022690197242,
+   "window_min": 20.0,
+   "low": 0.6743,
+   "volume": 4405767.0,
+   "cvd_change": 482401.0,
+   "oi_change_pct": -0.10112661235388565
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789657320000,
+  "price": 0.0013575,
+  "ordinal": 7,
+  "metrics": {
+   "move_pct": 10.707877997064097,
+   "window_min": 20.0,
+   "low": 0.0012262,
+   "volume": 8171353818.0,
+   "cvd_change": 171158930.0,
+   "oi_change_pct": -3.511734482489526
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789663920000,
+  "price": 0.0015496,
+  "ordinal": 8,
+  "metrics": {
+   "move_pct": 10.252579153326202,
+   "window_min": 20.0,
+   "low": 0.0014055,
+   "volume": 9990360959.0,
+   "cvd_change": 316639925.0,
+   "oi_change_pct": 1.1085316089443076
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789683120000,
+  "price": 0.0017733,
+  "ordinal": 9,
+  "metrics": {
+   "move_pct": 11.276355421686745,
+   "window_min": 20.0,
+   "low": 0.0015936,
+   "volume": 6515735392.0,
+   "cvd_change": 632382420.0,
+   "oi_change_pct": 0.9571627983774311
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789684320000,
+  "price": 0.002087,
+  "ordinal": 10,
+  "metrics": {
+   "move_pct": 20.329797047970466,
+   "window_min": 20.0,
+   "low": 0.0017344,
+   "volume": 19803995756.0,
+   "cvd_change": 931196018.0,
+   "oi_change_pct": -9.282066728693493
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789685880000,
+  "price": 0.0022705,
+  "ordinal": 11,
+  "metrics": {
+   "move_pct": 12.960199004975115,
+   "window_min": 20.0,
+   "low": 0.00201,
+   "volume": 9295039708.0,
+   "cvd_change": 333236242.0,
+   "oi_change_pct": 1.5745328799650071
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789694040000,
+  "price": 0.41563,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.135672266680796,
+   "window_min": 20.0,
+   "low": 0.37738,
+   "volume": 37489673.0,
+   "cvd_change": -6530541.0,
+   "oi_change_pct": -3.2670519246632113
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789695240000,
+  "price": 0.42096,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 13.656244937631623,
+   "window_min": 20.0,
+   "low": 0.37038,
+   "volume": 34995542.0,
+   "cvd_change": -1509220.0,
+   "oi_change_pct": 1.286373454386469
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789695840000,
+  "price": 0.0017146,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 11.802295252999473,
+   "window_min": 20.0,
+   "low": 0.0015336,
+   "volume": 6890229299.0,
+   "cvd_change": 450695939.0,
+   "oi_change_pct": -3.6616996479704844
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789706520000,
+  "price": 0.001674,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 11.451398135818902,
+   "window_min": 20.0,
+   "low": 0.001502,
+   "volume": 8321524525.0,
+   "cvd_change": 38743851.0,
+   "oi_change_pct": 2.0807077809479546
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789712340000,
+  "price": 0.0019153,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 10.06838687431757,
+   "window_min": 20.0,
+   "low": 0.0017401,
+   "volume": 6672098375.0,
+   "cvd_change": 327181037.0,
+   "oi_change_pct": 0.4480626379010033
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789734420000,
+  "price": 0.73914,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 11.252596405671467,
+   "window_min": 20.0,
+   "low": 0.66438,
+   "volume": 20102025.0,
+   "cvd_change": 4474861.0,
+   "oi_change_pct": 0.24799918739477622
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789737300000,
+  "price": 0.82792,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 11.967326183682015,
+   "window_min": 20.0,
+   "low": 0.73943,
+   "volume": 18069208.0,
+   "cvd_change": 2584658.0,
+   "oi_change_pct": 0.0746016032556085
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1789740000000,
+  "price": 0.24984,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.061674008810574,
+   "window_min": 20.0,
+   "low": 0.227,
+   "volume": 25623740.0,
+   "cvd_change": -1939064.0,
+   "oi_change_pct": -0.8243650229475263
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1789740480000,
+  "price": 0.51769,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 10.461741987794992,
+   "window_min": 20.0,
+   "low": 0.46866,
+   "volume": 21911461.0,
+   "cvd_change": 507665.0,
+   "oi_change_pct": -1.1430848648470548
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789747800000,
+  "price": 0.0017678,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 11.758755847768354,
+   "window_min": 20.0,
+   "low": 0.0015818,
+   "volume": 4162792485.0,
+   "cvd_change": 210034429.0,
+   "oi_change_pct": 4.1260302697593065
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "SAGAUSDT",
+  "side": "short",
+  "ts": 1789750920000,
+  "price": 0.02329,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 13.333333333333353,
+   "window_min": 20.0,
+   "low": 0.02055,
+   "volume": 101114114.8,
+   "cvd_change": 8558573.99999997,
+   "oi_change_pct": 3.2493254597208754
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789752000000,
+  "price": 0.030932,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 11.226177633944623,
+   "window_min": 20.0,
+   "low": 0.02781,
+   "volume": 361392647.0,
+   "cvd_change": 15090525.0,
+   "oi_change_pct": 1.3266121761239535
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "SAGAUSDT",
+  "side": "short",
+  "ts": 1789752120000,
+  "price": 0.02748,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 20.473476545374837,
+   "window_min": 20.0,
+   "low": 0.02281,
+   "volume": 660790409.7,
+   "cvd_change": -12415253.300000012,
+   "oi_change_pct": 13.138422364868108
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789754820000,
+  "price": 0.036074,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.426105056936441,
+   "window_min": 20.0,
+   "low": 0.032668,
+   "volume": 527934816.0,
+   "cvd_change": 28685596.0,
+   "oi_change_pct": 0.7902236568489096
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "USELESSUSDT",
+  "side": "short",
+  "ts": 1789755000000,
+  "price": 0.29666,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.496126340881995,
+   "window_min": 20.0,
+   "low": 0.26848,
+   "volume": 17786133.0,
+   "cvd_change": 1183925.0,
+   "oi_change_pct": 0.08800207752626132
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789756020000,
+  "price": 0.035269,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 16.20374946459755,
+   "window_min": 20.0,
+   "low": 0.030351,
+   "volume": 1343830944.0,
+   "cvd_change": 32498826.0,
+   "oi_change_pct": -1.7888423288762723
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789757220000,
+  "price": 0.038224,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 10.117538603364839,
+   "window_min": 20.0,
+   "low": 0.034712,
+   "volume": 686566185.0,
+   "cvd_change": 2324573.0,
+   "oi_change_pct": 1.5563803811761368
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789768500000,
+  "price": 0.04503,
+  "ordinal": 5,
+  "metrics": {
+   "move_pct": 10.456987269114727,
+   "window_min": 20.0,
+   "low": 0.040767,
+   "volume": 314535950.0,
+   "cvd_change": 30060658.0,
+   "oi_change_pct": -0.4182831922785013
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789770960000,
+  "price": 0.001847,
+  "ordinal": 5,
+  "metrics": {
+   "move_pct": 10.255491881566382,
+   "window_min": 20.0,
+   "low": 0.0016752,
+   "volume": 1896316158.0,
+   "cvd_change": 194869202.0,
+   "oi_change_pct": -1.4641334788333515
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789772820000,
+  "price": 0.0016949,
+  "ordinal": 6,
+  "metrics": {
+   "move_pct": 12.37154412252206,
+   "window_min": 20.0,
+   "low": 0.0015083,
+   "volume": 6715743902.0,
+   "cvd_change": -444218346.0,
+   "oi_change_pct": -3.526129993102445
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789774020000,
+  "price": 0.0018016,
+  "ordinal": 7,
+  "metrics": {
+   "move_pct": 14.897959183673471,
+   "window_min": 20.0,
+   "low": 0.001568,
+   "volume": 3894531644.0,
+   "cvd_change": 52539628.0,
+   "oi_change_pct": -0.35210214829282105
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789775220000,
+  "price": 0.0019939,
+  "ordinal": 8,
+  "metrics": {
+   "move_pct": 13.129078014184392,
+   "window_min": 20.0,
+   "low": 0.0017625,
+   "volume": 3212500035.0,
+   "cvd_change": 45663575.0,
+   "oi_change_pct": 3.6488442468433524
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789776960000,
+  "price": 0.0020789,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.815565031982931,
+   "window_min": 20.0,
+   "low": 0.001876,
+   "volume": 2763081310.0,
+   "cvd_change": 48345670.0,
+   "oi_change_pct": 0.46262078684760066
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789780800000,
+  "price": 0.0021561,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 12.713680798787186,
+   "window_min": 20.0,
+   "low": 0.0019129,
+   "volume": 2029982176.0,
+   "cvd_change": 116091666.0,
+   "oi_change_pct": -0.19427474921408505
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789781040000,
+  "price": 0.86003,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.257429296684695,
+   "window_min": 20.0,
+   "low": 0.78002,
+   "volume": 9116413.0,
+   "cvd_change": 773893.0,
+   "oi_change_pct": -1.0946929750768164
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789783260000,
+  "price": 0.0024986,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 13.048592887521515,
+   "window_min": 20.0,
+   "low": 0.0022102,
+   "volume": 4148501573.0,
+   "cvd_change": 277541373.0,
+   "oi_change_pct": 1.8669111281834239
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789784460000,
+  "price": 0.0027928,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 14.061670410455363,
+   "window_min": 20.0,
+   "low": 0.0024485,
+   "volume": 7170794414.0,
+   "cvd_change": 107460636.0,
+   "oi_change_pct": 4.974042349209817
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789790700000,
+  "price": 0.0024487,
+  "ordinal": 5,
+  "metrics": {
+   "move_pct": 12.017383348581866,
+   "window_min": 20.0,
+   "low": 0.002186,
+   "volume": 3752625779.0,
+   "cvd_change": 55550275.0,
+   "oi_change_pct": -1.6056102064177513
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789791600000,
+  "price": 0.044022,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.621937429325289,
+   "window_min": 20.0,
+   "low": 0.039795,
+   "volume": 299205763.0,
+   "cvd_change": 25716971.0,
+   "oi_change_pct": -1.063200180709789
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789793580000,
+  "price": 0.047564,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.616525965720136,
+   "window_min": 20.0,
+   "low": 0.042999,
+   "volume": 374797839.0,
+   "cvd_change": 44302827.0,
+   "oi_change_pct": -0.03422831549630967
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789794780000,
+  "price": 0.049584,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 12.18099547511311,
+   "window_min": 20.0,
+   "low": 0.0442,
+   "volume": 581312572.0,
+   "cvd_change": 51431110.0,
+   "oi_change_pct": 2.34881659487316
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1789795560000,
+  "price": 0.2132,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.466321243523314,
+   "window_min": 20.0,
+   "low": 0.193,
+   "volume": 48261995.0,
+   "cvd_change": -10506153.0,
+   "oi_change_pct": 0.2759919956298207
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789795980000,
+  "price": 0.052472,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 16.345898004434577,
+   "window_min": 20.0,
+   "low": 0.0451,
+   "volume": 793557902.0,
+   "cvd_change": 76503660.0,
+   "oi_change_pct": -2.8201138955620486
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789799280000,
+  "price": 0.061881,
+  "ordinal": 5,
+  "metrics": {
+   "move_pct": 12.09919930437302,
+   "window_min": 20.0,
+   "low": 0.055202,
+   "volume": 507758950.0,
+   "cvd_change": 32956478.0,
+   "oi_change_pct": 0.07790746930409487
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789802460000,
+  "price": 0.062672,
+  "ordinal": 6,
+  "metrics": {
+   "move_pct": 10.816019803730882,
+   "window_min": 20.0,
+   "low": 0.056555,
+   "volume": 301561245.0,
+   "cvd_change": 13044717.0,
+   "oi_change_pct": -0.6007006901028733
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789810740000,
+  "price": 0.0024849,
+  "ordinal": 6,
+  "metrics": {
+   "move_pct": 10.053589618672198,
+   "window_min": 20.0,
+   "low": 0.0022579,
+   "volume": 1916533554.0,
+   "cvd_change": 116158974.0,
+   "oi_change_pct": 0.8548745591099083
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789819800000,
+  "price": 1.02803,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.284715070374183,
+   "window_min": 20.0,
+   "low": 0.93216,
+   "volume": 14590129.0,
+   "cvd_change": 2440297.0,
+   "oi_change_pct": -0.1257470853250453
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789832160000,
+  "price": 0.0028713,
+  "ordinal": 7,
+  "metrics": {
+   "move_pct": 10.430368062766803,
+   "window_min": 20.0,
+   "low": 0.0026001,
+   "volume": 3713631354.0,
+   "cvd_change": 278697934.0,
+   "oi_change_pct": 2.4189438454216505
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789833660000,
+  "price": 0.0032346,
+  "ordinal": 8,
+  "metrics": {
+   "move_pct": 12.036299400782791,
+   "window_min": 20.0,
+   "low": 0.0028871,
+   "volume": 7386815736.0,
+   "cvd_change": 375024996.0,
+   "oi_change_pct": 1.6718270780088362
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789836240000,
+  "price": 0.0034606,
+  "ordinal": 9,
+  "metrics": {
+   "move_pct": 11.405852622090574,
+   "window_min": 20.0,
+   "low": 0.0031063,
+   "volume": 5365909363.0,
+   "cvd_change": 226542267.0,
+   "oi_change_pct": -1.6873854947245137
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789837380000,
+  "price": 0.072123,
+  "ordinal": 7,
+  "metrics": {
+   "move_pct": 16.917664986139712,
+   "window_min": 20.0,
+   "low": 0.061687,
+   "volume": 423549906.0,
+   "cvd_change": 72907668.0,
+   "oi_change_pct": -0.030755978537755357
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789839000000,
+  "price": 0.060367,
+  "ordinal": 8,
+  "metrics": {
+   "move_pct": 11.140363797039532,
+   "window_min": 20.0,
+   "low": 0.054316,
+   "volume": 609736702.0,
+   "cvd_change": -16210476.0,
+   "oi_change_pct": -2.7677220038443195
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789841520000,
+  "price": 0.0035811,
+  "ordinal": 10,
+  "metrics": {
+   "move_pct": 11.128006206361519,
+   "window_min": 20.0,
+   "low": 0.0032225,
+   "volume": 3255332408.0,
+   "cvd_change": 174059582.0,
+   "oi_change_pct": 1.6223284017724549
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789842720000,
+  "price": 0.0041621,
+  "ordinal": 11,
+  "metrics": {
+   "move_pct": 19.907234018034625,
+   "window_min": 20.0,
+   "low": 0.0034711,
+   "volume": 8716092334.0,
+   "cvd_change": 626163406.0,
+   "oi_change_pct": -4.32265403813481
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789845300000,
+  "price": 0.070257,
+  "ordinal": 9,
+  "metrics": {
+   "move_pct": 10.815457413249208,
+   "window_min": 20.0,
+   "low": 0.0634,
+   "volume": 235199963.0,
+   "cvd_change": 20142495.0,
+   "oi_change_pct": 0.3005905407729603
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789846620000,
+  "price": 0.079809,
+  "ordinal": 10,
+  "metrics": {
+   "move_pct": 13.494027303754287,
+   "window_min": 20.0,
+   "low": 0.07032,
+   "volume": 401116784.0,
+   "cvd_change": 21499692.0,
+   "oi_change_pct": 0.5523226123828273
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789848120000,
+  "price": 0.064752,
+  "ordinal": 11,
+  "metrics": {
+   "move_pct": 11.244352053876682,
+   "window_min": 20.0,
+   "low": 0.058207,
+   "volume": 885131551.0,
+   "cvd_change": -26880785.0,
+   "oi_change_pct": -4.677078439445593
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789848240000,
+  "price": 0.0040535,
+  "ordinal": 12,
+  "metrics": {
+   "move_pct": 10.34135452961673,
+   "window_min": 20.0,
+   "low": 0.0036736,
+   "volume": 4820976099.0,
+   "cvd_change": -108851547.0,
+   "oi_change_pct": -3.499076875738494
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789849200000,
+  "price": 0.97502,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 10.884670935165076,
+   "window_min": 20.0,
+   "low": 0.87931,
+   "volume": 26120540.0,
+   "cvd_change": -1709408.0,
+   "oi_change_pct": -0.8843602490722358
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789850400000,
+  "price": 1.07038,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 10.315472693730744,
+   "window_min": 20.0,
+   "low": 0.97029,
+   "volume": 22832689.0,
+   "cvd_change": 510253.0,
+   "oi_change_pct": -0.4162690516320122
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789852620000,
+  "price": 0.0044005,
+  "ordinal": 13,
+  "metrics": {
+   "move_pct": 11.143383931503049,
+   "window_min": 20.0,
+   "low": 0.0039593,
+   "volume": 2980466227.0,
+   "cvd_change": -6749327.0,
+   "oi_change_pct": 0.06676312996769518
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789853820000,
+  "price": 0.00484,
+  "ordinal": 14,
+  "metrics": {
+   "move_pct": 15.207921734783735,
+   "window_min": 20.0,
+   "low": 0.0042011,
+   "volume": 4265765716.0,
+   "cvd_change": 301635640.0,
+   "oi_change_pct": -0.6481209378185859
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789863060000,
+  "price": 0.0040592,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 11.715976331360945,
+   "window_min": 20.0,
+   "low": 0.0036335,
+   "volume": 4851526105.0,
+   "cvd_change": 67267619.0,
+   "oi_change_pct": -0.31822448176255236
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789869900000,
+  "price": 0.067449,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.398389419929277,
+   "window_min": 20.0,
+   "low": 0.061096,
+   "volume": 233131194.0,
+   "cvd_change": 31163878.0,
+   "oi_change_pct": -1.781438150964687
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789870500000,
+  "price": 0.0037044,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.387984981226527,
+   "window_min": 20.0,
+   "low": 0.0033558,
+   "volume": 3258349942.0,
+   "cvd_change": -115736282.0,
+   "oi_change_pct": -2.602235732974867
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789873740000,
+  "price": 0.0039522,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 10.38123167155427,
+   "window_min": 20.0,
+   "low": 0.0035805,
+   "volume": 2998893583.0,
+   "cvd_change": -124830975.0,
+   "oi_change_pct": -2.179170270171249
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789874520000,
+  "price": 0.061634,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 12.04144700963461,
+   "window_min": 20.0,
+   "low": 0.05501,
+   "volume": 362783434.0,
+   "cvd_change": -21536132.0,
+   "oi_change_pct": 0.9274678789770618
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789875240000,
+  "price": 0.0043809,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 15.286842105263165,
+   "window_min": 20.0,
+   "low": 0.0038,
+   "volume": 2352600231.0,
+   "cvd_change": 117853441.0,
+   "oi_change_pct": -0.6394050951656682
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789881060000,
+  "price": 0.004071,
+  "ordinal": 5,
+  "metrics": {
+   "move_pct": 10.537891335632255,
+   "window_min": 20.0,
+   "low": 0.0036829,
+   "volume": 2484306959.0,
+   "cvd_change": 173717785.0,
+   "oi_change_pct": 0.060508625578514774
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789882260000,
+  "price": 0.0044788,
+  "ordinal": 6,
+  "metrics": {
+   "move_pct": 10.735301389507,
+   "window_min": 20.0,
+   "low": 0.0040446,
+   "volume": 3449717246.0,
+   "cvd_change": 144743220.0,
+   "oi_change_pct": 0.6605068023240568
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789883820000,
+  "price": 0.062738,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 11.13512364486644,
+   "window_min": 20.0,
+   "low": 0.056452,
+   "volume": 420304065.0,
+   "cvd_change": 2925417.0,
+   "oi_change_pct": -0.1340232636571681
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789890180000,
+  "price": 0.0038912,
+  "ordinal": 7,
+  "metrics": {
+   "move_pct": 11.177142857142863,
+   "window_min": 20.0,
+   "low": 0.0035,
+   "volume": 3174653103.0,
+   "cvd_change": -101542483.0,
+   "oi_change_pct": -1.313343790973065
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789891680000,
+  "price": 0.0039677,
+  "ordinal": 8,
+  "metrics": {
+   "move_pct": 10.668860872475738,
+   "window_min": 20.0,
+   "low": 0.0035852,
+   "volume": 3128280459.0,
+   "cvd_change": -28195163.0,
+   "oi_change_pct": -1.2833647082021615
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789891860000,
+  "price": 0.068798,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 10.501124317378729,
+   "window_min": 20.0,
+   "low": 0.06226,
+   "volume": 433810030.0,
+   "cvd_change": 26938626.0,
+   "oi_change_pct": -1.606443815247427
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789893060000,
+  "price": 0.00435,
+  "ordinal": 9,
+  "metrics": {
+   "move_pct": 10.087563901402042,
+   "window_min": 20.0,
+   "low": 0.0039514,
+   "volume": 3288849395.0,
+   "cvd_change": 189338327.0,
+   "oi_change_pct": 0.7483990707930266
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789895520000,
+  "price": 0.078441,
+  "ordinal": 5,
+  "metrics": {
+   "move_pct": 11.263829787234059,
+   "window_min": 20.0,
+   "low": 0.0705,
+   "volume": 289539369.0,
+   "cvd_change": 25196613.0,
+   "oi_change_pct": -0.8009926657630451
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789896720000,
+  "price": 0.086678,
+  "ordinal": 6,
+  "metrics": {
+   "move_pct": 14.651922593616495,
+   "window_min": 20.0,
+   "low": 0.075601,
+   "volume": 422778106.0,
+   "cvd_change": 28378238.0,
+   "oi_change_pct": -0.34887782290824454
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789899300000,
+  "price": 0.095956,
+  "ordinal": 7,
+  "metrics": {
+   "move_pct": 14.694843537089719,
+   "window_min": 20.0,
+   "low": 0.083662,
+   "volume": 399465195.0,
+   "cvd_change": 16168433.0,
+   "oi_change_pct": 0.6272249323789891
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789899660000,
+  "price": 1.15137,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 12.350702576112415,
+   "window_min": 20.0,
+   "low": 1.0248,
+   "volume": 9136364.0,
+   "cvd_change": 1378142.0,
+   "oi_change_pct": -0.23655484637443713
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BTWUSDT",
+  "side": "short",
+  "ts": 1789900020000,
+  "price": 0.6848,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.025706940874034,
+   "window_min": 20.0,
+   "low": 0.6224,
+   "volume": 5730352.0,
+   "cvd_change": 1917324.0,
+   "oi_change_pct": -2.6499284934155987
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789900500000,
+  "price": 0.114,
+  "ordinal": 8,
+  "metrics": {
+   "move_pct": 20.608118830736032,
+   "window_min": 20.0,
+   "low": 0.094521,
+   "volume": 1607997478.0,
+   "cvd_change": 241339160.0,
+   "oi_change_pct": -42.678221841544186
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BTWUSDT",
+  "side": "short",
+  "ts": 1789901220000,
+  "price": 0.756,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.574813514699443,
+   "window_min": 20.0,
+   "low": 0.6837,
+   "volume": 17819841.0,
+   "cvd_change": 1942121.0,
+   "oi_change_pct": -1.5222155194127285
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789901580000,
+  "price": 0.0039072,
+  "ordinal": 10,
+  "metrics": {
+   "move_pct": 10.338595351726877,
+   "window_min": 20.0,
+   "low": 0.0035411,
+   "volume": 3069225423.0,
+   "cvd_change": -155828239.0,
+   "oi_change_pct": -5.79427159873398
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789901820000,
+  "price": 0.074574,
+  "ordinal": 9,
+  "metrics": {
+   "move_pct": 10.313304340108287,
+   "window_min": 20.0,
+   "low": 0.067602,
+   "volume": 1265954007.0,
+   "cvd_change": -69234837.0,
+   "oi_change_pct": 0.4370396690161815
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789903020000,
+  "price": 0.0042903,
+  "ordinal": 11,
+  "metrics": {
+   "move_pct": 12.517702596380808,
+   "window_min": 20.0,
+   "low": 0.003813,
+   "volume": 3069457938.0,
+   "cvd_change": 226618158.0,
+   "oi_change_pct": -1.3001226418969503
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789903440000,
+  "price": 0.05756,
+  "ordinal": 10,
+  "metrics": {
+   "move_pct": 10.690179035018566,
+   "window_min": 20.0,
+   "low": 0.052001,
+   "volume": 1227734342.0,
+   "cvd_change": -9341258.0,
+   "oi_change_pct": 4.015787811576965
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789905180000,
+  "price": 0.051964,
+  "ordinal": 11,
+  "metrics": {
+   "move_pct": 14.645016105546492,
+   "window_min": 20.0,
+   "low": 0.045326,
+   "volume": 792733275.0,
+   "cvd_change": -14706223.0,
+   "oi_change_pct": 2.706328000218372
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789907040000,
+  "price": 0.050876,
+  "ordinal": 12,
+  "metrics": {
+   "move_pct": 10.121212121212132,
+   "window_min": 20.0,
+   "low": 0.0462,
+   "volume": 388101080.0,
+   "cvd_change": 18290010.0,
+   "oi_change_pct": 0.7692503763437664
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BTWUSDT",
+  "side": "short",
+  "ts": 1789911240000,
+  "price": 0.7185,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 10.08120116439406,
+   "window_min": 20.0,
+   "low": 0.6527,
+   "volume": 6475205.0,
+   "cvd_change": -83241.0,
+   "oi_change_pct": -0.13816576103934386
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789913880000,
+  "price": 0.0037268,
+  "ordinal": 12,
+  "metrics": {
+   "move_pct": 10.2603550295858,
+   "window_min": 20.0,
+   "low": 0.00338,
+   "volume": 5002091983.0,
+   "cvd_change": -262439411.0,
+   "oi_change_pct": 0.888265518389475
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789914300000,
+  "price": 0.057187,
+  "ordinal": 13,
+  "metrics": {
+   "move_pct": 12.484264358772613,
+   "window_min": 20.0,
+   "low": 0.05084,
+   "volume": 228828543.0,
+   "cvd_change": 24630505.0,
+   "oi_change_pct": -1.5168530365907484
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "SAGAUSDT",
+  "side": "short",
+  "ts": 1789916760000,
+  "price": 0.03091,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 12.399999999999988,
+   "window_min": 20.0,
+   "low": 0.0275,
+   "volume": 117108783.4,
+   "cvd_change": 13332001.00000006,
+   "oi_change_pct": 0.06109289289955022
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789922340000,
+  "price": 0.0035632,
+  "ordinal": 13,
+  "metrics": {
+   "move_pct": 10.244113734104765,
+   "window_min": 20.0,
+   "low": 0.0032321,
+   "volume": 3917015810.0,
+   "cvd_change": 205737060.0,
+   "oi_change_pct": -2.6509097626574496
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "SAGAUSDT",
+  "side": "short",
+  "ts": 1789923120000,
+  "price": 0.0335,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 11.555111555111552,
+   "window_min": 20.0,
+   "low": 0.03003,
+   "volume": 81930117.0,
+   "cvd_change": 5615429.600000024,
+   "oi_change_pct": -1.1196288337049887
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "SAGAUSDT",
+  "side": "short",
+  "ts": 1789925400000,
+  "price": 0.03736,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 10.59798697454115,
+   "window_min": 20.0,
+   "low": 0.03378,
+   "volume": 187250690.0,
+   "cvd_change": 6892465.200000107,
+   "oi_change_pct": 2.1441034917162094
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789930020000,
+  "price": 0.059066,
+  "ordinal": 14,
+  "metrics": {
+   "move_pct": 16.92070153212717,
+   "window_min": 20.0,
+   "low": 0.050518,
+   "volume": 391914072.0,
+   "cvd_change": -9729608.0,
+   "oi_change_pct": -0.4439518153424804
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789931940000,
+  "price": 0.065609,
+  "ordinal": 15,
+  "metrics": {
+   "move_pct": 10.676450742240217,
+   "window_min": 20.0,
+   "low": 0.05928,
+   "volume": 158347793.0,
+   "cvd_change": 1257243.0,
+   "oi_change_pct": -1.2455769750852386
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "NILUSDT",
+  "side": "short",
+  "ts": 1789935840000,
+  "price": 0.06508,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 11.362080766598215,
+   "window_min": 20.0,
+   "low": 0.05844,
+   "volume": 37885009.3,
+   "cvd_change": 8729205.100000003,
+   "oi_change_pct": 10.645476600033454
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "SAGAUSDT",
+  "side": "short",
+  "ts": 1789948980000,
+  "price": 0.04085,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 12.009871126953641,
+   "window_min": 20.0,
+   "low": 0.03647,
+   "volume": 123644229.0,
+   "cvd_change": 13518377.00000006,
+   "oi_change_pct": 0.9071896153759029
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789950600000,
+  "price": 0.0042272,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 11.315339038841344,
+   "window_min": 20.0,
+   "low": 0.0037975,
+   "volume": 1674586899.0,
+   "cvd_change": 70300561.0,
+   "oi_change_pct": 0.25218073942392394
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "SAGAUSDT",
+  "side": "short",
+  "ts": 1789953360000,
+  "price": 0.03877,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.048254328697137,
+   "window_min": 20.0,
+   "low": 0.03523,
+   "volume": 130158594.5,
+   "cvd_change": 600238.5,
+   "oi_change_pct": 0.17524490932379067
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789957260000,
+  "price": 0.055322,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 11.233537750075406,
+   "window_min": 20.0,
+   "low": 0.049735,
+   "volume": 124712186.0,
+   "cvd_change": 15644586.0,
+   "oi_change_pct": 0.16561364234712883
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789958220000,
+  "price": 0.0030592,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 11.06189871119987,
+   "window_min": 20.0,
+   "low": 0.0027545,
+   "volume": 5002173056.0,
+   "cvd_change": -490060934.0,
+   "oi_change_pct": -3.5735417689486404
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789960860000,
+  "price": 0.0034293,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 11.311996883926255,
+   "window_min": 20.0,
+   "low": 0.0030808,
+   "volume": 1961482837.0,
+   "cvd_change": 17626483.0,
+   "oi_change_pct": -0.12401132595621922
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789968540000,
+  "price": 0.034619,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 11.040189883568008,
+   "window_min": 20.0,
+   "low": 0.031177,
+   "volume": 692069823.0,
+   "cvd_change": 22622111.0,
+   "oi_change_pct": 5.961595254613861
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1789968780000,
+  "price": 0.27883,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.537165510406354,
+   "window_min": 20.0,
+   "low": 0.25225,
+   "volume": 23039402.0,
+   "cvd_change": 4030030.0,
+   "oi_change_pct": 0.46299775248048736
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789969740000,
+  "price": 0.03871,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 16.59638554216867,
+   "window_min": 20.0,
+   "low": 0.0332,
+   "volume": 476022484.0,
+   "cvd_change": 20973422.0,
+   "oi_change_pct": -2.7669672901376563
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "NILUSDT",
+  "side": "short",
+  "ts": 1789971780000,
+  "price": 0.07468,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 11.9304556354916,
+   "window_min": 20.0,
+   "low": 0.06672,
+   "volume": 81435152.0,
+   "cvd_change": 1439843.599999994,
+   "oi_change_pct": 1.163952614405761
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789972740000,
+  "price": 0.041177,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 10.246318607764394,
+   "window_min": 20.0,
+   "low": 0.03735,
+   "volume": 208508447.0,
+   "cvd_change": 1349309.0,
+   "oi_change_pct": -0.34285383485389564
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789976640000,
+  "price": 0.0043737,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 11.928037670181201,
+   "window_min": 20.0,
+   "low": 0.0039076,
+   "volume": 1809890259.0,
+   "cvd_change": 181543223.0,
+   "oi_change_pct": 0.46322311555877516
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789979280000,
+  "price": 0.0043703,
+  "ordinal": 5,
+  "metrics": {
+   "move_pct": 10.297049693359895,
+   "window_min": 20.0,
+   "low": 0.0039623,
+   "volume": 2143165513.0,
+   "cvd_change": 287963049.0,
+   "oi_change_pct": -0.5061125648672227
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789980180000,
+  "price": 1.1816,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.094478504742543,
+   "window_min": 20.0,
+   "low": 1.07326,
+   "volume": 6077383.0,
+   "cvd_change": 403823.0,
+   "oi_change_pct": -0.03776548088432197
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1789982340000,
+  "price": 1.13362,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 12.730708035003978,
+   "window_min": 20.0,
+   "low": 1.0056,
+   "volume": 9788051.0,
+   "cvd_change": -21983.0,
+   "oi_change_pct": 0.024760638055965067
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "PHAUSDT",
+  "side": "short",
+  "ts": 1789982640000,
+  "price": 0.04857,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.3362108132667,
+   "window_min": 20.0,
+   "low": 0.04402,
+   "volume": 35714932.0,
+   "cvd_change": 2818078.0,
+   "oi_change_pct": 11.12235386260032
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1789983000000,
+  "price": 0.30681,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 11.304190096136413,
+   "window_min": 20.0,
+   "low": 0.27565,
+   "volume": 33188838.0,
+   "cvd_change": 11222594.0,
+   "oi_change_pct": -0.28710848542440326
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "PHAUSDT",
+  "side": "short",
+  "ts": 1789983840000,
+  "price": 0.05434,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 12.505175983436857,
+   "window_min": 20.0,
+   "low": 0.0483,
+   "volume": 190623149.0,
+   "cvd_change": 3947339.0,
+   "oi_change_pct": 20.82132742762579
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "PHAUSDT",
+  "side": "short",
+  "ts": 1789985400000,
+  "price": 0.05845,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 12.317448116833196,
+   "window_min": 20.0,
+   "low": 0.05204,
+   "volume": 141572090.0,
+   "cvd_change": 3316322.0,
+   "oi_change_pct": 20.02859968314643
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "PHAUSDT",
+  "side": "short",
+  "ts": 1789988220000,
+  "price": 0.06549,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 10.79343596684148,
+   "window_min": 20.0,
+   "low": 0.05911,
+   "volume": 213712162.0,
+   "cvd_change": 8645884.0,
+   "oi_change_pct": 6.544139742034072
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1789990200000,
+  "price": 0.0049327,
+  "ordinal": 6,
+  "metrics": {
+   "move_pct": 13.635735348322896,
+   "window_min": 20.0,
+   "low": 0.0043408,
+   "volume": 2130031583.0,
+   "cvd_change": 282827567.0,
+   "oi_change_pct": -1.0106605774095723
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789991160000,
+  "price": 0.048675,
+  "ordinal": 5,
+  "metrics": {
+   "move_pct": 12.314827633947111,
+   "window_min": 20.0,
+   "low": 0.043338,
+   "volume": 294195340.0,
+   "cvd_change": -4266870.0,
+   "oi_change_pct": -0.9585927313148335
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789993500000,
+  "price": 0.047423,
+  "ordinal": 6,
+  "metrics": {
+   "move_pct": 11.444551500481758,
+   "window_min": 20.0,
+   "low": 0.042553,
+   "volume": 391062704.0,
+   "cvd_change": 1824014.0,
+   "oi_change_pct": 0.6255040464938633
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789994940000,
+  "price": 0.052159,
+  "ordinal": 7,
+  "metrics": {
+   "move_pct": 10.095829111786546,
+   "window_min": 20.0,
+   "low": 0.047376,
+   "volume": 210443608.0,
+   "cvd_change": 5237696.0,
+   "oi_change_pct": -0.7994462184025886
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BTWUSDT",
+  "side": "short",
+  "ts": 1789997100000,
+  "price": 0.8911,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.434998141033592,
+   "window_min": 20.0,
+   "low": 0.8069,
+   "volume": 6058510.0,
+   "cvd_change": 407698.0,
+   "oi_change_pct": 0.1684150642621951
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1789997280000,
+  "price": 0.23671,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 16.60591133004925,
+   "window_min": 20.0,
+   "low": 0.203,
+   "volume": 125829819.0,
+   "cvd_change": -17295867.0,
+   "oi_change_pct": 3.046926344642076
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1789998480000,
+  "price": 0.26073,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 10.198647506339809,
+   "window_min": 20.0,
+   "low": 0.2366,
+   "volume": 36162144.0,
+   "cvd_change": 1621310.0,
+   "oi_change_pct": -2.0180569037225538
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1789999920000,
+  "price": 0.054528,
+  "ordinal": 8,
+  "metrics": {
+   "move_pct": 10.255580718214174,
+   "window_min": 20.0,
+   "low": 0.049456,
+   "volume": 161978769.0,
+   "cvd_change": -210281.0,
+   "oi_change_pct": -1.2414252216467192
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "1000PEPEUSDT",
+  "side": "short",
+  "ts": 1790002800000,
+  "price": 0.0048453,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.142983792139294,
+   "window_min": 20.0,
+   "low": 0.0043991,
+   "volume": 18844192246.0,
+   "cvd_change": 2571838822.0,
+   "oi_change_pct": 10.064012142168544
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1790003040000,
+  "price": 0.26082,
+  "ordinal": 5,
+  "metrics": {
+   "move_pct": 10.488858764720831,
+   "window_min": 20.0,
+   "low": 0.23606,
+   "volume": 61744895.0,
+   "cvd_change": 6765833.0,
+   "oi_change_pct": -0.573083386198947
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "SAGAUSDT",
+  "side": "short",
+  "ts": 1790006220000,
+  "price": 0.03687,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 13.726095003084527,
+   "window_min": 20.0,
+   "low": 0.03242,
+   "volume": 77951206.89999999,
+   "cvd_change": 5145288.499999881,
+   "oi_change_pct": 0.009923599610695
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1790013720000,
+  "price": 0.053842,
+  "ordinal": 9,
+  "metrics": {
+   "move_pct": 10.551711393548647,
+   "window_min": 20.0,
+   "low": 0.048703,
+   "volume": 213359872.0,
+   "cvd_change": -14953886.0,
+   "oi_change_pct": 0.05140860843484418
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BTWUSDT",
+  "side": "short",
+  "ts": 1790023680000,
+  "price": 0.7914,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 18.066537371326262,
+   "window_min": 20.0,
+   "low": 0.6703,
+   "volume": 30758150.0,
+   "cvd_change": -1172608.0,
+   "oi_change_pct": -1.2148170628509702
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BTWUSDT",
+  "side": "short",
+  "ts": 1790024880000,
+  "price": 0.8663,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 15.630005339028298,
+   "window_min": 20.0,
+   "low": 0.7492,
+   "volume": 16526534.0,
+   "cvd_change": 730900.0,
+   "oi_change_pct": -0.33626429319942863
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1790034600000,
+  "price": 0.004326,
+  "ordinal": 7,
+  "metrics": {
+   "move_pct": 10.076335877862586,
+   "window_min": 20.0,
+   "low": 0.00393,
+   "volume": 1465208776.0,
+   "cvd_change": 381748.0,
+   "oi_change_pct": 1.550521044304909
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BTWUSDT",
+  "side": "short",
+  "ts": 1790044620000,
+  "price": 0.8095,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 12.665274878218513,
+   "window_min": 20.0,
+   "low": 0.7185,
+   "volume": 2735039.0,
+   "cvd_change": 281739.0,
+   "oi_change_pct": 0.04014296498413561
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1790044800000,
+  "price": 0.054962,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.279098697806921,
+   "window_min": 20.0,
+   "low": 0.049839,
+   "volume": 258553941.0,
+   "cvd_change": -2712525.0,
+   "oi_change_pct": 1.127081563571064
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "PHAUSDT",
+  "side": "short",
+  "ts": 1790045460000,
+  "price": 0.05467,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.13295729250605,
+   "window_min": 20.0,
+   "low": 0.04964,
+   "volume": 72657617.0,
+   "cvd_change": 3477333.0,
+   "oi_change_pct": 1.2033434806309584
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1790046600000,
+  "price": 0.059099,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.255214357673225,
+   "window_min": 20.0,
+   "low": 0.053602,
+   "volume": 98540057.0,
+   "cvd_change": 5918833.0,
+   "oi_change_pct": -0.11459580065527053
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1790048700000,
+  "price": 0.06283,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 10.344221988057601,
+   "window_min": 20.0,
+   "low": 0.05694,
+   "volume": 124357131.0,
+   "cvd_change": 11235659.0,
+   "oi_change_pct": -0.4177444660403262
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1790051280000,
+  "price": 0.055894,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 10.453719073591007,
+   "window_min": 20.0,
+   "low": 0.050604,
+   "volume": 153527350.0,
+   "cvd_change": 10888136.0,
+   "oi_change_pct": 0.05205432324477677
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "MUBARAKUSDT",
+  "side": "short",
+  "ts": 1790052000000,
+  "price": 0.05331,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 12.137147665124125,
+   "window_min": 20.0,
+   "low": 0.04754,
+   "volume": 206637148.0,
+   "cvd_change": 9048480.0,
+   "oi_change_pct": 4.183514842320024
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1790054460000,
+  "price": 0.22131,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 12.101104244757366,
+   "window_min": 20.0,
+   "low": 0.19742,
+   "volume": 24446705.0,
+   "cvd_change": 2848807.0,
+   "oi_change_pct": -0.2929072988274939
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "MUBARAKUSDT",
+  "side": "short",
+  "ts": 1790056320000,
+  "price": 0.05817,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 12.776269872043432,
+   "window_min": 20.0,
+   "low": 0.05158,
+   "volume": 170486248.0,
+   "cvd_change": 14238342.0,
+   "oi_change_pct": 0.7471797338679753
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BROCCOLI714USDT",
+  "side": "short",
+  "ts": 1790070420000,
+  "price": 0.02428,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.867579908675795,
+   "window_min": 20.0,
+   "low": 0.0219,
+   "volume": 75314805.0,
+   "cvd_change": 10065489.0,
+   "oi_change_pct": 5.454201314138962
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1790071500000,
+  "price": 0.19224,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.033770247839268,
+   "window_min": 20.0,
+   "low": 0.17471,
+   "volume": 21931929.0,
+   "cvd_change": 1266493.0,
+   "oi_change_pct": -0.8398943408056914
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BCHUSDT",
+  "side": "short",
+  "ts": 1790080800000,
+  "price": 302.86,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 12.46193835870777,
+   "window_min": 20.0,
+   "low": 269.3,
+   "volume": 304123.762,
+   "cvd_change": 52619.41199999997,
+   "oi_change_pct": 15.960877401721962
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "PYTHUSDT",
+  "side": "short",
+  "ts": 1790085660000,
+  "price": 0.07054,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 12.486046882474898,
+   "window_min": 20.0,
+   "low": 0.06271,
+   "volume": 70026748.0,
+   "cvd_change": 17577300.0,
+   "oi_change_pct": -0.07835783789642559
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BROCCOLI714USDT",
+  "side": "short",
+  "ts": 1790088600000,
+  "price": 0.02646,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.80402010050252,
+   "window_min": 20.0,
+   "low": 0.02388,
+   "volume": 223235975.0,
+   "cvd_change": 3214029.0,
+   "oi_change_pct": 1.5733143036746
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1790088780000,
+  "price": 0.16527,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 13.136637458926614,
+   "window_min": 20.0,
+   "low": 0.14608,
+   "volume": 79638332.0,
+   "cvd_change": -15238988.0,
+   "oi_change_pct": 0.006282675524094117
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1790091480000,
+  "price": 0.14981,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 10.049217659590104,
+   "window_min": 20.0,
+   "low": 0.13613,
+   "volume": 53214529.0,
+   "cvd_change": -850243.0,
+   "oi_change_pct": 0.8813183100567112
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "MUBARAKUSDT",
+  "side": "short",
+  "ts": 1790093160000,
+  "price": 0.07455,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 10.493552690084496,
+   "window_min": 20.0,
+   "low": 0.06747,
+   "volume": 254010047.0,
+   "cvd_change": 17926699.0,
+   "oi_change_pct": 0.5178035505311263
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "SAGAUSDT",
+  "side": "short",
+  "ts": 1790094000000,
+  "price": 0.0404,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 11.294765840220379,
+   "window_min": 20.0,
+   "low": 0.0363,
+   "volume": 79184014.6,
+   "cvd_change": -21828317.400000036,
+   "oi_change_pct": 2.1414760059646376
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ZROUSDT",
+  "side": "short",
+  "ts": 1790094420000,
+  "price": 1.378,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.178300151914922,
+   "window_min": 20.0,
+   "low": 1.2507,
+   "volume": 5664140.1,
+   "cvd_change": 335711.8999999997,
+   "oi_change_pct": 3.5139311515215432
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "MOVRUSDT",
+  "side": "short",
+  "ts": 1790104320000,
+  "price": 1.001,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 11.993734616245222,
+   "window_min": 20.0,
+   "low": 0.8938,
+   "volume": 1427799.0699999998,
+   "cvd_change": 290098.8100000003,
+   "oi_change_pct": -0.054454774970613684
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1790116260000,
+  "price": 0.15053,
+  "ordinal": 5,
+  "metrics": {
+   "move_pct": 10.278388278388274,
+   "window_min": 20.0,
+   "low": 0.1365,
+   "volume": 20546003.0,
+   "cvd_change": 95221.0,
+   "oi_change_pct": -0.1327337031047482
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "NILUSDT",
+  "side": "short",
+  "ts": 1790132340000,
+  "price": 0.10152,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 11.181688752601016,
+   "window_min": 20.0,
+   "low": 0.09131,
+   "volume": 66142975.9,
+   "cvd_change": 5615445.099999987,
+   "oi_change_pct": 0.47308959521510374
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "MUBARAKUSDT",
+  "side": "short",
+  "ts": 1790140260000,
+  "price": 0.0693,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 11.057692307692314,
+   "window_min": 20.0,
+   "low": 0.0624,
+   "volume": 683461704.0,
+   "cvd_change": -47116452.0,
+   "oi_change_pct": -5.18134215935373
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1790140800000,
+  "price": 0.16871,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.462908400445237,
+   "window_min": 20.0,
+   "low": 0.15273,
+   "volume": 44864253.0,
+   "cvd_change": -3272123.0,
+   "oi_change_pct": -0.012117195220551213
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1790142240000,
+  "price": 0.18446,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.369173697122003,
+   "window_min": 20.0,
+   "low": 0.16713,
+   "volume": 37997030.0,
+   "cvd_change": -746008.0,
+   "oi_change_pct": -0.09303077573439289
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1790142840000,
+  "price": 0.048451,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.28133108754039,
+   "window_min": 20.0,
+   "low": 0.043934,
+   "volume": 92894330.0,
+   "cvd_change": -7042812.0,
+   "oi_change_pct": -1.8355217509038901
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1790143440000,
+  "price": 0.23554,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 30.935571738284516,
+   "window_min": 20.0,
+   "low": 0.17989,
+   "volume": 115870649.0,
+   "cvd_change": 1648719.0,
+   "oi_change_pct": -1.770298756263533
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "MUBARAKUSDT",
+  "side": "short",
+  "ts": 1790144520000,
+  "price": 0.07207,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.51985891734395,
+   "window_min": 20.0,
+   "low": 0.06521,
+   "volume": 176643221.0,
+   "cvd_change": 8765749.0,
+   "oi_change_pct": -1.8850296342774686
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1790149080000,
+  "price": 0.19812,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 10.042212841590747,
+   "window_min": 20.0,
+   "low": 0.18004,
+   "volume": 53947858.0,
+   "cvd_change": 2886838.0,
+   "oi_change_pct": 0.8877707164571591
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1790149140000,
+  "price": 1.16369,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.431118745077184,
+   "window_min": 20.0,
+   "low": 1.05377,
+   "volume": 3466357.0,
+   "cvd_change": 60041.0,
+   "oi_change_pct": 0.02896239965262115
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1790150880000,
+  "price": 0.18474,
+  "ordinal": 5,
+  "metrics": {
+   "move_pct": 10.10322549884377,
+   "window_min": 20.0,
+   "low": 0.167788,
+   "volume": 53201973.0,
+   "cvd_change": 1320395.0,
+   "oi_change_pct": -0.40754745533458925
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1790154000000,
+  "price": 0.0031191,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.044453852667235,
+   "window_min": 20.0,
+   "low": 0.0028344,
+   "volume": 1753214841.0,
+   "cvd_change": 126591763.0,
+   "oi_change_pct": 0.7382564489902599
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1790156160000,
+  "price": 0.043809,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.25847532277957,
+   "window_min": 20.0,
+   "low": 0.039733,
+   "volume": 135330013.0,
+   "cvd_change": -1198109.0,
+   "oi_change_pct": -0.7653872668016093
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1790172840000,
+  "price": 0.0029924,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 12.083302120008987,
+   "window_min": 20.0,
+   "low": 0.0026698,
+   "volume": 2300085087.0,
+   "cvd_change": -183561991.0,
+   "oi_change_pct": -2.4138522625178127
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ACEUSDT",
+  "side": "short",
+  "ts": 1790172840000,
+  "price": 0.19254,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 13.572818970093792,
+   "window_min": 20.0,
+   "low": 0.16953,
+   "volume": 34645152.88,
+   "cvd_change": -2475847.399999976,
+   "oi_change_pct": 0.25005127071551225
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "XPLUSDT",
+  "side": "short",
+  "ts": 1790173500000,
+  "price": 0.08876,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.439218613910683,
+   "window_min": 20.0,
+   "low": 0.08037,
+   "volume": 161659808.0,
+   "cvd_change": -18897556.0,
+   "oi_change_pct": -0.9538395114193521
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ACEUSDT",
+  "side": "short",
+  "ts": 1790174040000,
+  "price": 0.21072,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 12.660393498716838,
+   "window_min": 20.0,
+   "low": 0.18704,
+   "volume": 32170873.28,
+   "cvd_change": -308646.4799999893,
+   "oi_change_pct": -2.8208787740661156
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "MARSCOINUSDT",
+  "side": "short",
+  "ts": 1790179740000,
+  "price": 0.13543,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.763065347182454,
+   "window_min": 20.0,
+   "low": 0.12227,
+   "volume": 48942794.0,
+   "cvd_change": 1367896.0,
+   "oi_change_pct": -0.5183106322879549
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "NILUSDT",
+  "side": "short",
+  "ts": 1790180520000,
+  "price": 0.09935,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.376624819464485,
+   "window_min": 20.0,
+   "low": 0.09001,
+   "volume": 47720236.4,
+   "cvd_change": 951070.3999999911,
+   "oi_change_pct": -1.1907146025681326
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1790185980000,
+  "price": 1.01981,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.727353666083994,
+   "window_min": 20.0,
+   "low": 0.92101,
+   "volume": 9224871.0,
+   "cvd_change": -185891.0,
+   "oi_change_pct": -0.6978383986321002
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1790187180000,
+  "price": 1.13632,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 12.469069818081046,
+   "window_min": 20.0,
+   "low": 1.01034,
+   "volume": 7076189.0,
+   "cvd_change": 60239.0,
+   "oi_change_pct": -0.712767124702296
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "NILUSDT",
+  "side": "short",
+  "ts": 1790201820000,
+  "price": 0.1093,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 10.95320272053597,
+   "window_min": 20.0,
+   "low": 0.09851,
+   "volume": 67872985.9,
+   "cvd_change": 4746846.499999993,
+   "oi_change_pct": 3.0798723555442553
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "NILUSDT",
+  "side": "short",
+  "ts": 1790205300000,
+  "price": 0.12633,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 11.010544815465728,
+   "window_min": 20.0,
+   "low": 0.1138,
+   "volume": 117725203.4,
+   "cvd_change": 4013002.9999999925,
+   "oi_change_pct": 3.084248419711022
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "NILUSDT",
+  "side": "short",
+  "ts": 1790212320000,
+  "price": 0.13973,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 12.314122658950243,
+   "window_min": 20.0,
+   "low": 0.12441,
+   "volume": 121092863.3,
+   "cvd_change": 11342237.70000001,
+   "oi_change_pct": 1.510017288021781
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1790231220000,
+  "price": 0.0026672,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.530023621068342,
+   "window_min": 20.0,
+   "low": 0.0024131,
+   "volume": 1741297473.0,
+   "cvd_change": 185618991.0,
+   "oi_change_pct": 1.1843219784265502
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1790233440000,
+  "price": 0.13644,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 13.359920239282165,
+   "window_min": 20.0,
+   "low": 0.12036,
+   "volume": 58960179.0,
+   "cvd_change": 2240153.0,
+   "oi_change_pct": 1.5169487661296
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1790235780000,
+  "price": 0.042248,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.884228760399983,
+   "window_min": 20.0,
+   "low": 0.038101,
+   "volume": 104181651.0,
+   "cvd_change": -2343729.0,
+   "oi_change_pct": 0.29317886423751993
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1790236980000,
+  "price": 0.047545,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 17.270552253163295,
+   "window_min": 20.0,
+   "low": 0.040543,
+   "volume": 357399342.0,
+   "cvd_change": 7190338.0,
+   "oi_change_pct": -0.8130075584503293
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "NILUSDT",
+  "side": "short",
+  "ts": 1790237340000,
+  "price": 0.13948,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.698412698412696,
+   "window_min": 20.0,
+   "low": 0.126,
+   "volume": 82426945.0,
+   "cvd_change": 5717573.799999999,
+   "oi_change_pct": 0.3687609301700201
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BROCCOLI714USDT",
+  "side": "short",
+  "ts": 1790246280000,
+  "price": 0.02807,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.251374705420279,
+   "window_min": 20.0,
+   "low": 0.02546,
+   "volume": 149352206.0,
+   "cvd_change": 184808.0,
+   "oi_change_pct": 13.9049569884651
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1790247240000,
+  "price": 0.12618,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.898224644049904,
+   "window_min": 20.0,
+   "low": 0.11378,
+   "volume": 31746784.0,
+   "cvd_change": 1513404.0,
+   "oi_change_pct": -0.3801603256245123
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1790248980000,
+  "price": 0.13665,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 10.764367350247216,
+   "window_min": 20.0,
+   "low": 0.12337,
+   "volume": 30553610.0,
+   "cvd_change": 662596.0,
+   "oi_change_pct": 0.3606026694295217
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1790251680000,
+  "price": 0.14212,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 11.231118415903584,
+   "window_min": 20.0,
+   "low": 0.12777,
+   "volume": 25621227.0,
+   "cvd_change": 1213055.0,
+   "oi_change_pct": 0.35003446699877205
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1790260320000,
+  "price": 0.0025163,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.655233069481085,
+   "window_min": 20.0,
+   "low": 0.002274,
+   "volume": 2825133676.0,
+   "cvd_change": 312058686.0,
+   "oi_change_pct": 2.0401460970516316
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "2ZUSDT",
+  "side": "short",
+  "ts": 1790268240000,
+  "price": 0.06217,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.780470420527433,
+   "window_min": 20.0,
+   "low": 0.05612,
+   "volume": 41561605.0,
+   "cvd_change": 6153881.0,
+   "oi_change_pct": 22.681467989543513
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1790268360000,
+  "price": 0.14989,
+  "ordinal": 5,
+  "metrics": {
+   "move_pct": 12.151141040029923,
+   "window_min": 20.0,
+   "low": 0.13365,
+   "volume": 28471652.0,
+   "cvd_change": -1440488.0,
+   "oi_change_pct": 0.8518231319827985
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BTWUSDT",
+  "side": "short",
+  "ts": 1790281380000,
+  "price": 1.0361,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 14.994450610432853,
+   "window_min": 20.0,
+   "low": 0.901,
+   "volume": 10730255.0,
+   "cvd_change": -238601.0,
+   "oi_change_pct": 0.09040414496146454
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LSKUSDT",
+  "side": "short",
+  "ts": 1790281500000,
+  "price": 0.47583,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 11.268824244691778,
+   "window_min": 20.0,
+   "low": 0.42764,
+   "volume": 35604770.0,
+   "cvd_change": 2874326.0,
+   "oi_change_pct": 1.3266752357818934
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "SAGAUSDT",
+  "side": "short",
+  "ts": 1790284620000,
+  "price": 0.04504,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 11.182424092816579,
+   "window_min": 20.0,
+   "low": 0.04051,
+   "volume": 115807874.10000001,
+   "cvd_change": -9369877.900000036,
+   "oi_change_pct": 0.30791253411648345
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "SAGAUSDT",
+  "side": "short",
+  "ts": 1790285820000,
+  "price": 0.06217,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 42.4936969974788,
+   "window_min": 20.0,
+   "low": 0.04363,
+   "volume": 343682495.7,
+   "cvd_change": 30880957.300000012,
+   "oi_change_pct": -0.222126036889414
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "SAGAUSDT",
+  "side": "short",
+  "ts": 1790287020000,
+  "price": 0.06208,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 11.6948542641238,
+   "window_min": 20.0,
+   "low": 0.05558,
+   "volume": 195399793.9,
+   "cvd_change": -5607890.299999952,
+   "oi_change_pct": 1.5632715212945625
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "SAGAUSDT",
+  "side": "short",
+  "ts": 1790288760000,
+  "price": 0.0704,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 11.728297095699114,
+   "window_min": 20.0,
+   "low": 0.06301,
+   "volume": 224356992.3,
+   "cvd_change": 6958571.900000155,
+   "oi_change_pct": 0.7198007589958921
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1790289000000,
+  "price": 0.11564,
+  "ordinal": 6,
+  "metrics": {
+   "move_pct": 13.062182244818166,
+   "window_min": 20.0,
+   "low": 0.10228,
+   "volume": 35476592.0,
+   "cvd_change": 790530.0,
+   "oi_change_pct": -0.230337438515682
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "SAGAUSDT",
+  "side": "short",
+  "ts": 1790294460000,
+  "price": 0.08165,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 14.935247747747749,
+   "window_min": 20.0,
+   "low": 0.07104,
+   "volume": 206307577.5,
+   "cvd_change": 7203475.100000024,
+   "oi_change_pct": 1.4339502908467416
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1790295000000,
+  "price": 0.0022036,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.578081091930969,
+   "window_min": 20.0,
+   "low": 0.0019928,
+   "volume": 2574513576.0,
+   "cvd_change": -61829560.0,
+   "oi_change_pct": 0.19187943430087895
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "SAGAUSDT",
+  "side": "short",
+  "ts": 1790297760000,
+  "price": 0.06666,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 23.330249768732656,
+   "window_min": 20.0,
+   "low": 0.05405,
+   "volume": 551851749.1,
+   "cvd_change": -18821312.69999993,
+   "oi_change_pct": -1.1789690655926277
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "SAGAUSDT",
+  "side": "short",
+  "ts": 1790298960000,
+  "price": 0.06862,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 12.473365022127524,
+   "window_min": 20.0,
+   "low": 0.06101,
+   "volume": 358708529.5,
+   "cvd_change": 1045385.8999999166,
+   "oi_change_pct": -1.0535388440026217
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "SAGAUSDT",
+  "side": "short",
+  "ts": 1790300160000,
+  "price": 0.07354,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 10.073342314024858,
+   "window_min": 20.0,
+   "low": 0.06681,
+   "volume": 171152210.3,
+   "cvd_change": 5842967.5,
+   "oi_change_pct": 0.6820500417489495
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "SAGAUSDT",
+  "side": "short",
+  "ts": 1790306040000,
+  "price": 0.03491,
+  "ordinal": 5,
+  "metrics": {
+   "move_pct": 13.82458428431692,
+   "window_min": 20.0,
+   "low": 0.03067,
+   "volume": 608642903.6,
+   "cvd_change": -58777013.19999993,
+   "oi_change_pct": 1.6557695268067496
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1790306700000,
+  "price": 0.93014,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.228363532939099,
+   "window_min": 20.0,
+   "low": 0.84383,
+   "volume": 9486084.0,
+   "cvd_change": -686806.0,
+   "oi_change_pct": -0.2890457315885331
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "AKEUSDT",
+  "side": "short",
+  "ts": 1790307180000,
+  "price": 0.038256,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.127238182969656,
+   "window_min": 20.0,
+   "low": 0.034738,
+   "volume": 127179016.0,
+   "cvd_change": -2256612.0,
+   "oi_change_pct": 0.36555194359617627
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "SAGAUSDT",
+  "side": "short",
+  "ts": 1790307960000,
+  "price": 0.03019,
+  "ordinal": 6,
+  "metrics": {
+   "move_pct": 10.38391224862889,
+   "window_min": 20.0,
+   "low": 0.02735,
+   "volume": 409918185.3,
+   "cvd_change": -17344874.700000048,
+   "oi_change_pct": 1.7655196674276619
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1790308080000,
+  "price": 0.0028207,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 13.162962368611097,
+   "window_min": 20.0,
+   "low": 0.0024926,
+   "volume": 2533271923.0,
+   "cvd_change": 216999183.0,
+   "oi_change_pct": -1.1240084575927956
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "SAGAUSDT",
+  "side": "short",
+  "ts": 1790309220000,
+  "price": 0.0326,
+  "ordinal": 7,
+  "metrics": {
+   "move_pct": 10.209601081812036,
+   "window_min": 20.0,
+   "low": 0.02958,
+   "volume": 234920697.6,
+   "cvd_change": 14822267.600000024,
+   "oi_change_pct": -0.1700057558847834
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "ONEUSDT",
+  "side": "short",
+  "ts": 1790309280000,
+  "price": 0.0023247,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 21.533877038895845,
+   "window_min": 20.0,
+   "low": 0.0019128,
+   "volume": 9286044985.0,
+   "cvd_change": -423521725.0,
+   "oi_change_pct": -6.233606840964844
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1790315760000,
+  "price": 0.12991,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 11.88528119886314,
+   "window_min": 20.0,
+   "low": 0.11611,
+   "volume": 32911836.0,
+   "cvd_change": 1032024.0,
+   "oi_change_pct": -0.5545327077758122
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "NILUSDT",
+  "side": "short",
+  "ts": 1790316540000,
+  "price": 0.1138,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.991904808348774,
+   "window_min": 20.0,
+   "low": 0.10253,
+   "volume": 55345581.9,
+   "cvd_change": -783751.9000000022,
+   "oi_change_pct": -2.011544532166043
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BTWUSDT",
+  "side": "short",
+  "ts": 1790319720000,
+  "price": 0.9915,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.683188211654393,
+   "window_min": 20.0,
+   "low": 0.8958,
+   "volume": 3287078.0,
+   "cvd_change": 442168.0,
+   "oi_change_pct": -0.1514839821800562
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "SAGAUSDT",
+  "side": "short",
+  "ts": 1790331300000,
+  "price": 0.03954,
+  "ordinal": 8,
+  "metrics": {
+   "move_pct": 12.617487895186553,
+   "window_min": 20.0,
+   "low": 0.03511,
+   "volume": 148309835.9,
+   "cvd_change": 12009650.300000012,
+   "oi_change_pct": -0.8202125997425425
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1790331960000,
+  "price": 1.10432,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.067675992464942,
+   "window_min": 20.0,
+   "low": 1.00331,
+   "volume": 5913100.0,
+   "cvd_change": 942832.0,
+   "oi_change_pct": 0.45438679668143855
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1790333940000,
+  "price": 0.98735,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 10.4690192217324,
+   "window_min": 20.0,
+   "low": 0.89378,
+   "volume": 24719927.0,
+   "cvd_change": 551075.0,
+   "oi_change_pct": -3.9332978598267343
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1790335680000,
+  "price": 0.12114,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.10725322668604,
+   "window_min": 20.0,
+   "low": 0.11002,
+   "volume": 29032964.0,
+   "cvd_change": -332300.0,
+   "oi_change_pct": 0.7652165264902644
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1790337720000,
+  "price": 0.91706,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 12.931469737085145,
+   "window_min": 20.0,
+   "low": 0.81205,
+   "volume": 17446617.0,
+   "cvd_change": 408645.0,
+   "oi_change_pct": -0.9063235477507869
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "PHAUSDT",
+  "side": "short",
+  "ts": 1790338500000,
+  "price": 0.07149,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 15.64218699450015,
+   "window_min": 20.0,
+   "low": 0.06182,
+   "volume": 112745946.0,
+   "cvd_change": 11827702.0,
+   "oi_change_pct": 2.072210341396108
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1790339760000,
+  "price": 0.11975,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 10.17572913791518,
+   "window_min": 20.0,
+   "low": 0.10869,
+   "volume": 31620608.0,
+   "cvd_change": -1248412.0,
+   "oi_change_pct": 0.5747190809474612
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "PHAUSDT",
+  "side": "short",
+  "ts": 1790344080000,
+  "price": 0.07387,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.007446016381238,
+   "window_min": 20.0,
+   "low": 0.06715,
+   "volume": 163036569.0,
+   "cvd_change": 12802689.0,
+   "oi_change_pct": 0.953105542691568
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "RAREUSDT",
+  "side": "short",
+  "ts": 1790349720000,
+  "price": 0.01543,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.768126346015784,
+   "window_min": 20.0,
+   "low": 0.01393,
+   "volume": 60241219.0,
+   "cvd_change": -1118083.0,
+   "oi_change_pct": 1.6310646283463681
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "RAREUSDT",
+  "side": "short",
+  "ts": 1790350920000,
+  "price": 0.01728,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 16.051040967092,
+   "window_min": 20.0,
+   "low": 0.01489,
+   "volume": 634969461.0,
+   "cvd_change": -18708997.0,
+   "oi_change_pct": 35.94696529970416
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LYNUSDT",
+  "side": "short",
+  "ts": 1790351940000,
+  "price": 0.04474,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.907288051561736,
+   "window_min": 20.0,
+   "low": 0.04034,
+   "volume": 55768103.0,
+   "cvd_change": 16359281.0,
+   "oi_change_pct": 3.7213743354310713
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "RAREUSDT",
+  "side": "short",
+  "ts": 1790353320000,
+  "price": 0.01709,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 11.263020833333348,
+   "window_min": 20.0,
+   "low": 0.01536,
+   "volume": 404753150.0,
+   "cvd_change": 17116712.0,
+   "oi_change_pct": 8.678021216652908
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "PHAUSDT",
+  "side": "short",
+  "ts": 1790354160000,
+  "price": 0.08117,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 11.436024162548053,
+   "window_min": 20.0,
+   "low": 0.07284,
+   "volume": 194523225.0,
+   "cvd_change": 24135095.0,
+   "oi_change_pct": 4.671195249022375
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LYNUSDT",
+  "side": "short",
+  "ts": 1790354460000,
+  "price": 0.04713,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 11.286894923258561,
+   "window_min": 20.0,
+   "low": 0.04235,
+   "volume": 58799641.0,
+   "cvd_change": 24989073.0,
+   "oi_change_pct": 2.08144938753847
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1790355540000,
+  "price": 0.84863,
+  "ordinal": 5,
+  "metrics": {
+   "move_pct": 10.15446521287644,
+   "window_min": 20.0,
+   "low": 0.7704,
+   "volume": 7810875.0,
+   "cvd_change": 650263.0,
+   "oi_change_pct": -2.9970388159399897
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LYNUSDT",
+  "side": "short",
+  "ts": 1790355660000,
+  "price": 0.06893,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 46.65957446808511,
+   "window_min": 20.0,
+   "low": 0.047,
+   "volume": 323134323.0,
+   "cvd_change": 16141179.0,
+   "oi_change_pct": 20.991929619128946
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BRUSDT",
+  "side": "short",
+  "ts": 1790356800000,
+  "price": 0.91934,
+  "ordinal": 6,
+  "metrics": {
+   "move_pct": 10.100598802395222,
+   "window_min": 20.0,
+   "low": 0.835,
+   "volume": 8709812.0,
+   "cvd_change": 457886.0,
+   "oi_change_pct": -2.207315730957493
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LYNUSDT",
+  "side": "short",
+  "ts": 1790357340000,
+  "price": 0.06809,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 17.35608410892795,
+   "window_min": 20.0,
+   "low": 0.05802,
+   "volume": 334910255.0,
+   "cvd_change": -9543085.0,
+   "oi_change_pct": 0.13241578354317163
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LYNUSDT",
+  "side": "short",
+  "ts": 1790358960000,
+  "price": 0.06322,
+  "ordinal": 5,
+  "metrics": {
+   "move_pct": 10.273853130995981,
+   "window_min": 20.0,
+   "low": 0.05733,
+   "volume": 175830630.0,
+   "cvd_change": -12927996.0,
+   "oi_change_pct": -2.5860262201807482
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "LYNUSDT",
+  "side": "short",
+  "ts": 1790366340000,
+  "price": 0.05382,
+  "ordinal": 6,
+  "metrics": {
+   "move_pct": 10.991957104557649,
+   "window_min": 20.0,
+   "low": 0.04849,
+   "volume": 116407743.0,
+   "cvd_change": -10913923.0,
+   "oi_change_pct": -4.647449363660272
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "PHAUSDT",
+  "side": "short",
+  "ts": 1790373300000,
+  "price": 0.09674,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 13.331771321462039,
+   "window_min": 20.0,
+   "low": 0.08536,
+   "volume": 194865486.0,
+   "cvd_change": 32090676.0,
+   "oi_change_pct": -3.066051023208227
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BTWUSDT",
+  "side": "short",
+  "ts": 1790387640000,
+  "price": 0.8733,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 16.006907545164715,
+   "window_min": 20.0,
+   "low": 0.7528,
+   "volume": 44320796.0,
+   "cvd_change": -1316928.0,
+   "oi_change_pct": -3.096597036841897
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "BTWUSDT",
+  "side": "short",
+  "ts": 1790388960000,
+  "price": 0.9116,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.003620127911184,
+   "window_min": 20.0,
+   "low": 0.8287,
+   "volume": 26833505.0,
+   "cvd_change": -172337.0,
+   "oi_change_pct": -0.23245261047022403
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "SAGAUSDT",
+  "side": "short",
+  "ts": 1790393220000,
+  "price": 0.03496,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.353535353535337,
+   "window_min": 20.0,
+   "low": 0.03168,
+   "volume": 200180516.3,
+   "cvd_change": -48735513.100000024,
+   "oi_change_pct": 1.2716970601905242
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "SAGAUSDT",
+  "side": "short",
+  "ts": 1790394420000,
+  "price": 0.04021,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 17.26450860309128,
+   "window_min": 20.0,
+   "low": 0.03429,
+   "volume": 594729975.7,
+   "cvd_change": 5601060.299999952,
+   "oi_change_pct": 0.6497223562583532
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "2ZUSDT",
+  "side": "short",
+  "ts": 1790403420000,
+  "price": 0.06872,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 13.69953673064197,
+   "window_min": 20.0,
+   "low": 0.06044,
+   "volume": 43272113.0,
+   "cvd_change": 7533465.0,
+   "oi_change_pct": 7.24314363290095
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "RAREUSDT",
+  "side": "short",
+  "ts": 1790403840000,
+  "price": 0.01766,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 13.56913183279742,
+   "window_min": 20.0,
+   "low": 0.01555,
+   "volume": 343107467.0,
+   "cvd_change": 25355157.0,
+   "oi_change_pct": 4.269022397173239
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "RAREUSDT",
+  "side": "short",
+  "ts": 1790405040000,
+  "price": 0.01981,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 12.174405436013602,
+   "window_min": 20.0,
+   "low": 0.01766,
+   "volume": 663578081.0,
+   "cvd_change": 3506257.0,
+   "oi_change_pct": 9.685131747373532
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "QUSDT",
+  "side": "short",
+  "ts": 1790405760000,
+  "price": 0.028056,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 14.26709567059017,
+   "window_min": 20.0,
+   "low": 0.024553,
+   "volume": 26087116.0,
+   "cvd_change": 1204464.0,
+   "oi_change_pct": 0.449022842193747
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "RAREUSDT",
+  "side": "short",
+  "ts": 1790406240000,
+  "price": 0.02161,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 11.679586563307499,
+   "window_min": 20.0,
+   "low": 0.01935,
+   "volume": 793117164.0,
+   "cvd_change": 34801984.0,
+   "oi_change_pct": 12.45448010055943
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "QUSDT",
+  "side": "short",
+  "ts": 1790406960000,
+  "price": 0.03019,
+  "ordinal": 2,
+  "metrics": {
+   "move_pct": 10.166399065829811,
+   "window_min": 20.0,
+   "low": 0.027404,
+   "volume": 55992271.0,
+   "cvd_change": -5885691.0,
+   "oi_change_pct": 5.805577725515354
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "QUSDT",
+  "side": "short",
+  "ts": 1790412720000,
+  "price": 0.029025,
+  "ordinal": 3,
+  "metrics": {
+   "move_pct": 18.580708420149538,
+   "window_min": 20.0,
+   "low": 0.024477,
+   "volume": 88725931.0,
+   "cvd_change": -960465.0,
+   "oi_change_pct": -0.689341433164925
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "QUSDT",
+  "side": "short",
+  "ts": 1790413920000,
+  "price": 0.032129,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 13.433837028668272,
+   "window_min": 20.0,
+   "low": 0.028324,
+   "volume": 120970676.0,
+   "cvd_change": 3685038.0,
+   "oi_change_pct": 6.042692344936462
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "RAREUSDT",
+  "side": "short",
+  "ts": 1790416200000,
+  "price": 0.02329,
+  "ordinal": 4,
+  "metrics": {
+   "move_pct": 10.066162570888459,
+   "window_min": 20.0,
+   "low": 0.02116,
+   "volume": 405076478.0,
+   "cvd_change": 57563062.0,
+   "oi_change_pct": 3.135098257472513
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "QUSDT",
+  "side": "short",
+  "ts": 1790416200000,
+  "price": 0.03054,
+  "ordinal": 5,
+  "metrics": {
+   "move_pct": 12.756138083810221,
+   "window_min": 20.0,
+   "low": 0.027085,
+   "volume": 79368347.0,
+   "cvd_change": 1392911.0,
+   "oi_change_pct": -1.297071594974708
+  },
+  "filters": {
+   "cvd_confirms": false,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "QUSDT",
+  "side": "short",
+  "ts": 1790417400000,
+  "price": 0.02988,
+  "ordinal": 6,
+  "metrics": {
+   "move_pct": 11.554974799327988,
+   "window_min": 20.0,
+   "low": 0.026785,
+   "volume": 97948062.0,
+   "cvd_change": -10001456.0,
+   "oi_change_pct": 0.5036621132530117
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "\u9f99\u867eUSDT",
+  "side": "short",
+  "ts": 1790418660000,
+  "price": 0.10491,
+  "ordinal": 1,
+  "metrics": {
+   "move_pct": 10.164864013441143,
+   "window_min": 20.0,
+   "low": 0.09523,
+   "volume": 40437831.0,
+   "cvd_change": -8471377.0,
+   "oi_change_pct": -1.775246774300665
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": true
+  }
+ },
+ {
+  "rule": "pump_short",
+  "exchange": "binance",
+  "symbol": "QUSDT",
+  "side": "short",
+  "ts": 1790418960000,
+  "price": 0.030132,
+  "ordinal": 7,
+  "metrics": {
+   "move_pct": 10.002920560747652,
+   "window_min": 20.0,
+   "low": 0.027392,
+   "volume": 70984945.0,
+   "cvd_change": -3210705.0,
+   "oi_change_pct": 2.7225254567509127
+  },
+  "filters": {
+   "cvd_confirms": true,
+   "oi_confirms": false
+  }
+ }
+]
