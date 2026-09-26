@@ -25,6 +25,7 @@ from .backtest.engine import build_rule, interval_for
 from .config import NotifySettings, Rules
 from .data import binance, bybit
 from .data.binance import INTERVAL_MS
+from . import journal
 from .data.series import Series, merge_oi
 from .models import Bar, Exchange, Signal
 from .notify.dispatch import Dispatcher
@@ -232,9 +233,11 @@ class Screener:
             if self.require_filters and sig.filters and not sig.passed_all_filters:
                 bad = ",".join(k for k, ok in sig.filters.items() if not ok)
                 log.info("  skip %s (fails %s)", tag, bad)
+                self._journal(sig, "skipped", now)
                 continue
             log.info("  SEND %s", tag)
             self.dispatcher.submit(sig)
+            self._journal(sig, "sent", now)
             sent += 1
         self.emitted += sent
 
@@ -244,6 +247,14 @@ class Screener:
         log.info("sweep %.0fs: %d symbols, %d triggered, %d sent (total %d)%s",
                  time.monotonic() - started, len(self.symbols), len(fresh), sent,
                  self.emitted, f"; FAILED {failed}" if failed else "")
+
+
+    @staticmethod
+    def _journal(sig: Signal, action: str, now: int) -> None:
+        try:
+            journal.record(sig, action, now)
+        except Exception as e:  # a full disk must not stop alerts
+            log.warning("journal write failed: %s", e)
 
 
 def build_dispatcher(settings: NotifySettings, dry_run: bool = False) -> Dispatcher:

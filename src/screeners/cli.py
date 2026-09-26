@@ -349,6 +349,14 @@ def cmd_record_liquidations(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_status(args: argparse.Namespace) -> int:
+    """Everything needed to answer "what is happening?" in one screen."""
+    from .status import report
+
+    print(report(hours=args.hours, show=args.show, show_warnings=args.warnings))
+    return 0
+
+
 def cmd_ops(args: argparse.Namespace) -> int:
     """Post one line to the Ops topic. Used by start.sh to report a stage that
     keeps dying; silently does nothing when Telegram is not configured."""
@@ -442,7 +450,13 @@ def main(argv: list[str] | None = None) -> int:
                    help="print liquidations at least this large")
     r.set_defaults(func=cmd_record_liquidations)
 
-    o = sub.add_parser("ops", help="post a line to the Ops topic")
+    st = sub.add_parser("status", help="health report: stages, sweeps, signals, errors")
+    st.add_argument("--hours", type=float, default=24.0, help="look-back window")
+    st.add_argument("--show", type=int, default=8, help="recent sent signals to list")
+    st.add_argument("--warnings", type=int, default=5, help="recent warnings to list per log")
+    st.set_defaults(func=cmd_status)
+
+    o = sub.add_parser("ops", help="post a line to the Logs topic")
     o.add_argument("text")
     o.set_defaults(func=cmd_ops)
 

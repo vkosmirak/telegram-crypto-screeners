@@ -39,5 +39,16 @@ class TestPenalty(unittest.TestCase):
             WeightBudget(10, headroom=0.8).spend(20)
 
 
+class TestSlowWaitLogging(unittest.TestCase):
+    def test_a_saturated_pool_logs_one_summary_not_one_line_per_request(self):
+        b = WeightBudget(1000, name="t")
+        b.SLOW_WAIT_S = 0.0
+        with self.assertLogs("screeners.data.http", level="WARNING") as cm:
+            for _ in range(50):
+                b.spend(1)
+        self.assertEqual(len(cm.output), 1)
+        self.assertIn("1 request(s)", cm.output[0])
+
+
 if __name__ == "__main__":
     unittest.main()

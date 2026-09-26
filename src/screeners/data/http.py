@@ -63,6 +63,10 @@ class WeightBudget:
         with self._lock:
             self._blocked_until = max(self._blocked_until, time.monotonic() + seconds)
 
+    # Summarise slow waits at most this often. Logging each one produced a
+    # line per request -- hundreds for a single saturated minute.
+    SLOW_LOG_EVERY_S = 60.0
+
     def spend(self, weight: int = 1) -> None:
         t0 = time.monotonic()
         try:
@@ -70,7 +74,19 @@ class WeightBudget:
         finally:
             waited = time.monotonic() - t0
             if waited >= self.SLOW_WAIT_S:
-                log.warning("waited %.0fs for the %s rate budget", waited, self.name)
+                self._note_slow(waited)
+
+    def _note_slow(self, waited: float) -> None:
+        with self._lock:
+            self._slow_n = getattr(self, "_slow_n", 0) + 1
+            self._slow_max = max(getattr(self, "_slow_max", 0.0), waited)
+            now = time.monotonic()
+            if now - getattr(self, "_slow_logged", 0.0) < self.SLOW_LOG_EVERY_S:
+                return
+            n, worst = self._slow_n, self._slow_max
+            self._slow_n, self._slow_max, self._slow_logged = 0, 0.0, now
+        log.warning("%d request(s) waited up to %.0fs for the %s rate budget",
+                    n, worst, self.name)
 
     def _spend(self, weight: int) -> None:
         while True:
