@@ -1,39 +1,49 @@
 """Live screener.
 
-Design choice worth stating plainly: this runs the *same* code path as the
-backtester. Each sweep re-fetches a short tail of history, builds the same
-`Series`, and calls the same `scan()`. Signals newer than the last one emitted
-get dispatched.
+Design choice worth stating plainly: this runs the *same* rule code as the
+backtester. Bars are held in memory as the same `Series` the backtest uses,
+and every sweep calls the same `scan()`. Only how the bars arrive differs.
 
-The alternative -- a websocket fleet maintaining its own rolling state -- is
-faster but means two implementations of every rule, and the live one is the
-one you cannot test. Divergence there is how a screener ends up firing on
-conditions its backtest never saw. Correctness first; latency is a known,
-bounded cost (one sweep interval) and can be bought down later by feeding the
-same `Series` from websockets instead of REST.
+Each symbol keeps a rolling window of TAIL_HOURS. The first sweep fetches the
+whole window; after that a sweep fetches only the bars that closed since the
+last one, and open interest only when a new 5-minute sample can exist. The
+first version re-downloaded the entire 8-hour tail -- bars and OI -- for every
+symbol every minute, and the rate limits capped it at 60 symbols. Incremental
+fetching is what lets it watch the whole universe.
 
-Rate limits set the ceiling on universe size: Binance bills open-interest
-requests against a 1000-per-5-minute pool, i.e. ~200/min, so one symbol per
-sweep-minute is the budget. `--top` exists for that reason.
+The alternative -- websockets feeding the same `Series` -- would cut latency
+further, but REST keeps one code path and is plenty for minute bars.
 """
 from __future__ import annotations
 
 import logging
 import threading
 import time
+from concurrent.futures import ThreadPoolExecutor
 
 from .backtest.engine import build_rule, interval_for
 from .config import NotifySettings, Rules
-from .data.series import load_many
-from .models import Exchange, Signal
+from .data import binance, bybit
+from .data.binance import INTERVAL_MS
+from .data.series import Series, merge_oi
+from .models import Bar, Exchange, Signal
 from .notify.dispatch import Dispatcher
 from .rules.base import SignalState, scan
 
 log = logging.getLogger(__name__)
 
-# How much history each sweep pulls. Must comfortably exceed the longest
+ADAPTERS = {Exchange.BINANCE: binance, Exchange.BYBIT: bybit}
+
+# How much history each symbol keeps. Must comfortably exceed the longest
 # lookback any rule uses (flat_before reaches back flat_lookback_h hours).
 TAIL_HOURS = 8.0
+OI_PERIOD = "5m"
+OI_STEP_MS = INTERVAL_MS[OI_PERIOD]
+# Bars this recent are re-judged every sweep. An OI sample can land a little
+# after the bar it belongs to was first judged; re-checking a short trailing
+# window lets that bar fire once its data is complete. SignalState stops any
+# bar from being sent twice.
+RECHECK_MS = 15 * 60_000
 
 
 class Screener:
@@ -46,10 +56,11 @@ class Screener:
         dispatcher: Dispatcher,
         *,
         sweep_s: float = 60.0,
-        workers: int = 8,
+        workers: int = 16,
         require_filters: bool = True,
     ):
         self.exchange = exchange
+        self.adapter = ADAPTERS[exchange]
         self.symbols = symbols
         self.rules = rules
         self.dispatcher = dispatcher
@@ -57,39 +68,46 @@ class Screener:
         self.workers = workers
         self.require_filters = require_filters
         self.built = [build_rule(n, rules) for n in rule_names]
+        self.intervals = sorted({interval_for(r.name) for r in self.built})
         # Carried across sweeps so the daily ordinal and the cooldown are
-        # continuous, rather than restarting inside each 8-hour tail.
+        # continuous, rather than restarting inside each window.
         self._state = SignalState()
+        self._bars: dict[tuple[str, str], list[Bar]] = {}
+        self._oi: dict[str, list[tuple[int, float]]] = {}
         self._warm = False
         self.emitted = 0
 
-    def required_sweep_s(self) -> float:
-        """Shortest sweep interval this universe can sustain inside the budgets.
+    # ── budget ────────────────────────────────────────────────────────────────
 
-        Each (symbol, bar-interval) costs one kline call at weight 10 against
-        the /fapi pool and one OI call against the separate /futures/data
-        pool. Two rules with different bar sizes therefore cost DOUBLE, which
-        is how the defaults (100 symbols, 2 rules, 60s) ended up over both
-        limits at once -- every sweep overran, `stop.wait` degenerated to
-        wait(0), and the rate limiter became the only pacing.
+    def required_sweep_s(self) -> float:
+        """Shortest sweep interval the steady state can sustain, per venue.
+
+        After warm-up a sweep costs one small kline call per (symbol,
+        interval), plus one OI call per symbol every 5 minutes. Each venue has
+        its own limits -- the first version applied Binance's to Bybit too,
+        which understated Bybit's headroom several times over.
         """
-        intervals = {interval_for(r.name) for r in self.built}
-        calls = len(self.symbols) * len(intervals)
-        # WeightBudget applies 0.8 headroom to both pools.
-        fapi_s = calls * 10 * 60.0 / (2400 * 0.8)
-        data_s = calls * 60.0 / (1000 * 0.8 / 5)
-        return max(fapi_s, data_s)
+        kline_calls = len(self.symbols) * len(self.intervals)
+        oi_calls_per_min = len(self.symbols) / 5.0
+        if self.exchange is Exchange.BINANCE:
+            # /fapi pool: 2400/min, 0.8 headroom; incremental fetches are weight 1.
+            fapi_s = kline_calls * 1 * 60.0 / (2400 * 0.8)
+            # /futures/data pool: 1000 per 5 min, 0.8 headroom.
+            data_ok = oi_calls_per_min <= (1000 * 0.8) / 5.0
+            return fapi_s if data_ok else float("inf")
+        # Bybit: 600 requests per 5s across public endpoints; we use half.
+        per_s = 600 / 5.0 * 0.5
+        return (kline_calls + oi_calls_per_min) / per_s
+
+    # ── loop ──────────────────────────────────────────────────────────────────
 
     def run(self, stop: threading.Event) -> None:
         needed = self.required_sweep_s()
         if needed > self.sweep_s:
             log.warning(
                 "%d symbols x %d bar-interval(s) needs a %.0fs sweep to stay "
-                "inside the rate limits; raising --sweep from %.0fs. Lower "
-                "--top for faster sweeps.",
-                len(self.symbols),
-                len({interval_for(r.name) for r in self.built}),
-                needed, self.sweep_s)
+                "inside the rate limits; raising --sweep from %.0fs.",
+                len(self.symbols), len(self.intervals), needed, self.sweep_s)
             self.sweep_s = needed
 
         while not stop.is_set():
@@ -99,51 +117,105 @@ class Screener:
             except Exception as e:
                 log.exception("sweep failed: %s", e)
             elapsed = time.monotonic() - started
-            if elapsed > self.sweep_s:
-                log.warning("sweep took %.0fs, longer than the %.0fs interval -- "
-                            "reduce --top or raise --sweep", elapsed, self.sweep_s)
+            if self._warm and elapsed > self.sweep_s:
+                log.warning("sweep took %.0fs, longer than the %.0fs interval",
+                            elapsed, self.sweep_s)
             stop.wait(max(0.0, self.sweep_s - elapsed))
 
-    def _sweep(self) -> None:
-        by_interval: dict[str, list] = {}
-        for rule in self.built:
-            by_interval.setdefault(interval_for(rule.name), []).append(rule)
+    # ── fetching ──────────────────────────────────────────────────────────────
 
+    def _refresh_bars(self, symbol: str, interval: str, start: int, end: int) -> None:
+        key = (interval, symbol)
+        have = self._bars.get(key)
+        step = INTERVAL_MS[interval]
+        frm = start if not have else have[-1].ts + step
+        if frm < end:
+            new = self.adapter.klines(symbol, interval, frm, end)
+            if have:
+                last = have[-1].ts
+                have = have + [b for b in new if b.ts > last]
+            else:
+                have = new
+        # Drop what has aged out of the window.
+        self._bars[key] = [b for b in (have or []) if b.ts >= start]
+
+    def _refresh_oi(self, symbol: str, start: int, now: int) -> None:
+        have = self._oi.get(symbol)
+        if have and now < have[-1][0] + OI_STEP_MS:
+            return  # no newer sample can exist yet
+        frm = start - OI_STEP_MS if not have else have[-1][0] + 1
+        new = self.adapter.open_interest(symbol, OI_PERIOD, frm, now + 1)
+        if have:
+            last = have[-1][0]
+            have = have + [(t, v) for t, v in new if t > last]
+        else:
+            have = new
+        self._oi[symbol] = [(t, v) for t, v in have if t >= start - OI_STEP_MS]
+
+    def _refresh_all(self, now: int) -> dict[str, int]:
+        """Update every symbol in parallel. Returns failure counts per stream."""
+        windows = {}
+        for iv in self.intervals:
+            step = INTERVAL_MS[iv]
+            end = now // step * step  # excludes the bar still forming
+            windows[iv] = (end - int(TAIL_HOURS * 3_600_000), end)
+        oi_start = min(s for s, _ in windows.values())
+
+        jobs = []
+        for sym in self.symbols:
+            for iv, (s, e) in windows.items():
+                jobs.append((iv, lambda sym=sym, iv=iv, s=s, e=e:
+                             self._refresh_bars(sym, iv, s, e)))
+            jobs.append(("oi", lambda sym=sym: self._refresh_oi(sym, oi_start, now)))
+
+        failed: dict[str, int] = {}
+        with ThreadPoolExecutor(max_workers=self.workers) as pool:
+            futures = [(name, pool.submit(fn)) for name, fn in jobs]
+            for name, fut in futures:
+                try:
+                    fut.result()
+                except Exception as e:
+                    failed[name] = failed.get(name, 0) + 1
+                    log.debug("%s refresh failed: %s", name, e)
+        return failed
+
+    # ── one sweep ─────────────────────────────────────────────────────────────
+
+    def _sweep(self) -> None:
         now = int(time.time() * 1000)
         started = time.monotonic()
+        failed = self._refresh_all(now)
+
+        since = None if not self._warm else now - RECHECK_MS
         fresh: list[Signal] = []
-        loaded: dict[str, int] = {}
+        for rule in self.built:
+            iv = interval_for(rule.name)
+            step = INTERVAL_MS[iv]
+            for sym in self.symbols:
+                bars = self._bars.get((iv, sym))
+                if not bars:
+                    continue
+                series = Series(self.exchange, sym, iv,
+                                merge_oi(bars, self._oi.get(sym, []), step))
+                fresh.extend(scan(rule, series, state=self._state, since_ts=since))
 
-        for interval, rules in by_interval.items():
-            step = 60_000 * {"1m": 1, "5m": 5}[interval]
-            end = now // step * step
-            start = end - int(TAIL_HOURS * 3_600_000)
-            # No cache: a live tail must be re-read every sweep, and cached
-            # ranges would pin us to stale bars.
-            series_map = load_many(
-                self.exchange, self.symbols, interval, start, end,
-                with_oi=True, cache=None, workers=self.workers,
-            )
-            loaded[interval] = len(series_map)
-            for rule in rules:
-                for series in series_map.values():
-                    fresh.extend(scan(rule, series, state=self._state))
-
-        # The first sweep sees eight hours of history at once. Emitting it
-        # would blast a wall of stale alerts, so the first pass only primes
-        # the de-duplication state.
+        # The first sweep sees the whole window at once. Emitting it would
+        # blast a wall of stale alerts, so the first pass only primes state.
         if not self._warm:
             self._warm = True
-            log.info("warm-up: primed %d historical signals, none sent", len(fresh))
+            log.info("warm-up %.0fs: %d symbols, primed %d historical signals, "
+                     "none sent%s", time.monotonic() - started, len(self.symbols),
+                     len(fresh), f"; FAILED {failed}" if failed else "")
             return
 
         fresh.sort(key=lambda s: s.ts)
         sent = 0
         for sig in fresh:
-            tag = f"{sig.rule} {sig.symbol} #{sig.ordinal}"
+            age_min = (now - sig.ts) / 60_000
+            tag = f"{sig.rule} {sig.symbol} #{sig.ordinal} ({age_min:.0f}m old)"
             if self.require_filters and sig.filters and not sig.passed_all_filters:
-                failed = ",".join(k for k, ok in sig.filters.items() if not ok)
-                log.info("  skip %s (fails %s)", tag, failed)
+                bad = ",".join(k for k, ok in sig.filters.items() if not ok)
+                log.info("  skip %s (fails %s)", tag, bad)
                 continue
             log.info("  SEND %s", tag)
             self.dispatcher.submit(sig)
@@ -151,13 +223,12 @@ class Screener:
         self.emitted += sent
 
         # One line per sweep, always. Without it a quiet market and a wedged
-        # sweep are indistinguishable in the log, and a symbol silently
-        # dropping out of the fetch (rate limit, delisting) goes unnoticed.
-        want = len(self.symbols)
-        short = {iv: n for iv, n in loaded.items() if n < want}
-        log.info("sweep %.0fs: %d triggered, %d sent (total %d)%s",
-                 time.monotonic() - started, len(fresh), sent, self.emitted,
-                 f"; MISSING symbols {short} of {want}" if short else "")
+        # sweep are indistinguishable, and a stream silently failing for some
+        # symbols (rate limit, delisting) goes unnoticed.
+        log.info("sweep %.0fs: %d symbols, %d triggered, %d sent (total %d)%s",
+                 time.monotonic() - started, len(self.symbols), len(fresh), sent,
+                 self.emitted, f"; FAILED {failed}" if failed else "")
+
 
 def build_dispatcher(settings: NotifySettings, dry_run: bool = False) -> Dispatcher:
     d = Dispatcher(settings, dry_run=dry_run)

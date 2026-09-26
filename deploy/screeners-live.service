@@ -9,7 +9,7 @@ Wants=network-online.target
 Type=simple
 WorkingDirectory=/opt/telegram-crypto-screeners
 Environment=PYTHONPATH=/opt/telegram-crypto-screeners/src
-ExecStart=/usr/bin/python3 -m screeners.cli live --exchange binance --rules oi_growth,pump_short --top 60
+ExecStart=/usr/bin/python3 -m screeners.cli live --exchange binance --rules oi_growth,pump_short
 Restart=always
 RestartSec=10
 

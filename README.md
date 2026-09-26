@@ -30,8 +30,8 @@ backtester can price each one instead of taking them on faith.
 ## Run it
 
 ```bash
-./start.sh              # liquidation recorder + Binance live screener
-./start.sh --bybit      # ...plus a Bybit live screener (no CVD there)
+./start.sh              # everything: recorder + Binance and Bybit screeners
+./start.sh --no-bybit   # skip the Bybit screener (no CVD there)
 ./start.sh --no-live    # recorder only, no alerts
 ./start.sh --dry-run    # screeners log signals instead of sending
 ```

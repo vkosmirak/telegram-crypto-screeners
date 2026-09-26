@@ -97,13 +97,17 @@ class SignalState:
         return self._ordinal[key]
 
 
-def scan(rule: Rule, series: Series, state: SignalState | None = None) -> list[Signal]:
+def scan(rule: Rule, series: Series, state: SignalState | None = None,
+         since_ts: int | None = None) -> list[Signal]:
     """Replay a series bar by bar, numbering and de-duplicating what fires.
 
     Strictly causal: bar i is evaluated using bars <= i only. No lookahead.
 
     Pass `state` to keep numbering and cooldown continuous across calls; omit
-    it for a one-shot scan over a complete series.
+    it for a one-shot scan over a complete series. Pass `since_ts` to skip
+    evaluating bars older than it -- the live screener uses this so each
+    sweep only re-judges the recent edge of an 8-hour window instead of all
+    of it. Skipped bars still count as history for the bars that are judged.
     """
     from dataclasses import replace
 
@@ -115,6 +119,8 @@ def scan(rule: Rule, series: Series, state: SignalState | None = None) -> list[S
 
     for i in range(len(series.bars)):
         bar = series.bars[i]
+        if since_ts is not None and bar.ts < since_ts:
+            continue
         if not st.may_fire(key, bar.ts, cooldown_ms):
             continue
         sig = rule.evaluate(series, i, cvd)

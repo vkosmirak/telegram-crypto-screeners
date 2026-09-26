@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # Run the screeners and keep them running.
 #
-#   ./start.sh              # liquidation recorder + Binance live screener
-#   ./start.sh --bybit      # ...plus a Bybit live screener (no CVD there)
+#   ./start.sh              # everything: recorder + Binance and Bybit screeners
+#   ./start.sh --no-bybit   # skip the Bybit screener (no CVD there)
 #   ./start.sh --no-live    # recorder only -- no Telegram alerts
-#   ./start.sh --dry-run    # live screeners log signals instead of sending
+#   ./start.sh --dry-run    # screeners log signals instead of sending
 #
 # Each stage is its own process, so a wedged Telegram send can never stall
 # liquidation ingest. A stage that dies is restarted with a growing delay
@@ -38,13 +38,13 @@ if [ -n "$stray" ]; then
   exit 1
 fi
 
-WANT_LIVE=1; WANT_BYBIT=0; LIVE_FLAGS=""
+WANT_LIVE=1; WANT_BYBIT=1; LIVE_FLAGS=""
 for arg in "$@"; do
   case "$arg" in
-    --bybit)   WANT_BYBIT=1 ;;
-    --no-live) WANT_LIVE=0 ;;
-    --dry-run) LIVE_FLAGS="--dry-run" ;;
-    *) echo "usage: ./start.sh [--bybit] [--no-live] [--dry-run]" >&2; exit 2 ;;
+    --no-bybit) WANT_BYBIT=0 ;;
+    --no-live)  WANT_LIVE=0 ;;
+    --dry-run)  LIVE_FLAGS="--dry-run" ;;
+    *) echo "usage: ./start.sh [--no-bybit] [--no-live] [--dry-run]" >&2; exit 2 ;;
   esac
 done
 echo $$ > "$LOCK"

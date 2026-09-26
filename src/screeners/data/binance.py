@@ -62,17 +62,35 @@ def top_by_turnover(n: int, quote: str = "USDT") -> list[str]:
     return [t["symbol"] for t in rows[:n]]
 
 
+def kline_weight(limit: int) -> int:
+    """Binance bills /fapi/v1/klines by the `limit` REQUESTED, not rows returned:
+    [1,100) -> 1, [100,500) -> 2, [500,1000] -> 5, above -> 10."""
+    if limit < 100:
+        return 1
+    if limit < 500:
+        return 2
+    if limit <= 1000:
+        return 5
+    return 10
+
+
 def klines(symbol: str, interval: str, start_ms: int, end_ms: int) -> list[Bar]:
-    """OHLCV + taker-buy volume, paginated forward. `oi` is left None here."""
+    """OHLCV + taker-buy volume, paginated forward. `oi` is left None here.
+
+    Each page asks for only as many bars as remain. Always asking for 1500
+    cost weight 10 even for a two-bar live refresh -- 10x the bill, which is
+    what capped the live screener at a fraction of the universe.
+    """
     step = INTERVAL_MS[interval]
     out: list[Bar] = []
     cursor = start_ms
     while cursor < end_ms:
+        want = min(KLINE_LIMIT, max(1, -(-(end_ms - cursor) // step)))
         rows = get_json(
             f"{FAPI}/fapi/v1/klines",
             {"symbol": symbol, "interval": interval, "startTime": cursor,
-             "endTime": end_ms, "limit": KLINE_LIMIT},
-            budget=FAPI_BUDGET, weight=10,
+             "endTime": end_ms, "limit": want},
+            budget=FAPI_BUDGET, weight=kline_weight(want),
         )
         if not rows:
             break
@@ -85,7 +103,7 @@ def klines(symbol: str, interval: str, start_ms: int, end_ms: int) -> list[Bar]:
         if last + step <= cursor:  # no forward progress; bail rather than spin
             break
         cursor = last + step
-        if len(rows) < KLINE_LIMIT:
+        if len(rows) < want:
             break
     return [b for b in out if start_ms <= b.ts < end_ms]
 

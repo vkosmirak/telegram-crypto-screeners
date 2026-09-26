@@ -423,10 +423,10 @@ def main(argv: list[str] | None = None) -> int:
     lv = sub.add_parser("live", help="run the screeners live and alert to Telegram")
     lv.add_argument("--exchange", default="binance", choices=["binance", "bybit"])
     lv.add_argument("--rules", default="oi_growth,pump_short")
-    lv.add_argument("--top", type=int, default=60,
-                    help="rate limits cap this; see Screener.required_sweep_s")
+    lv.add_argument("--top", type=int, default=0,
+                    help="N most-traded symbols; 0 = the whole universe (default)")
     lv.add_argument("--sweep", type=float, default=60.0, help="seconds between sweeps")
-    lv.add_argument("--workers", type=int, default=8)
+    lv.add_argument("--workers", type=int, default=16)
     lv.add_argument("--config", default=None)
     lv.add_argument("--dry-run", action="store_true", help="log signals, never send")
     lv.add_argument("--unfiltered", action="store_true",
