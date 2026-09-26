@@ -1,0 +1,32 @@
+# The whole stack under one unit: start.sh supervises the recorder and both
+# live screeners, restarting any stage that dies.
+#
+#   sudo cp deploy/telegram-crypto-screeners.service /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now telegram-crypto-screeners
+#   journalctl -u telegram-crypto-screeners -f      # supervisor output
+#   tail -f /opt/telegram-crypto-screeners/data/logs/*.log
+[Unit]
+Description=telegram-crypto-screeners (recorder + Binance/Bybit screeners)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/telegram-crypto-screeners
+ExecStart=/opt/telegram-crypto-screeners/start.sh
+# start.sh traps TERM and stops its stages cleanly.
+KillMode=mixed
+TimeoutStopSec=30
+Restart=always
+RestartSec=10
+
+# This shares a small box with a live trading bot. Cap memory so that if
+# anything is OOM-killed it is this service, and yield CPU to everything else.
+MemoryMax=600M
+MemoryHigh=500M
+CPUWeight=50
+Nice=10
+
+[Install]
+WantedBy=multi-user.target
