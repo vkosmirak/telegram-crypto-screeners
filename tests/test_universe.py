@@ -37,5 +37,35 @@ class TestBinanceUniverse(unittest.TestCase):
             self.assertEqual(binance.universe(), ["BTCUSDT"])
 
 
+class TestBybitInBodyRateLimit(unittest.TestCase):
+    """Bybit reports its rate limit as HTTP 200 + retCode 10006. It used to
+    reach _result as a plain error and the symbol just failed."""
+
+    def test_throttled_reply_is_retried_then_succeeds(self):
+        limited = {"retCode": 10006, "retMsg": "Too many visits"}
+        ok = {"retCode": 0, "result": {"list": [], "nextPageCursor": ""}}
+        with mock.patch.object(bybit, "get_json", side_effect=[limited, limited, ok]) as g, \
+             mock.patch.object(bybit.time, "sleep"), \
+             mock.patch.object(bybit.BUDGET, "penalize") as pen:
+            self.assertEqual(bybit.universe(), [])
+        self.assertEqual(g.call_count, 3)
+        self.assertEqual(pen.call_count, 2)   # the whole pool paused each time
+
+    def test_persistent_throttling_still_surfaces_as_an_error(self):
+        limited = {"retCode": 10006, "retMsg": "Too many visits"}
+        with mock.patch.object(bybit, "get_json", return_value=limited), \
+             mock.patch.object(bybit.time, "sleep"), \
+             mock.patch.object(bybit.BUDGET, "penalize"):
+            with self.assertRaises(RuntimeError):
+                bybit.universe()
+
+    def test_other_errors_are_not_retried(self):
+        bad = {"retCode": 10001, "retMsg": "params error"}
+        with mock.patch.object(bybit, "get_json", return_value=bad) as g:
+            with self.assertRaises(RuntimeError):
+                bybit.universe()
+        self.assertEqual(g.call_count, 1)
+
+
 if __name__ == "__main__":
     unittest.main()

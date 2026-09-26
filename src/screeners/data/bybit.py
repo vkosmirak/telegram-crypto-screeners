@@ -12,6 +12,7 @@ at 100ms and is available historically via cursor paging.
 from __future__ import annotations
 
 import logging
+import time
 
 from ..models import Bar, Exchange
 from .http import WeightBudget, get_json
@@ -21,7 +22,7 @@ log = logging.getLogger(__name__)
 API = "https://api.bybit.com"
 
 # Public endpoints allow 600 req / 5s per IP. This is deliberately far under.
-BUDGET = WeightBudget(600, window_s=5.0, headroom=0.5, name="bybit")
+BUDGET = WeightBudget(600, window_s=5.0, headroom=0.3, name="bybit")
 
 KLINE_LIMIT = 1000
 OI_LIMIT = 200
@@ -38,6 +39,30 @@ _KLINE_IV = {"1m": "1", "3m": "3", "5m": "5", "15m": "15", "30m": "30",
              "1h": "60", "4h": "240", "1d": "D"}
 _OI_IV = {"5m": "5min", "15m": "15min", "30m": "30min",
           "1h": "1h", "4h": "4h", "1d": "1d"}
+
+
+# Bybit signals its own rate limit in the JSON body with HTTP 200, so the
+# generic HTTP retry never saw it and each throttled symbol simply failed --
+# 102 in one sweep at 14:00. 10006 is "Too many visits"; 10018 is the IP-level
+# variant.
+RATE_LIMIT_CODES = frozenset({10006, 10018})
+RATE_LIMIT_ATTEMPTS = 5
+
+
+def _get_json(url: str, params: dict | None = None, *, budget: WeightBudget = BUDGET) -> object:
+    """get_json that treats Bybit's in-body rate limit like an HTTP 429:
+    pause the whole pool, back off, retry."""
+    for attempt in range(RATE_LIMIT_ATTEMPTS):
+        payload = get_json(url, params, budget=budget)
+        code = payload.get("retCode") if isinstance(payload, dict) else None
+        if code not in RATE_LIMIT_CODES:
+            return payload
+        wait = min(10.0, 1.0 * 2 ** attempt)
+        budget.penalize(wait)
+        log.warning("bybit rate limit (%s) on %s, retry %d/%d in %.0fs",
+                    code, url.rsplit("/", 1)[-1], attempt + 1, RATE_LIMIT_ATTEMPTS, wait)
+        time.sleep(wait)
+    return payload  # still limited: let _result raise with Bybit's message
 
 
 def _result(payload: object) -> dict:
@@ -61,7 +86,7 @@ def universe(quote: str = "USDT") -> list[str]:
     out: list[str] = []
     cursor = None
     while True:
-        res = _result(get_json(
+        res = _result(_get_json(
             f"{API}/v5/market/instruments-info",
             {"category": "linear", "limit": 1000, "cursor": cursor},
             budget=BUDGET,
@@ -78,7 +103,7 @@ def universe(quote: str = "USDT") -> list[str]:
 
 
 def top_by_turnover(n: int, quote: str = "USDT") -> list[str]:
-    res = _result(get_json(f"{API}/v5/market/tickers", {"category": "linear"}, budget=BUDGET))
+    res = _result(_get_json(f"{API}/v5/market/tickers", {"category": "linear"}, budget=BUDGET))
     perps = set(universe(quote))
     rows = [t for t in res.get("list", []) if t["symbol"] in perps]
     rows.sort(key=lambda t: float(t.get("turnover24h") or 0), reverse=True)
@@ -97,7 +122,7 @@ def klines(symbol: str, interval: str, start_ms: int, end_ms: int) -> list[Bar]:
     seen: dict[int, Bar] = {}
     cursor_end = end_ms
     for _ in range(MAX_PAGES):
-        res = _result(get_json(
+        res = _result(_get_json(
             f"{API}/v5/market/kline",
             {"category": "linear", "symbol": symbol, "interval": iv,
              "start": start_ms, "end": cursor_end, "limit": KLINE_LIMIT},
@@ -126,7 +151,7 @@ def open_interest(symbol: str, period: str, start_ms: int, end_ms: int) -> list[
     seen: dict[int, float] = {}
     cursor = None
     for _ in range(200):  # hard stop; 200 pages * 200 rows covers far more than retention
-        res = _result(get_json(
+        res = _result(_get_json(
             f"{API}/v5/market/open-interest",
             {"category": "linear", "symbol": symbol, "intervalTime": iv,
              "startTime": start_ms, "endTime": end_ms, "limit": OI_LIMIT, "cursor": cursor},

@@ -14,6 +14,12 @@ trading bot (Jesse, in Docker) -- do not starve it; the unit is capped at
 
 Run it in ONE place. A second copy anywhere doubles every alert.
 
+**It shares Binance's per-IP rate limit with Jesse.** Jesse trades Binance
+perpetual futures from the same box, and Binance counts request weight per IP,
+so every unit this project spends is taken from the trading bot. That is why
+`binance.FAPI_BUDGET` uses only half the limit. Do not raise it without
+checking Jesse's own usage first. (Jesse does not use Bybit.)
+
 ## "What is happening on the server?"
 
 Start here -- one read-only command that covers stages, the last sweep per
@@ -47,6 +53,10 @@ been silent for more than ~4 minutes means that stage is stuck.
   about 50s on Binance's rate budget, because it lands in the same 5-minute
   window as the warm-up. One warning line and a sweep over 60s is expected;
   it clears by itself.
+- Bybit occasionally answers "Too many visits" (retCode 10006), clustered
+  at the top of the hour. It is retried with backoff and pauses the whole
+  Bybit pool; a `bybit rate limit` warning line is normal, a `refresh
+  failures` line naming it every sweep is not.
 - Binance records very few liquidations. Its feed sends at most one per
   symbol per second; that is the venue, not a bug.
 - Bybit sends far more OI alerts than Binance. Per docs/findings.md they carry

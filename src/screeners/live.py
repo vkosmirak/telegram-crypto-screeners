@@ -101,13 +101,11 @@ class Screener:
         kline_calls = len(self.symbols) * len(self.intervals)
         oi_calls_per_min = len(self.symbols) / 5.0
         if self.exchange is Exchange.BINANCE:
-            # /fapi pool: 2400/min, 0.8 headroom; incremental fetches are weight 1.
-            fapi_s = kline_calls * 1 * 60.0 / (2400 * 0.8)
-            # /futures/data pool: 1000 per 5 min, 0.8 headroom.
-            data_ok = oi_calls_per_min <= (1000 * 0.8) / 5.0
-            return fapi_s if data_ok else float("inf")
-        # Bybit: 600 requests per 5s across public endpoints; we use half.
-        per_s = 600 / 5.0 * 0.5
+            # Incremental kline fetches cost weight 1 each.
+            fapi_s = kline_calls * 1 * 60.0 / binance.FAPI_BUDGET.limit
+            data_per_min = binance.DATA_BUDGET.limit / (binance.DATA_BUDGET.window_s / 60.0)
+            return fapi_s if oi_calls_per_min <= data_per_min else float("inf")
+        per_s = bybit.BUDGET.limit / bybit.BUDGET.window_s
         return (kline_calls + oi_calls_per_min) / per_s
 
     # ── loop ──────────────────────────────────────────────────────────────────

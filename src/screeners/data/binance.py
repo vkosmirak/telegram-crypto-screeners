@@ -24,7 +24,10 @@ log = logging.getLogger(__name__)
 FAPI = "https://fapi.binance.com"
 
 # REQUEST_WEIGHT: 2400/min, confirmed live from /fapi/v1/exchangeInfo.
-FAPI_BUDGET = WeightBudget(2400, window_s=60.0, name="binance /fapi")
+# Half, not most, of the IP's weight: the same box runs Jesse, a live trading
+# bot on Binance futures, and Binance counts weight per IP -- so every unit we
+# spend is taken from it. Steady state needs ~1,050/min of these 1,200.
+FAPI_BUDGET = WeightBudget(2400, window_s=60.0, headroom=0.5, name="binance /fapi")
 # /futures/data/* is capped separately at 1000 requests / 5 min per IP.
 DATA_BUDGET = WeightBudget(1000, window_s=300.0, name="binance /futures/data")
 
