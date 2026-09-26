@@ -43,6 +43,32 @@ the third restart in a row posts one line to the Ops topic. Logs go to
 to start if it is already running, or if any screener stage was started by hand —
 two recorders would double-count, two screeners would double-alert.
 
+## Deploy
+
+It runs on **hetzner** (Ubuntu 24.04, Python 3.12, reached over Tailscale:
+`ssh root@hetzner`), checked out at `/opt/telegram-crypto-screeners`, under
+one systemd unit that runs `start.sh`.
+
+```bash
+ssh root@hetzner
+cd /opt/telegram-crypto-screeners && git pull && systemctl restart telegram-crypto-screeners
+systemctl status telegram-crypto-screeners
+tail -f data/logs/*.log
+```
+
+The repo is public, so the box pulls over HTTPS with no key. Secrets are not in
+git: `.env` is copied to the box by hand (`scp -p .env root@hetzner:/opt/telegram-crypto-screeners/`)
+and kept at `chmod 600`.
+
+The box also runs a live trading bot (Jesse). The unit caps this service at
+600MB and runs it at low CPU priority, so under memory pressure the kernel
+kills the screeners, not the bot. Stages use ~150-200MB each when watching the
+full universe.
+
+**Run it in one place only.** Two copies would double every alert, and share
+nothing, so each would also spend its own rate-limit budget against the same
+venues.
+
 ## Backtest first
 
 ```bash
