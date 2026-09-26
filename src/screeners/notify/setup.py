@@ -26,7 +26,7 @@ log = logging.getLogger(__name__)
 # phone has to be unambiguous without opening it. This repo only ever covers
 # crypto perpetuals on Binance and Bybit -- nothing here touches equities or
 # ETFs, so the naming should not imply otherwise.
-GROUP_TITLE = "Crypto Perp Screeners"
+GROUP_TITLE = "Crypto Screeners"
 
 TOPICS = [
     ("TOPIC_OI", "OI growth \u2192 long", 0x6FB9F0),
