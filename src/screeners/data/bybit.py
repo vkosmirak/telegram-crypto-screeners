@@ -21,7 +21,7 @@ log = logging.getLogger(__name__)
 API = "https://api.bybit.com"
 
 # Public endpoints allow 600 req / 5s per IP. This is deliberately far under.
-BUDGET = WeightBudget(600, window_s=5.0, headroom=0.5)
+BUDGET = WeightBudget(600, window_s=5.0, headroom=0.5, name="bybit")
 
 KLINE_LIMIT = 1000
 OI_LIMIT = 200

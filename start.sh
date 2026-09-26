@@ -82,6 +82,20 @@ start() {
 stop_all() {
   say "stopping..."
   for p in "${PIDS[@]}"; do [ "$p" -gt 0 ] && kill "$p" 2>/dev/null; done
+  # A stage stuck mid-sweep can ignore SIGTERM until the sweep ends. Give
+  # them 20s, then force it -- a stop that never finishes is worse.
+  for _ in $(seq 1 20); do
+    alive=0
+    for p in "${PIDS[@]}"; do [ "$p" -gt 0 ] && kill -0 "$p" 2>/dev/null && alive=1; done
+    [ "$alive" -eq 0 ] && break
+    sleep 1
+  done
+  for p in "${PIDS[@]}"; do
+    if [ "$p" -gt 0 ] && kill -0 "$p" 2>/dev/null; then
+      say "pid $p ignored SIGTERM for 20s; killing"
+      kill -9 "$p" 2>/dev/null
+    fi
+  done
   for p in "${PIDS[@]}"; do [ "$p" -gt 0 ] && wait "$p" 2>/dev/null; done
   rm -f "$LOCK"
   say "stopped"

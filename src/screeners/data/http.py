@@ -39,7 +39,13 @@ class WeightBudget:
     collectively overshoot the way independent limiters would.
     """
 
-    def __init__(self, limit: int, window_s: float = 60.0, headroom: float = 0.8):
+    # A wait this long means the pool is saturated; worth one log line so a
+    # stalled sweep says why instead of going silent.
+    SLOW_WAIT_S = 10.0
+
+    def __init__(self, limit: int, window_s: float = 60.0, headroom: float = 0.8,
+                 name: str = "budget"):
+        self.name = name
         self.limit = int(limit * headroom)
         self.window_s = window_s
         self._events: list[tuple[float, int]] = []
@@ -58,6 +64,15 @@ class WeightBudget:
             self._blocked_until = max(self._blocked_until, time.monotonic() + seconds)
 
     def spend(self, weight: int = 1) -> None:
+        t0 = time.monotonic()
+        try:
+            self._spend(weight)
+        finally:
+            waited = time.monotonic() - t0
+            if waited >= self.SLOW_WAIT_S:
+                log.warning("waited %.0fs for the %s rate budget", waited, self.name)
+
+    def _spend(self, weight: int) -> None:
         while True:
             with self._lock:
                 now = time.monotonic()

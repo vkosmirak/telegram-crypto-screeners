@@ -7,6 +7,7 @@
 from __future__ import annotations
 
 import argparse
+import faulthandler
 import signal
 import sys
 import threading
@@ -450,6 +451,11 @@ def main(argv: list[str] | None = None) -> int:
 
     args = p.parse_args(argv)
     etb_logging.setup(args.log_level)
+    # `kill -USR1 <pid>` writes every thread's stack to this stage's log. A
+    # wedged sweep once went silent and ignored SIGTERM, and without this
+    # there was no way to see where it was stuck.
+    if hasattr(signal, "SIGUSR1"):
+        faulthandler.register(signal.SIGUSR1, all_threads=True)
     if getattr(args, "top", None) == 0:
         args.top = None
     return args.func(args)

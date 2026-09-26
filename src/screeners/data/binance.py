@@ -24,9 +24,9 @@ log = logging.getLogger(__name__)
 FAPI = "https://fapi.binance.com"
 
 # REQUEST_WEIGHT: 2400/min, confirmed live from /fapi/v1/exchangeInfo.
-FAPI_BUDGET = WeightBudget(2400, window_s=60.0)
+FAPI_BUDGET = WeightBudget(2400, window_s=60.0, name="binance /fapi")
 # /futures/data/* is capped separately at 1000 requests / 5 min per IP.
-DATA_BUDGET = WeightBudget(1000, window_s=300.0)
+DATA_BUDGET = WeightBudget(1000, window_s=300.0, name="binance /futures/data")
 
 KLINE_LIMIT = 1500
 OI_LIMIT = 500
