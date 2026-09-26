@@ -44,9 +44,31 @@ class WeightBudget:
         self.window_s = window_s
         self._events: list[tuple[float, int]] = []
         self._lock = threading.Lock()
+        self._blocked_until = 0.0
+
+    def penalize(self, seconds: float) -> None:
+        """Hold EVERY caller of this budget for `seconds`.
+
+        When the venue answers 429, the thread that got it backing off alone
+        is not enough: the rest of the pool keeps firing into the limit, and
+        Binance escalates repeated 429s to a 418 IP ban. So one 429 pauses
+        the whole pool.
+        """
+        with self._lock:
+            self._blocked_until = max(self._blocked_until, time.monotonic() + seconds)
 
     def spend(self, weight: int = 1) -> None:
         while True:
+            with self._lock:
+                now = time.monotonic()
+                if now < self._blocked_until:
+                    wait = self._blocked_until - now
+                    blocked = True
+                else:
+                    blocked = False
+            if blocked:
+                time.sleep(wait)
+                continue
             with self._lock:
                 now = time.monotonic()
                 cutoff = now - self.window_s
@@ -95,7 +117,11 @@ def get_json(
                 raise RuntimeError(f"HTTP {e.code} for {url}: {body}") from e
             retry_after = float(e.headers.get("Retry-After") or 0)
             delay = retry_after or min(30.0, 1.5 * (2**attempt))
-            log.warning("HTTP %s, retry %d/%d in %.1fs", e.code, attempt + 1, attempts, delay)
+            if e.code in (418, 429) and budget is not None:
+                budget.penalize(delay)
+            endpoint = urllib.parse.urlparse(url).path
+            log.warning("HTTP %s on %s, retry %d/%d in %.1fs",
+                        e.code, endpoint, attempt + 1, attempts, delay)
             time.sleep(delay)
         except (urllib.error.URLError, TimeoutError, json.JSONDecodeError,
                 ConnectionError, http.client.HTTPException) as e:
