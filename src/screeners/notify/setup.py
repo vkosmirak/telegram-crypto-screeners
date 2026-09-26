@@ -32,7 +32,7 @@ TOPICS = [
     ("TOPIC_OI", "OI growth \u2192 long", 0x6FB9F0),
     ("TOPIC_PUMP", "Pumps \u2192 short", 0xFFD67E),
     ("TOPIC_LIQUIDATION", "Liquidations", 0xFF93B2),
-    ("TOPIC_OPS", "Ops", 0x8EEE98),
+    ("TOPIC_OPS", "Logs", 0x8EEE98),
 ]
 
 
