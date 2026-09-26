@@ -1,17 +1,17 @@
 # Record liquidation feeds. They cannot be backfilled, so this wants to have
 # been running for weeks before the liquidation screener means anything.
 #   sudo cp deploy/*.service /etc/systemd/system/
-#   sudo systemctl enable --now etb-liquidations
+#   sudo systemctl enable --now screeners-liquidations
 [Unit]
-Description=etb liquidation recorder
+Description=screeners liquidation recorder
 After=network-online.target
 Wants=network-online.target
 
 [Service]
 Type=simple
-WorkingDirectory=/opt/etb
-Environment=PYTHONPATH=/opt/etb/src
-ExecStart=/usr/bin/python3 -m etb.cli record-liquidations --exchange both
+WorkingDirectory=/opt/telegram-crypto-screeners
+Environment=PYTHONPATH=/opt/telegram-crypto-screeners/src
+ExecStart=/usr/bin/python3 -m screeners.cli record-liquidations --exchange both
 Restart=always
 RestartSec=10
 

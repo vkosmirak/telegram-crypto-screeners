@@ -31,9 +31,9 @@ if [ -f "$LOCK" ] && ps -p "$(cat "$LOCK")" -o command= 2>/dev/null | grep -q st
   exit 1
 fi
 # Stages started by hand would double-record and double-alert.
-stray=$(pgrep -fl -- "-m etb.cli (live|record-liquidations)" || true)
+stray=$(pgrep -fl -- "-m screeners.cli (live|record-liquidations)" || true)
 if [ -n "$stray" ]; then
-  echo "etb stages are already running outside start.sh -- stop them first:" >&2
+  echo "screener stages are already running outside start.sh -- stop them first:" >&2
   echo "$stray" | sed 's/^/  /' >&2
   exit 1
 fi
@@ -73,7 +73,7 @@ rotate_logs() {
 start() {
   local i=$1
   # shellcheck disable=SC2086  # CMDS holds several words on purpose
-  $PY -m etb.cli ${CMDS[$i]} >> "$LOG_DIR/${NAMES[$i]}.log" 2>&1 &
+  $PY -m screeners.cli ${CMDS[$i]} >> "$LOG_DIR/${NAMES[$i]}.log" 2>&1 &
   PIDS[$i]=$!
   STARTED[$i]=$(date +%s)
   say "started ${NAMES[$i]} (pid ${PIDS[$i]}) -> $LOG_DIR/${NAMES[$i]}.log"
@@ -91,7 +91,7 @@ trap stop_all INT TERM
 
 for i in $(seq 0 "$LAST"); do start "$i"; done
 [ "$WANT_LIVE" -eq 1 ] && [ -z "$LIVE_FLAGS" ] && \
-  $PY -m etb.cli ops "etb started: ${NAMES[*]}" >/dev/null 2>&1
+  $PY -m screeners.cli ops "screeners started: ${NAMES[*]}" >/dev/null 2>&1
 
 last_status=$(date +%s)
 while true; do
@@ -109,7 +109,7 @@ while true; do
       tail -n 5 "$LOG_DIR/${NAMES[$i]}.log" | sed 's/^/    /'
       if [ "${RESTARTS[$i]}" -eq "$FLAP_RESTARTS" ]; then
         # Not a blip: say so once, in the Ops topic.
-        $PY -m etb.cli ops "⚠️ ${NAMES[$i]} keeps dying (restart #${RESTARTS[$i]}): $(tail -n 1 "$LOG_DIR/${NAMES[$i]}.log" | cut -c1-200)" \
+        $PY -m screeners.cli ops "⚠️ ${NAMES[$i]} keeps dying (restart #${RESTARTS[$i]}): $(tail -n 1 "$LOG_DIR/${NAMES[$i]}.log" | cut -c1-200)" \
           >/dev/null 2>&1 || true
       fi
     elif [ "$now" -ge "${RETRY_AT[$i]}" ]; then
@@ -122,6 +122,6 @@ while true; do
     rotate_logs
     up=""; for i in $(seq 0 "$LAST"); do kill -0 "${PIDS[$i]}" 2>/dev/null && up+="${NAMES[$i]} "; done
     say "status: up = ${up:-none}"
-    $PY -c "from etb.data.liquidations import LiquidationStore as S; from etb.config import ROOT; print('    liquidations:', S(ROOT/'data'/'liquidations.db').count())" 2>/dev/null
+    $PY -c "from screeners.data.liquidations import LiquidationStore as S; from screeners.config import ROOT; print('    liquidations:', S(ROOT/'data'/'liquidations.db').count())" 2>/dev/null
   fi
 done

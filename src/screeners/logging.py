@@ -14,4 +14,4 @@ def setup(level: str | None = None) -> None:
         datefmt="%H:%M:%S",
         stream=sys.stderr,
     )
-    logging.getLogger("etb.data.http").setLevel(logging.WARNING)
+    logging.getLogger("screeners.data.http").setLevel(logging.WARNING)

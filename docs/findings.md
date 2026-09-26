@@ -122,7 +122,7 @@ that is a different product from the one in the video.
 
 ## 3. Liquidations — not measurable yet
 
-No historical endpoint exists on either venue. `etb record-liquidations` is
+No historical endpoint exists on either venue. `screeners record-liquidations` is
 running; a 100-second sample recorded 6 Bybit liquidations and **zero** from
 Binance, consistent with Binance's documented throttle (one per symbol per
 second, snapshot not firehose) rather than a bug.

@@ -45,7 +45,7 @@ reset_tz      = "UTC"
 
 [liquidation]
 # No historical endpoint exists on either venue -- this rule cannot be
-# backtested, only recorded live. `etb record-liquidations` builds the dataset.
+# backtested, only recorded live. `screeners record-liquidations` builds the dataset.
 enabled      = true
 min_usd      = 20000.0
 exclude      = ["BTCUSDT", "ETHUSDT"]   # "for alts, $20k is a lot" -- majors need a higher bar

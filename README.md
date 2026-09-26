@@ -1,4 +1,4 @@
-# experimental-trading-bots
+# telegram-crypto-screeners
 
 Market screeners for Binance and Bybit USDT perpetuals. They watch price,
 volume, open interest and CVD, and alert to Telegram. **They do not trade** —
@@ -40,13 +40,13 @@ One supervisor, one process per stage, so a stuck Telegram send can never
 stall liquidation ingest. A dead stage restarts with a growing delay (5s..60s);
 the third restart in a row posts one line to the Ops topic. Logs go to
 `data/logs/<stage>.log`, rotated past 20MB. Ctrl-C stops everything. It refuses
-to start if it is already running, or if any `etb` stage was started by hand —
+to start if it is already running, or if any screener stage was started by hand —
 two recorders would double-count, two screeners would double-alert.
 
 ## Backtest first
 
 ```bash
-PYTHONPATH=src python3 -m etb.cli backtest --rule oi_growth --exchange binance --days 30 --top 200
+PYTHONPATH=src python3 -m screeners.cli backtest --rule oi_growth --exchange binance --days 30 --top 200
 ```
 
 Every run reports a **random-entry baseline** alongside the rule. This is not
@@ -61,9 +61,9 @@ Results are in `out/`. Summary of what the numbers actually say:
 Other commands:
 
 ```bash
-python3 -m etb.cli universe --exchange bybit        # list tradable perps
-python3 -m etb.cli cache                            # what history is cached
-python3 -m etb.cli record-liquidations              # start collecting (see below)
+python3 -m screeners.cli universe --exchange bybit        # list tradable perps
+python3 -m screeners.cli cache                            # what history is cached
+python3 -m screeners.cli record-liquidations              # start collecting (see below)
 ```
 
 History is cached in `data/cache.db`, so re-running with different thresholds
@@ -80,7 +80,7 @@ all** until a dataset exists, and the dataset is only as good as how long it
 has been running:
 
 ```bash
-PYTHONPATH=src python3 -m etb.cli record-liquidations --exchange both
+PYTHONPATH=src python3 -m screeners.cli record-liquidations --exchange both
 ```
 
 Caveat worth knowing: Binance's `!forceOrder@arr` is a *snapshot* stream that
@@ -107,7 +107,7 @@ neither. Everything after that is automated.
 **Then this does the rest:**
 
 ```bash
-PYTHONPATH=src python3 -m etb.cli telegram-setup '<token>'
+PYTHONPATH=src python3 -m screeners.cli telegram-setup '<token>'
 ```
 
 It waits for you to post any message in the group, reads the chat id off that
@@ -117,7 +117,7 @@ message, creates the four topics (OI / Pump / Liquidations / Ops), and writes
 **See it work:**
 
 ```bash
-PYTHONPATH=src python3 -m etb.cli telegram-test --count 30
+PYTHONPATH=src python3 -m screeners.cli telegram-test --count 30
 ```
 
 Replays real signals from `out/signals_*.json` into their topics — genuine
@@ -132,7 +132,7 @@ of sent, so the backtester and recorder need no credentials.
 ## Layout
 
 ```
-src/etb/
+src/screeners/
   models.py        Bar, Signal, Liquidation
   config.py        rules.toml + .env loading
   data/

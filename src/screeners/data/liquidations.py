@@ -2,7 +2,7 @@
 
 Neither venue serves historical liquidations over REST, so the only way to ever
 backtest the liquidation screener is to start recording now. That is what
-`etb record-liquidations` is for.
+`screeners record-liquidations` is for.
 
 Two things to know about the feeds:
 

@@ -88,7 +88,7 @@ class Dispatcher:
             return
         if self.dry_run:
             log.warning("Telegram not configured -- signals will be logged, not sent")
-        self._thread = threading.Thread(target=self._run, name="etb-notify", daemon=True)
+        self._thread = threading.Thread(target=self._run, name="screeners-notify", daemon=True)
         self._thread.start()
 
     def submit(self, signal: Signal) -> None:

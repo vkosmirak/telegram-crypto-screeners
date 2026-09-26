@@ -7,8 +7,8 @@ from __future__ import annotations
 
 import unittest
 
-from etb.models import Exchange, Side, Signal
-from etb.notify.cards import chart_url, fmt_usd, signal_card
+from screeners.models import Exchange, Side, Signal
+from screeners.notify.cards import chart_url, fmt_usd, signal_card
 
 
 def sig(**kw):

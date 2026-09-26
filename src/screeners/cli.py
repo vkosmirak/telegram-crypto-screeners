@@ -1,8 +1,8 @@
 """Command line entry point.
 
-    etb backtest --rule oi_growth --exchange binance --days 30 --top 100
-    etb universe --exchange bybit
-    etb cache
+    screeners backtest --rule oi_growth --exchange binance --days 30 --top 100
+    screeners universe --exchange bybit
+    screeners cache
 """
 from __future__ import annotations
 
@@ -181,7 +181,7 @@ def cmd_telegram_setup(args: argparse.Namespace) -> int:
                             "NOTIFY_CHAT_ID": chat_id, **topics})
     print(f"\nwrote {path} (chmod 600). Topics: "
           + ", ".join(f"{k}={v}" for k, v in topics.items()), file=sys.stderr)
-    print("\nNow run:  python3 -m etb.cli telegram-test", file=sys.stderr)
+    print("\nNow run:  python3 -m screeners.cli telegram-test", file=sys.stderr)
     return 0
 
 
@@ -205,7 +205,7 @@ def cmd_telegram_test(args: argparse.Namespace) -> int:
     files = store.available()
     if not files:
         print("no saved signals. Run a backtest first, e.g.\n"
-              "  python3 -m etb.cli backtest --rule oi_growth --days 30 --top 200",
+              "  python3 -m screeners.cli backtest --rule oi_growth --days 30 --top 200",
               file=sys.stderr)
         return 1
 
@@ -232,7 +232,7 @@ def cmd_telegram_test(args: argparse.Namespace) -> int:
     d = Dispatcher(settings, dry_run=args.dry_run, rate_per_sec=args.rate,
                    burst=3, batch_window_s=args.batch, max_batch=args.max_batch)
     d.start()
-    d.submit_text(f"\U0001f6a6 <b>etb test run</b>\nreplaying {len(collected)} real "
+    d.submit_text(f"\U0001f6a6 <b>screeners test run</b>\nreplaying {len(collected)} real "
                   f"signals from {exchange.value} history into their topics.")
     for sig in collected:
         d.submit(sig)
@@ -375,7 +375,7 @@ def cmd_cache(args: argparse.Namespace) -> int:
 
 
 def main(argv: list[str] | None = None) -> int:
-    p = argparse.ArgumentParser(prog="etb", description=__doc__,
+    p = argparse.ArgumentParser(prog="screeners", description=__doc__,
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--log-level", default=None)
     sub = p.add_subparsers(dest="cmd", required=True)

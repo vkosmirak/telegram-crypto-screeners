@@ -3,9 +3,9 @@ from __future__ import annotations
 
 import unittest
 
-from etb.backtest.stats import score, summarise
-from etb.data.series import Series
-from etb.models import Bar, Exchange, Side, Signal
+from screeners.backtest.stats import score, summarise
+from screeners.data.series import Series
+from screeners.models import Bar, Exchange, Side, Signal
 
 MIN = 60_000
 
@@ -74,7 +74,7 @@ class TestSummary(unittest.TestCase):
 
 class TestResultSubset(unittest.TestCase):
     def test_uncomputed_filters_do_not_exclude_a_signal(self):
-        from etb.backtest.engine import BacktestResult
+        from screeners.backtest.engine import BacktestResult
 
         s = series([100.0] * 6)
         a = score(Signal(rule="r", exchange=Exchange.BINANCE, symbol="A",
@@ -98,7 +98,7 @@ class TestTopicRouting(unittest.TestCase):
     silently landing in the group's General topic."""
 
     def settings(self):
-        from etb.config import load_notify
+        from screeners.config import load_notify
         return load_notify(env={
             "NOTIFY_BOT_TOKEN": "t", "NOTIFY_CHAT_ID": "-100",
             "TOPIC_OI": "3", "TOPIC_PUMP": "4",

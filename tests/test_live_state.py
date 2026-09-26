@@ -7,12 +7,12 @@ from __future__ import annotations
 
 import unittest
 
-from etb.backtest.engine import _paired_baseline
-from etb.config import OIGrowthConfig
-from etb.data.series import Series
-from etb.models import Bar, Exchange, Side, Signal
-from etb.rules.base import SignalState, scan
-from etb.rules.oi_growth import OIGrowthRule
+from screeners.backtest.engine import _paired_baseline
+from screeners.config import OIGrowthConfig
+from screeners.data.series import Series
+from screeners.models import Bar, Exchange, Side, Signal
+from screeners.rules.base import SignalState, scan
+from screeners.rules.oi_growth import OIGrowthRule
 
 MIN = 60_000
 HOUR = 3_600_000
@@ -126,8 +126,8 @@ class TestPairedBaseline(unittest.TestCase):
         self.assertNotIn("AUSDT", {o.signal.symbol for o in out})
 
     def test_control_inherits_the_rule_s_side(self):
-        from etb.config import PumpConfig
-        from etb.rules.pump import PumpRule
+        from screeners.config import PumpConfig
+        from screeners.rules.pump import PumpRule
         sm = self.series_map()
         out = _paired_baseline(sm, [self.signal("AUSDT", 5 * MIN)],
                                PumpRule(PumpConfig(), Side.SHORT), (1,))

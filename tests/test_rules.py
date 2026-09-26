@@ -3,13 +3,13 @@ from __future__ import annotations
 
 import unittest
 
-from etb.config import LiquidationConfig, OIGrowthConfig, PumpConfig, PumpSideConfig
-from etb.data.series import Series, merge_oi
-from etb.models import Bar, Exchange, Liquidation, Side
-from etb.rules.base import scan, utc_day
-from etb.rules.liquidation import LiquidationRule, normalise_side
-from etb.rules.oi_growth import OIGrowthRule
-from etb.rules.pump import PumpRule
+from screeners.config import LiquidationConfig, OIGrowthConfig, PumpConfig, PumpSideConfig
+from screeners.data.series import Series, merge_oi
+from screeners.models import Bar, Exchange, Liquidation, Side
+from screeners.rules.base import scan, utc_day
+from screeners.rules.liquidation import LiquidationRule, normalise_side
+from screeners.rules.oi_growth import OIGrowthRule
+from screeners.rules.pump import PumpRule
 
 MIN = 60_000
 

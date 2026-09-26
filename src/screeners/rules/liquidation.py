@@ -2,7 +2,7 @@
 
 This one cannot be backtested. Neither venue exposes historical liquidations
 over REST -- they are websocket-only, so the dataset has to be *recorded*
-before any of this can be measured (`etb record-liquidations`). It is
+before any of this can be measured (`screeners record-liquidations`). It is
 implemented here so the live screener is complete and so the recorder has
 something to write against.
 

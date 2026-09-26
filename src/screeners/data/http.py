@@ -85,7 +85,7 @@ def get_json(
         if budget:
             budget.spend(weight)
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": "etb/0.1"})
+            req = urllib.request.Request(url, headers={"User-Agent": "screeners/0.1"})
             with urllib.request.urlopen(req, timeout=timeout) as r:
                 return json.loads(r.read())
         except urllib.error.HTTPError as e:
