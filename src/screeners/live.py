@@ -260,8 +260,11 @@ class Screener:
 
     @staticmethod
     def _journal(sig: Signal, action: str, now: int) -> None:
+        # Stamp the moment of the decision, not the sweep's start: the two
+        # stages share one journal file, and sweep-start stamps made their
+        # rows interleave out of order and read 20-40s early.
         try:
-            journal.record(sig, action, now)
+            journal.record(sig, action, int(time.time() * 1000))
         except Exception as e:  # a full disk must not stop alerts
             log.warning("journal write failed: %s", e)
 
