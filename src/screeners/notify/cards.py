@@ -44,6 +44,13 @@ def fmt_usd(v: float) -> str:
     return f"{v:.0f} $"
 
 
+def _pct(v: float) -> str:
+    """5.1%, 12.46%, 5%, -1.26% -- up to two decimals, no forced plus sign,
+    matching how the screener in the video prints percentages."""
+    txt = f"{v:.2f}".rstrip("0").rstrip(".")
+    return f"{'0' if txt in ('-0', '') else txt}%"
+
+
 def _fmt_price(p: float) -> str:
     if p >= 100:
         return f"{p:,.2f}"
@@ -80,15 +87,15 @@ def signal_card(signal: Signal, *, show_filters: bool = True) -> str:
 
     window = int(m.get("window_min") or m.get("oi_window_min") or 0)
     win = f" \u2013 {window}m" if window else ""
-    head = f'{dot} {name}{win} \u2013 <a href="{link}"><b>{sym}</b></a>'
+    head = f'{dot} {name}{win} \u2013 <a href="{link}">{sym}</a>'
 
     lines: list[str] = []
 
     if "oi_growth_pct" in m:
         total = f' ({fmt_usd(m["oi_usd"])})' if "oi_usd" in m else ""
-        lines.append(f'\U0001f4c8 <b>OI {m["oi_growth_pct"]:+.2f}%</b>{total}')
+        lines.append(f'\U0001f4c8 <b>OI grew {_pct(m["oi_growth_pct"])}</b>{total}')
     if "price_change_pct" in m:
-        lines.append(f'\U0001f4b2 Price change: {m["price_change_pct"]:+.2f}%')
+        lines.append(f'\U0001f4b2 Price change: {_pct(m["price_change_pct"])}')
 
     if "move_pct" in m:
         # Red for the big accelerated move he shorts, green for a small impulse.
@@ -96,9 +103,9 @@ def signal_card(signal: Signal, *, show_filters: bool = True) -> str:
         rng = ""
         if "low" in m:
             rng = f' ({_fmt_price(m["low"])}-{_fmt_price(signal.price)})'
-        lines.append(f'{icon} <b>Pump: {m["move_pct"]:.2f}%</b>{rng}')
+        lines.append(f'{icon} <b>Pump: {_pct(m["move_pct"])}</b>{rng}')
         if "oi_change_pct" in m:
-            lines.append(f'\U0001f4b2 OI change: {m["oi_change_pct"]:+.2f}%')
+            lines.append(f'\U0001f4b2 OI change: {_pct(m["oi_change_pct"])}')
 
     if "usd" in m:
         side_txt = "longs" if m.get("liquidated_side", 0) > 0 else "shorts"

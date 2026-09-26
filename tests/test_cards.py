@@ -50,16 +50,16 @@ class TestBody(unittest.TestCase):
         card = signal_card(sig(ordinal=8, metrics={
             "oi_growth_pct": 12.46, "oi_usd": 2_910_000,
             "price_change_pct": 1.5, "window_min": 30}))
-        self.assertIn("OI +12.46%", card)
+        self.assertIn("OI grew 12.46%", card)
         self.assertIn("2.91M $", card)
-        self.assertIn("Price change: +1.50%", card)
+        self.assertIn("Price change: 1.5%", card)
         self.assertIn("Signal 24h: 8", card)
 
     def test_negative_price_change_is_shown_not_suppressed(self):
         # His OI signals go out with price down; the read is the human's job.
         card = signal_card(sig(metrics={"oi_growth_pct": 5.1,
                                         "price_change_pct": -1.26}))
-        self.assertIn("-1.26%", card)
+        self.assertIn("Price change: -1.26%", card)
 
     def test_pump_card_shows_the_price_range(self):
         card = signal_card(sig(rule="pump_short", side=Side.SHORT, price=0.6013,
@@ -74,6 +74,32 @@ class TestBody(unittest.TestCase):
                                metrics={"usd": 55_000, "liquidated_side": 1.0}))
         self.assertIn("Liquidated longs", card)
         self.assertIn("55.00K $", card)
+
+
+class TestNumberStyle(unittest.TestCase):
+    """Percentages print the way the video's screener prints them."""
+
+    def test_trailing_zeros_are_trimmed_and_no_plus_is_forced(self):
+        card = signal_card(sig(metrics={"oi_growth_pct": 5.0, "price_change_pct": 1.5}))
+        self.assertIn("OI grew 5%", card)
+        self.assertIn("Price change: 1.5%", card)
+        self.assertNotIn("+", card.split("\n", 1)[1])
+
+    def test_oi_card_header_names_the_window(self):
+        from screeners.config import OIGrowthConfig
+        from screeners.data.series import Series
+        from screeners.models import Bar
+        from screeners.rules.base import scan
+        from screeners.rules.oi_growth import OIGrowthRule
+        MIN = 60_000
+        oi = [100.0, 100.0, 100.0, 110.0]
+        bars = [Bar(ts=n * 5 * MIN, open=1, high=1, low=1, close=1, volume=1,
+                    oi=oi[n]) for n in range(4)]
+        rule = OIGrowthRule(OIGrowthConfig(window_min=15, cooldown_min=0,
+                                           max_ordinal=0, price_up=False, cvd_up=False,
+                                           volume_up=False, flat_before=False))
+        s = scan(rule, Series(Exchange.BINANCE, "BANDUSDT", "5m", bars))[0]
+        self.assertIn("Binance \u2013 15m \u2013", signal_card(s).split("\n")[0])
 
 
 class TestFilters(unittest.TestCase):

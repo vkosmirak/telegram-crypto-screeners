@@ -51,6 +51,9 @@ class OIGrowthRule:
             "price_change_pct": price_change,
             "oi": now.oi,
             "oi_usd": now.oi * now.close,
+            # The card header names the window ("ByBit – 15m – SYMBOL"), as
+            # the screener in the video does. Without this it was omitted.
+            "window_min": float(cfg.window_min),
         }
         filters: dict[str, bool] = {}
 
