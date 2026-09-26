@@ -17,8 +17,10 @@ further, but REST keeps one code path and is plenty for minute bars.
 from __future__ import annotations
 
 import logging
+import re
 import threading
 import time
+from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 
 from .backtest.engine import build_rule, interval_for
@@ -183,6 +185,7 @@ class Screener:
             jobs.append(("oi", lambda sym=sym: self._refresh_oi(sym, oi_start, now)))
 
         failed: dict[str, int] = {}
+        reasons: Counter[str] = Counter()
         with ThreadPoolExecutor(max_workers=self.workers) as pool:
             futures = [(name, pool.submit(fn)) for name, fn in jobs]
             for name, fut in futures:
@@ -190,7 +193,13 @@ class Screener:
                     fut.result()
                 except Exception as e:
                     failed[name] = failed.get(name, 0) + 1
-                    log.debug("%s refresh failed: %s", name, e)
+                    # Group by message with symbols and numbers blanked, so
+                    # 65 failures of one kind read as one line, not 65.
+                    msg = re.sub(r"symbol=[A-Z0-9]+", "symbol=*", str(e))
+                    reasons[re.sub(r"\d{5,}", "N", msg)[:160]] += 1
+        if reasons:
+            log.warning("refresh failures: %s", "; ".join(
+                f"{n}x {r}" for r, n in reasons.most_common(3)))
         return failed
 
     # ── one sweep ─────────────────────────────────────────────────────────────
