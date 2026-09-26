@@ -110,7 +110,9 @@ class Screener:
             by_interval.setdefault(interval_for(rule.name), []).append(rule)
 
         now = int(time.time() * 1000)
+        started = time.monotonic()
         fresh: list[Signal] = []
+        loaded: dict[str, int] = {}
 
         for interval, rules in by_interval.items():
             step = 60_000 * {"1m": 1, "5m": 5}[interval]
@@ -122,6 +124,7 @@ class Screener:
                 self.exchange, self.symbols, interval, start, end,
                 with_oi=True, cache=None, workers=self.workers,
             )
+            loaded[interval] = len(series_map)
             for rule in rules:
                 for series in series_map.values():
                     fresh.extend(scan(rule, series, state=self._state))
@@ -135,13 +138,26 @@ class Screener:
             return
 
         fresh.sort(key=lambda s: s.ts)
+        sent = 0
         for sig in fresh:
+            tag = f"{sig.rule} {sig.symbol} #{sig.ordinal}"
             if self.require_filters and sig.filters and not sig.passed_all_filters:
+                failed = ",".join(k for k, ok in sig.filters.items() if not ok)
+                log.info("  skip %s (fails %s)", tag, failed)
                 continue
+            log.info("  SEND %s", tag)
             self.dispatcher.submit(sig)
-            self.emitted += 1
-        if fresh:
-            log.info("sweep: %d new signal(s), %d dispatched", len(fresh), self.emitted)
+            sent += 1
+        self.emitted += sent
+
+        # One line per sweep, always. Without it a quiet market and a wedged
+        # sweep are indistinguishable in the log, and a symbol silently
+        # dropping out of the fetch (rate limit, delisting) goes unnoticed.
+        want = len(self.symbols)
+        short = {iv: n for iv, n in loaded.items() if n < want}
+        log.info("sweep %.0fs: %d triggered, %d sent (total %d)%s",
+                 time.monotonic() - started, len(fresh), sent, self.emitted,
+                 f"; MISSING symbols {short} of {want}" if short else "")
 
 def build_dispatcher(settings: NotifySettings, dry_run: bool = False) -> Dispatcher:
     d = Dispatcher(settings, dry_run=dry_run)
