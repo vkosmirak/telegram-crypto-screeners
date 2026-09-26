@@ -8,7 +8,7 @@ from __future__ import annotations
 import unittest
 
 from screeners.config import load_rules
-from screeners.live import OI_STEP_MS, TAIL_HOURS, Screener
+from screeners.live import OI_LAG_MS, OI_RETRY_MS, OI_STEP_MS, TAIL_HOURS, Screener
 from screeners.models import Bar, Exchange
 from screeners.notify.dispatch import Dispatcher
 from screeners.config import NotifySettings
@@ -79,15 +79,30 @@ class TestIncrementalFeed(unittest.TestCase):
         self.assertEqual(ts, sorted(set(ts)))                  # no dupes, ordered
         self.assertTrue(all(b - a == MIN for a, b in zip(ts, ts[1:])))  # no gaps
 
-    def test_oi_is_not_refetched_before_a_new_sample_can_exist(self):
+    def test_oi_is_not_refetched_before_the_next_sample_is_published(self):
         sc = screener()
         sc._refresh_all(self.T0)
         sc.adapter.oi_calls.clear()
-        sc._refresh_all(self.T0 + 1 * MIN)
         sc._refresh_all(self.T0 + 2 * MIN)
+        # The 5 minutes are up, but Binance has not published the sample yet.
+        sc._refresh_all(self.T0 + OI_STEP_MS + OI_LAG_MS - 1)
         self.assertEqual(sc.adapter.oi_calls, [])
-        sc._refresh_all(self.T0 + 5 * MIN)
+        sc._refresh_all(self.T0 + OI_STEP_MS + OI_LAG_MS)
         self.assertEqual(len(sc.adapter.oi_calls), 2)   # one per symbol
+
+    def test_an_empty_oi_fetch_backs_off_instead_of_retrying_every_sweep(self):
+        """The 259s stall: every symbol re-asked every sweep for a sample
+        that was not published yet, and starved the 800-per-5-min pool."""
+        sc = screener()
+        sc._refresh_all(self.T0)
+        sc.adapter.open_interest = lambda *a: (sc.adapter.oi_calls.append(a), [])[1]
+        due = self.T0 + OI_STEP_MS + OI_LAG_MS
+        sc._refresh_all(due)                                   # empty answer
+        sc.adapter.oi_calls.clear()
+        sc._refresh_all(due + MIN - 1)
+        self.assertEqual(sc.adapter.oi_calls, [])              # backing off
+        sc._refresh_all(due + OI_RETRY_MS)
+        self.assertEqual(len(sc.adapter.oi_calls), 2)          # asks again
 
     def test_a_failing_symbol_is_counted_and_does_not_block_the_rest(self):
         sc = screener()

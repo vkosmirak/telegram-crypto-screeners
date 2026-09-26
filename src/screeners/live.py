@@ -39,6 +39,13 @@ ADAPTERS = {Exchange.BINANCE: binance, Exchange.BYBIT: bybit}
 TAIL_HOURS = 8.0
 OI_PERIOD = "5m"
 OI_STEP_MS = INTERVAL_MS[OI_PERIOD]
+# Binance publishes each 5m open-interest sample ~30-35s after its timestamp
+# (measured 2026-09-26). Asking the instant the 5 minutes are up returns
+# nothing new, and when every symbol then retried every sweep the OI pool
+# (800 requests per 5 minutes) starved and one sweep stalled for 259s.
+OI_LAG_MS = 45_000
+# After a fetch that brought nothing new, wait this long before asking again.
+OI_RETRY_MS = 60_000
 # Bars this recent are re-judged every sweep. An OI sample can land a little
 # after the bar it belongs to was first judged; re-checking a short trailing
 # window lets that bar fire once its data is complete. SignalState stops any
@@ -74,6 +81,7 @@ class Screener:
         self._state = SignalState()
         self._bars: dict[tuple[str, str], list[Bar]] = {}
         self._oi: dict[str, list[tuple[int, float]]] = {}
+        self._oi_next: dict[str, int] = {}  # earliest time worth asking again
         self._warm = False
         self.emitted = 0
 
@@ -141,16 +149,21 @@ class Screener:
 
     def _refresh_oi(self, symbol: str, start: int, now: int) -> None:
         have = self._oi.get(symbol)
-        if have and now < have[-1][0] + OI_STEP_MS:
-            return  # no newer sample can exist yet
+        if have and now < self._oi_next.get(symbol, 0):
+            return  # the next sample is not published yet
         frm = start - OI_STEP_MS if not have else have[-1][0] + 1
         new = self.adapter.open_interest(symbol, OI_PERIOD, frm, now + 1)
+        before = have[-1][0] if have else None
         if have:
-            last = have[-1][0]
-            have = have + [(t, v) for t, v in new if t > last]
+            have = have + [(t, v) for t, v in new if t > before]
         else:
             have = new
         self._oi[symbol] = [(t, v) for t, v in have if t >= start - OI_STEP_MS]
+        newest = self._oi[symbol][-1][0] if self._oi[symbol] else None
+        if newest is not None and newest != before:
+            self._oi_next[symbol] = newest + OI_STEP_MS + OI_LAG_MS
+        else:
+            self._oi_next[symbol] = now + OI_RETRY_MS
 
     def _refresh_all(self, now: int) -> dict[str, int]:
         """Update every symbol in parallel. Returns failure counts per stream."""
