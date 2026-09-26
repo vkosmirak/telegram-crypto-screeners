@@ -8,7 +8,8 @@ from __future__ import annotations
 import unittest
 
 from screeners.models import Exchange, Side, Signal
-from screeners.notify.cards import chart_url, fmt_usd, signal_card
+from screeners.notify.cards import (chart_button, chart_url, fmt_usd,
+                                    signal_card, tradingview_url)
 
 
 def sig(**kw):
@@ -25,6 +26,19 @@ class TestHelpers(unittest.TestCase):
         self.assertEqual(fmt_usd(58_070_000), "58.07M $")
         self.assertEqual(fmt_usd(55_000), "55.00K $")
         self.assertEqual(fmt_usd(900), "900 $")
+
+
+class TestChartLinks(unittest.TestCase):
+    def test_tradingview_points_at_the_venue_perpetual(self):
+        self.assertEqual(
+            tradingview_url(sig(exchange=Exchange.BYBIT, symbol="CLSKUSDT")),
+            "https://www.tradingview.com/chart/?symbol=BYBIT:CLSKUSDT.P")
+        self.assertIn("symbol=BINANCE:BANDUSDT.P", tradingview_url(sig()))
+
+    def test_button_row_offers_coinglass_and_tradingview(self):
+        s = sig()
+        urls = [b["url"] for b in chart_button(s)[0]]
+        self.assertEqual(urls, [chart_url(s), tradingview_url(s)])
 
 
 class TestHeader(unittest.TestCase):

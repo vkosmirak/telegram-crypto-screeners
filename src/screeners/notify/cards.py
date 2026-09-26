@@ -17,6 +17,9 @@ from ..models import Side, Signal
 
 COINGLASS = "https://www.coinglass.com/tv/{exchange}_{symbol}"
 _EXCHANGE_SLUG = {"binance": "Binance", "bybit": "Bybit"}
+# Second chart, for when Coinglass's heavy /tv page will not load (it hangs
+# in Telegram's iOS in-app browser). ".P" is TradingView's perpetual suffix.
+TRADINGVIEW = "https://www.tradingview.com/chart/?symbol={exchange}:{symbol}.P"
 
 _TITLE = {
     "oi_growth": ("OI", "🟢"),
@@ -34,6 +37,12 @@ def chart_url(signal: Signal) -> str:
     slug = _EXCHANGE_SLUG.get(signal.exchange.value, signal.exchange.value)
     return COINGLASS.format(exchange=slug,
                             symbol=urllib.parse.quote(signal.symbol, safe=""))
+
+
+def tradingview_url(signal: Signal) -> str:
+    """TradingView chart of the same perpetual, e.g. BYBIT:CLSKUSDT.P."""
+    return TRADINGVIEW.format(exchange=signal.exchange.value.upper(),
+                              symbol=urllib.parse.quote(signal.symbol, safe=""))
 
 
 def fmt_usd(v: float) -> str:
@@ -126,4 +135,5 @@ def signal_card(signal: Signal, *, show_filters: bool = True) -> str:
 
 
 def chart_button(signal: Signal) -> list[list[dict]]:
-    return [[{"text": "📊 Coinglass", "url": chart_url(signal)}]]
+    return [[{"text": "📊 Coinglass", "url": chart_url(signal)},
+             {"text": "📈 TradingView", "url": tradingview_url(signal)}]]
