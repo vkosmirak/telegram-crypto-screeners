@@ -59,6 +59,18 @@ class TestBybitInBodyRateLimit(unittest.TestCase):
             with self.assertRaises(RuntimeError):
                 bybit.universe()
 
+    def test_a_burst_of_throttles_logs_one_summary(self):
+        limited = {"retCode": 10006, "retMsg": "Too many visits"}
+        ok = {"retCode": 0, "result": {"list": [], "nextPageCursor": ""}}
+        bybit._throttle.update(n=0, worst=0, since=0.0, endpoints=set())
+        with mock.patch.object(bybit, "get_json", side_effect=[limited, ok] * 20), \
+             mock.patch.object(bybit.time, "sleep"), \
+             mock.patch.object(bybit.BUDGET, "penalize"), \
+             self.assertLogs("screeners.data.bybit", level="WARNING") as cm:
+            for _ in range(20):
+                bybit.universe()
+        self.assertEqual(len(cm.output), 1)
+
     def test_other_errors_are_not_retried(self):
         bad = {"retCode": 10001, "retMsg": "params error"}
         with mock.patch.object(bybit, "get_json", return_value=bad) as g:

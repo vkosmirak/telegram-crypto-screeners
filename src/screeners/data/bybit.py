@@ -12,6 +12,7 @@ at 100ms and is available historically via cursor paging.
 from __future__ import annotations
 
 import logging
+import threading
 import time
 
 from ..models import Bar, Exchange
@@ -49,6 +50,28 @@ RATE_LIMIT_CODES = frozenset({10006, 10018})
 RATE_LIMIT_ATTEMPTS = 5
 
 
+# Summarised, not per retry: at 15:00 Bybit throttled 44 requests in one
+# sweep, and a line each buried everything else in the log.
+_THROTTLE_LOG_EVERY_S = 60.0
+_throttle = {"n": 0, "worst": 0, "since": 0.0, "endpoints": set()}
+_throttle_lock = threading.Lock()
+
+
+def _note_throttle(endpoint: str, code: int, attempt: int) -> None:
+    with _throttle_lock:
+        t = _throttle
+        t["n"] += 1
+        t["worst"] = max(t["worst"], attempt)
+        t["endpoints"].add(endpoint)
+        now = time.monotonic()
+        if now - t["since"] < _THROTTLE_LOG_EVERY_S:
+            return
+        n, worst, eps = t["n"], t["worst"], sorted(t["endpoints"])
+        t.update(n=0, worst=0, since=now, endpoints=set())
+    log.warning("bybit rate limit (%s): %d retr%s on %s, deepest attempt %d/%d",
+                code, n, "y" if n == 1 else "ies", ",".join(eps), worst, RATE_LIMIT_ATTEMPTS)
+
+
 def _get_json(url: str, params: dict | None = None, *, budget: WeightBudget = BUDGET) -> object:
     """get_json that treats Bybit's in-body rate limit like an HTTP 429:
     pause the whole pool, back off, retry."""
@@ -59,8 +82,7 @@ def _get_json(url: str, params: dict | None = None, *, budget: WeightBudget = BU
             return payload
         wait = min(10.0, 1.0 * 2 ** attempt)
         budget.penalize(wait)
-        log.warning("bybit rate limit (%s) on %s, retry %d/%d in %.0fs",
-                    code, url.rsplit("/", 1)[-1], attempt + 1, RATE_LIMIT_ATTEMPTS, wait)
+        _note_throttle(url.rsplit("/", 1)[-1], code, attempt + 1)
         time.sleep(wait)
     return payload  # still limited: let _result raise with Bybit's message
 
