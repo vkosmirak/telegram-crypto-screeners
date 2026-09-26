@@ -73,6 +73,37 @@ trades it.
 
 ---
 
+## 1b. OI growth, long — Bybit, 30 days, top 200 by turnover
+
+Same trigger and filters, minus CVD: Bybit klines carry no taker-buy volume,
+so that filter cannot be computed (§4). **2913 firings over 30 days ≈ 97/day;
+1084 pass the remaining filters, ≈ 36/day.** Control n≈14,500.
+
+| horizon | trigger alone | all filters (n=1084) |
+|---:|---:|---:|
+| +5m | +0.8 | −0.9 |
+| +15m | −0.4 | −0.0 |
+| +30m | −0.7 | −1.3 |
+| +60m | −0.3 | −0.5 |
+| +240m | −1.1 | −2.0 |
+
+**No edge at any horizon, with or without filters**, on a sample large enough
+to trust. Where Binance's filtered set beat the control by 5–6pp in the first
+15 minutes, Bybit's is flat.
+
+The obvious difference is the missing CVD filter, which was the strongest
+single filter on Binance. So this is consistent with "CVD carries most of what
+edge exists" — though it does not prove it, since the two venues also differ
+in liquidity and in which coins list where. Bybit also fires ~4× as often as
+Binance for the same thresholds, so without CVD its alerts are both more
+numerous and uninformative.
+
+Practical consequence: Bybit OI alerts are noise at present. Either keep the
+Bybit screener off, or record Bybit CVD live from `publicTrade.{symbol}` for a
+few weeks and re-test with it.
+
+---
+
 ## 2. Pump, short — Binance, 14 days, top 100 by turnover
 
 Trigger: price +10% within 20 minutes. 1m bars.
@@ -166,8 +197,10 @@ partially-computed filter cannot masquerade as a clean one.
 
 ## 6. One line each
 
-* **OI growth long** — real edge, but small (~5–6pp) and gone within 30
-  minutes. Filters are what carry it; the bare trigger is noise.
+* **OI growth long, Binance** — real edge, but small (~5–6pp) and gone
+  within 30 minutes. Filters are what carry it; the bare trigger is noise.
+* **OI growth long, Bybit** — no edge at all (n=1084 filtered). Without CVD
+  the filters do nothing, and it fires 4× as often.
 * **Pump short** — the 7-in-10 claim is false at n=395: a 48% coin flip that
   loses money, with a −25% mean adverse excursion at four hours. The filters
   cut tail risk rather than pick direction.

@@ -224,8 +224,11 @@ class Screener:
         fresh.sort(key=lambda s: s.ts)
         sent = 0
         for sig in fresh:
-            age_min = (now - sig.ts) / 60_000
-            tag = f"{sig.rule} {sig.symbol} #{sig.ordinal} ({age_min:.0f}m old)"
+            # Measured from the bar's CLOSE: from its open, a 5m signal always
+            # looks at least 5 minutes stale, which is just the bar's length.
+            closed = sig.ts + INTERVAL_MS[interval_for(sig.rule)]
+            tag = (f"{sig.rule} {sig.symbol} #{sig.ordinal} "
+                   f"({(now - closed) / 1000:.0f}s after bar close)")
             if self.require_filters and sig.filters and not sig.passed_all_filters:
                 bad = ",".join(k for k, ok in sig.filters.items() if not ok)
                 log.info("  skip %s (fails %s)", tag, bad)
