@@ -8,8 +8,8 @@ from __future__ import annotations
 import unittest
 
 from screeners.models import Exchange, Side, Signal
-from screeners.notify.cards import (chart_button, chart_url, fmt_usd,
-                                    signal_card, tradingview_url)
+from screeners.notify.cards import (chart_button, chart_url, digest_buttons,
+                                    fmt_usd, signal_card, tradingview_url)
 
 
 def sig(**kw):
@@ -39,6 +39,14 @@ class TestChartLinks(unittest.TestCase):
         s = sig()
         urls = [b["url"] for b in chart_button(s)[0]]
         self.assertEqual(urls, [chart_url(s), tradingview_url(s)])
+
+    def test_digest_has_a_row_of_both_charts_per_signal(self):
+        a, b = sig(symbol="ORCAUSDT"), sig(symbol="VELOUSDT")
+        rows = digest_buttons([a, b])
+        self.assertEqual([[x["url"] for x in r] for r in rows],
+                         [[chart_url(a), tradingview_url(a)],
+                          [chart_url(b), tradingview_url(b)]])
+        self.assertIn("VELOUSDT", rows[1][0]["text"])
 
 
 class TestHeader(unittest.TestCase):

@@ -137,3 +137,11 @@ def signal_card(signal: Signal, *, show_filters: bool = True) -> str:
 def chart_button(signal: Signal) -> list[list[dict]]:
     return [[{"text": "📊 Coinglass", "url": chart_url(signal)},
              {"text": "📈 TradingView", "url": tradingview_url(signal)}]]
+
+
+def digest_buttons(signals: list[Signal]) -> list[list[dict]]:
+    """One row per signal in a collapsed burst, the symbol naming each pair,
+    so a digest keeps the same two charts a single card has."""
+    return [[{"text": f"📊 {s.symbol}", "url": chart_url(s)},
+             {"text": f"📈 {s.symbol}", "url": tradingview_url(s)}]
+            for s in signals]

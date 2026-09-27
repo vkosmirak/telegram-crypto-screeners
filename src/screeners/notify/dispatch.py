@@ -21,7 +21,7 @@ from dataclasses import dataclass
 from ..config import NotifySettings
 from ..models import Signal
 from . import botapi
-from .cards import chart_button, signal_card
+from .cards import chart_button, digest_buttons, signal_card
 
 log = logging.getLogger(__name__)
 
@@ -157,7 +157,7 @@ class Dispatcher:
             for item in items:
                 lines.append(item.text if item.signal is None else signal_card(item.signal))
             text = "\n\n".join(lines)
-            buttons = None
+            buttons = digest_buttons([i.signal for i in items if i.signal]) or None
 
         if self.dry_run:
             log.info("[dry-run topic=%s]\n%s", topic, text)
