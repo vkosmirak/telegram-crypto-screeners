@@ -103,6 +103,13 @@ class TestBody(unittest.TestCase):
                                 metrics={"usd": 30_000, "liquidated_side": -1.0}))
         self.assertTrue(short.startswith("\u26ab ByBit \U0001f7e2 "))
 
+    def test_trophy_marks_only_a_squeezed_short_that_is_the_day_high(self):
+        def card(side):
+            return signal_card(sig(rule="liquidation", metrics={
+                "usd": 30_000, "liquidated_side": side, "day_high": 1.0}))
+        self.assertTrue(card(-1.0).endswith(" \U0001f3c6"))
+        self.assertNotIn("\U0001f3c6", card(1.0))
+
 
 class TestNumberStyle(unittest.TestCase):
     """Percentages print the way the video's screener prints them."""

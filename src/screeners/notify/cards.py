@@ -139,6 +139,10 @@ def liquidation_card(signal: Signal) -> str:
     Red is a long liquidated (forced selling), green a short (forced buying).
     The trailing counter is that symbol's alert of the day. One line because
     this topic is a ticker tape: ~100 a day on Bybit alone, read at a glance.
+
+    🏆 marks a squeezed short that is the symbol's largest liquidation of the
+    day -- the only liquidation read that beat a random entry. Long day highs
+    get no mark: fading them showed no edge.
     """
     m = signal.metrics
     venue = signal.exchange.value
@@ -148,7 +152,8 @@ def liquidation_card(signal: Signal) -> str:
     base = signal.symbol.removesuffix("USDT") or signal.symbol
     link = html.escape(chart_url(signal), quote=True)
     return (f'{dot} {name} {died} <a href="{link}">#{html.escape(base)}</a>: '
-            f'${m["usd"]:.0f} (\U0001f50a{signal.ordinal})')
+            f'${m["usd"]:.0f} (\U0001f50a{signal.ordinal})'
+            + (" \U0001f3c6" if m.get("day_high") and m.get("liquidated_side", 0) < 0 else ""))
 
 
 def chart_button(signal: Signal) -> list[list[dict]]:

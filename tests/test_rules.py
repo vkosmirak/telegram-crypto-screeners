@@ -12,6 +12,7 @@ from screeners.rules.oi_growth import OIGrowthRule
 from screeners.rules.pump import PumpRule
 
 MIN = 60_000
+DAY = 86_400_000
 
 
 def bars(prices, ois=None, *, start=0, step=MIN, vol=100.0, taker=None):
@@ -251,6 +252,23 @@ class TestLiquidation(unittest.TestCase):
         self.assertIsNotNone(rule.evaluate_event(a))
         self.assertIsNone(rule.evaluate_event(b))     # same symbol, inside cooldown
         self.assertIsNotNone(rule.evaluate_event(c))  # different symbol, unaffected
+
+    def test_day_high_spans_both_sides_and_resets_daily(self):
+        rule = LiquidationRule(LiquidationConfig(min_usd=20_000.0, exclude=(), cooldown_min=0))
+        def liq(ts, side, usd):
+            return Liquidation(Exchange.BYBIT, "AUSDT", ts, side, usd, 1.0)
+        self.assertEqual(rule.evaluate_event(liq(0, Side.LONG, 50_000.0)).metrics["day_high"], 1.0)
+        # The day's largest is per symbol: a smaller short after a bigger long is not it.
+        self.assertEqual(rule.evaluate_event(liq(MIN, Side.SHORT, 30_000.0)).metrics["day_high"], 0.0)
+        self.assertEqual(rule.evaluate_event(liq(DAY, Side.SHORT, 25_000.0)).metrics["day_high"], 1.0)
+
+    def test_a_new_day_high_is_not_swallowed_by_the_cooldown(self):
+        rule = LiquidationRule(LiquidationConfig(min_usd=20_000.0, exclude=(), cooldown_min=5))
+        def liq(ts, usd):
+            return Liquidation(Exchange.BYBIT, "AUSDT", ts, Side.SHORT, usd, 1.0)
+        self.assertIsNotNone(rule.evaluate_event(liq(0, 30_000.0)))
+        self.assertIsNone(rule.evaluate_event(liq(MIN, 25_000.0)))      # smaller, in cooldown
+        self.assertIsNotNone(rule.evaluate_event(liq(2 * MIN, 60_000.0)))  # day high, in cooldown
 
 
 if __name__ == "__main__":

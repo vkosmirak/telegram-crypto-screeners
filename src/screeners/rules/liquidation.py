@@ -33,6 +33,7 @@ class LiquidationRule:
         self._last_fire: dict[tuple[str, str], int] = {}
         self._day: dict[tuple[str, str], int] = {}
         self._ordinal: dict[tuple[str, str], int] = {}
+        self._day_max: dict[tuple[str, str], tuple[int, float]] = {}
 
     def evaluate_event(self, liq: Liquidation) -> Signal | None:
         """Stateful by necessity: liquidations arrive as a stream, not as bars."""
@@ -40,16 +41,29 @@ class LiquidationRule:
         if liq.symbol in cfg.exclude:
             return None
         usd = liq.usd
+        key = (liq.exchange.value, liq.symbol)
+        day = int(liq.ts // 86_400_000)
+
+        # "The largest liquidation of the day is the target" -- every print
+        # counts toward the day's max, not just the ones that alerted.
+        # Fading a squeezed short that is the day's largest was the one
+        # liquidation read with an edge in the backtest (+1.1-1.7pp over a
+        # same-time control, scripts/liq_signals.py).
+        max_day, prev_max = self._day_max.get(key, (day, 0.0))
+        prev_max = prev_max if max_day == day else 0.0
+        self._day_max[key] = (day, max(prev_max, usd))
+        day_high = usd > prev_max
+
         if usd < cfg.min_usd:
             return None
 
-        key = (liq.exchange.value, liq.symbol)
         last = self._last_fire.get(key)  # absent means never fired, not "fired at epoch"
-        if last is not None and liq.ts - last < cfg.cooldown_min * 60_000:
+        # A new day high is the print that matters most, so it is never
+        # swallowed by the cooldown of a smaller one a minute earlier.
+        if last is not None and liq.ts - last < cfg.cooldown_min * 60_000 and not day_high:
             return None
         self._last_fire[key] = liq.ts
 
-        day = int(liq.ts // 86_400_000)
         if self._day.get(key) != day:
             self._day[key] = day
             self._ordinal[key] = 0
@@ -61,7 +75,8 @@ class LiquidationRule:
             rule=self.name, exchange=liq.exchange, symbol=liq.symbol,
             side=side, ts=liq.ts, price=liq.price, ordinal=self._ordinal[key],
             metrics={"usd": usd, "qty": liq.qty,
-                     "liquidated_side": 1.0 if liq.side is Side.LONG else -1.0},
+                     "liquidated_side": 1.0 if liq.side is Side.LONG else -1.0,
+                     "day_high": 1.0 if day_high else 0.0},
             filters={},
         )
 
