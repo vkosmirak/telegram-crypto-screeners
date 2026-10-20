@@ -57,8 +57,11 @@ been silent for more than ~4 minutes means that stage is stuck.
   at the top of the hour. It is retried with backoff and pauses the whole
   Bybit pool; a `bybit rate limit` warning line is normal, a `refresh
   failures` line naming it every sweep is not.
-- Binance records very few liquidations. Its feed sends at most one per
-  symbol per second; that is the venue, not a bug.
+- Binance undercounts liquidations: its feed sends at most one per symbol
+  per second; that is the venue, not a bug. Zero Binance rows for hours is
+  a bug -- until 2026-10-21 the feed sat on a dead URL and recorded none.
+- The Liquidations topic is fed by the `liquidations` stage itself
+  (`record-liquidations --alert`), one line per alt liquidation >= $20k.
 - Bybit sends far more OI alerts than Binance. Per docs/findings.md they carry
   no edge; they run because the owner chose to keep them on.
 

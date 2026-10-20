@@ -114,6 +114,12 @@ pushes at most one liquidation per symbol per second, so it undercounts during
 exactly the cascades that matter. Bybit's `allLiquidation` does not drop. Treat
 Bybit as the trustworthy side.
 
+With `--alert` (which `start.sh` passes unless `--no-live`) the recorder also
+runs the liquidation screener and posts each hit to the Liquidations topic as
+one line, the way the video's bot does: `🟡 Binance 🔴 #GAS: $25213 (🔊8)` --
+red is a long liquidated, green a short, the counter is that symbol's alert
+of the day.
+
 ## Telegram setup
 
 This repo uses **its own bot**, separate from anything else on the machine.

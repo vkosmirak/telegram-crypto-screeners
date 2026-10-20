@@ -91,11 +91,17 @@ class TestBody(unittest.TestCase):
         self.assertIn("0.54301-0.6013", card)
         self.assertIn("20m", card)
 
-    def test_liquidation_card_names_the_side_that_died(self):
-        card = signal_card(sig(rule="liquidation", side=Side.LONG,
-                               metrics={"usd": 55_000, "liquidated_side": 1.0}))
-        self.assertIn("Liquidated longs", card)
-        self.assertIn("55.00K $", card)
+    def test_liquidation_card_is_one_line_like_the_video(self):
+        card = signal_card(sig(rule="liquidation", symbol="GASUSDT", side=Side.LONG,
+                               ordinal=8, metrics={"usd": 25_213.4, "liquidated_side": 1.0}))
+        self.assertNotIn("\n", card)
+        self.assertTrue(card.startswith("\U0001f7e1 Binance \U0001f534 <a href="))
+        self.assertIn(">#GAS</a>: $25213 (\U0001f50a8)", card)
+
+    def test_liquidation_card_colours_the_side_that_died(self):
+        short = signal_card(sig(rule="liquidation", exchange=Exchange.BYBIT,
+                                metrics={"usd": 30_000, "liquidated_side": -1.0}))
+        self.assertTrue(short.startswith("\u26ab ByBit \U0001f7e2 "))
 
 
 class TestNumberStyle(unittest.TestCase):

@@ -13,6 +13,7 @@ import sys
 import threading
 import time
 
+from . import journal
 from . import logging as etb_logging
 from .backtest.engine import build_rule, interval_for, run_backtest
 from .config import load_rules
@@ -298,16 +299,40 @@ def cmd_record_liquidations(args: argparse.Namespace) -> int:
     only way it will ever be measurable. Start it early; the dataset is only
     as good as how long it has been running.
     """
-    from .config import ROOT
+    from .config import ROOT, load_notify
     from .data import liquidations as lq
 
     store = lq.LiquidationStore(args.db or ROOT / "data" / "liquidations.db")
     stop = threading.Event()
     seen = {"n": 0}
 
+    # Alerting rides on the recorder rather than a stage of its own: it is the
+    # one process already holding both feeds, and a second subscriber would
+    # double the websocket load for the same events.
+    rule = dispatcher = None
+    if args.alert:
+        from .live import build_dispatcher
+        from .rules.liquidation import LiquidationRule
+
+        cfg = load_rules(args.config).liquidation
+        if cfg.enabled:
+            rule = LiquidationRule(cfg)
+            dispatcher = build_dispatcher(load_notify(), dry_run=args.dry_run)
+            print(f"alerting on liquidations >= ${cfg.min_usd:,.0f}", file=sys.stderr)
+    rule_lock = threading.Lock()  # both feed threads land here
+
     def on_event(liq) -> None:
         store.add(liq)
         seen["n"] += 1
+        if rule is not None:
+            with rule_lock:
+                sig = rule.evaluate_event(liq)
+            if sig is not None:
+                dispatcher.submit(sig)
+                try:
+                    journal.record(sig, "sent", int(time.time() * 1000))
+                except Exception as e:  # a full disk must not stop alerts
+                    print(f"journal write failed: {e}", file=sys.stderr)
         if liq.usd >= args.echo_usd:
             print(f"{time.strftime('%H:%M:%S')}  {liq.exchange.value:<8} "
                   f"{liq.symbol:<14} {liq.side.value:<5} ${liq.usd:>12,.0f}", flush=True)
@@ -345,6 +370,8 @@ def cmd_record_liquidations(args: argparse.Namespace) -> int:
                   f"db totals {store.count()} spanning {hours:.1f}h", file=sys.stderr)
     finally:
         stop.set()
+        if dispatcher is not None:
+            dispatcher.stop()
     print(f"stopped. {store.count()}", file=sys.stderr)
     return 0
 
@@ -448,6 +475,10 @@ def main(argv: list[str] | None = None) -> int:
     r.add_argument("--db", default=None)
     r.add_argument("--echo-usd", type=float, default=20000.0,
                    help="print liquidations at least this large")
+    r.add_argument("--alert", action="store_true",
+                   help="also run the liquidation screener and post to Telegram")
+    r.add_argument("--dry-run", action="store_true", help="with --alert: log, never send")
+    r.add_argument("--config", default=None)
     r.set_defaults(func=cmd_record_liquidations)
 
     st = sub.add_parser("status", help="health report: stages, sweeps, signals, errors")

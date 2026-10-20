@@ -87,6 +87,8 @@ def signal_card(signal: Signal, *, show_filters: bool = True) -> str:
     signal flunks, because the backtest showed the filters are what carry the
     edge (docs/findings.md).
     """
+    if signal.rule == "liquidation":
+        return liquidation_card(signal)
     m = signal.metrics
     venue = signal.exchange.value
     dot = _VENUE_DOT.get(venue, "\u26aa")
@@ -116,11 +118,6 @@ def signal_card(signal: Signal, *, show_filters: bool = True) -> str:
         if "oi_change_pct" in m:
             lines.append(f'\U0001f4b2 OI change: {_pct(m["oi_change_pct"])}')
 
-    if "usd" in m:
-        side_txt = "longs" if m.get("liquidated_side", 0) > 0 else "shorts"
-        lines.append(f'\u26a1 <b>Liquidated {side_txt}: {fmt_usd(m["usd"])}</b>')
-        lines.append(f'\U0001f4b2 Price: {_fmt_price(signal.price)}')
-
     lines.append(f'\U0001f514 Signal 24h: {signal.ordinal}')
 
     parts = [head, "\n".join(lines)]
@@ -132,6 +129,26 @@ def signal_card(signal: Signal, *, show_filters: bool = True) -> str:
                          + ", ".join(html.escape(f) for f in failed) + "</i>")
 
     return "\n".join(parts)
+
+
+def liquidation_card(signal: Signal) -> str:
+    """One line, the way the video's liquidation bot posts them:
+
+        🟡 Binance 🔴 #GAS: $25213 (🔊8)
+
+    Red is a long liquidated (forced selling), green a short (forced buying).
+    The trailing counter is that symbol's alert of the day. One line because
+    this topic is a ticker tape: ~100 a day on Bybit alone, read at a glance.
+    """
+    m = signal.metrics
+    venue = signal.exchange.value
+    dot = _VENUE_DOT.get(venue, "\u26aa")
+    name = "Binance" if venue == "binance" else "ByBit"
+    died = "\U0001f534" if m.get("liquidated_side", 0) > 0 else "\U0001f7e2"
+    base = signal.symbol.removesuffix("USDT") or signal.symbol
+    link = html.escape(chart_url(signal), quote=True)
+    return (f'{dot} {name} {died} <a href="{link}">#{html.escape(base)}</a>: '
+            f'${m["usd"]:.0f} (\U0001f50a{signal.ordinal})')
 
 
 def chart_button(signal: Signal) -> list[list[dict]]:

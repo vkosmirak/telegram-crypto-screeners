@@ -3,7 +3,7 @@
 #
 #   ./start.sh              # everything: recorder + Binance and Bybit screeners
 #   ./start.sh --no-bybit   # skip the Bybit screener (no CVD there)
-#   ./start.sh --no-live    # recorder only -- no Telegram alerts
+#   ./start.sh --no-live    # recorder only -- no Telegram alerts (liquidations included)
 #   ./start.sh --dry-run    # screeners log signals instead of sending
 #
 # Each stage is its own process, so a wedged Telegram send can never stall
@@ -51,6 +51,7 @@ echo $$ > "$LOCK"
 
 NAMES=(liquidations); CMDS=("record-liquidations --exchange both")
 if [ "$WANT_LIVE" -eq 1 ]; then
+  CMDS[0]+=" --alert $LIVE_FLAGS"
   NAMES+=(live-binance); CMDS+=("live --exchange binance $LIVE_FLAGS")
   [ "$WANT_BYBIT" -eq 1 ] && { NAMES+=(live-bybit); CMDS+=("live --exchange bybit $LIVE_FLAGS"); }
 fi
