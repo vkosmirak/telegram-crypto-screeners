@@ -12,7 +12,7 @@ fee + slippage. When a bar touches both stop and target, the stop wins.
 
 Run from a laptop, not hetzner: kline fetches would eat Jesse's Binance budget.
 
-  PYTHONPATH=src python3 scripts/signal_pnl.py /path/to/signals_dir
+  PYTHONPATH=src python3 scripts/signal_pnl.py /path/to/signals_dir [out_dir]
 """
 from __future__ import annotations
 
@@ -206,7 +206,9 @@ def summarise(vals: list[float]) -> dict:
     }
 
 
-def main(src: str) -> None:
+def main(src: str, out: str = "out") -> None:
+    global OUT
+    OUT = Path(out)
     sigs = sorted(load(src), key=lambda r: r["at"])
     keys = sorted({(r["venue"], r["symbol"], ms(r["at"]) // DAY * DAY) for r in sigs})
     print(f"{len(sigs)} signals, {len(keys)} symbol-days to fetch", file=sys.stderr)
@@ -272,14 +274,16 @@ def main(src: str) -> None:
     report = defaultdict(dict)
     for (venue, rule, side) in sorted({(r["venue"], r["rule"], r["side"]) for r in per_signal}):
         for gname, pred in groups.items():
-            rows = [r for r in per_signal if (r["venue"], r["rule"]) == (venue, rule) and pred(r)]
+            rows = [r for r in per_signal
+                    if (r["venue"], r["rule"], r["side"]) == (venue, rule, side) and pred(r)]
             for plan in PLANS[side]:
                 paired = [r for r in rows if r[plan] is not None and r[f"ctl: {plan}"] is not None]
                 m = summarise([r[plan] for r in rows if r[plan] is not None])
                 if paired:
                     m["ctl avg%"] = 100 * st.mean(r[f"ctl: {plan}"] for r in paired)
                     m["edge pp"] = 100 * st.mean(r[plan] - r[f"ctl: {plan}"] for r in paired)
-                report[f"{venue} {rule} [{gname}]"][plan] = m
+                label = f"{venue} {rule}" + (f" {side}" if rule.startswith("liq") else "")
+                report[f"{label} [{gname}]"][plan] = m
     (OUT / "pnl_report.json").write_text(json.dumps(report, indent=1))
 
     for g, plans in report.items():
@@ -293,4 +297,4 @@ def main(src: str) -> None:
 
 
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else "data/signals")
+    main(*(sys.argv[1:3] or ["data/signals"]))

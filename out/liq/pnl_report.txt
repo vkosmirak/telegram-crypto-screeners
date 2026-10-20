@@ -1,0 +1,318 @@
+
+== binance liq_base short [sent]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+
+== binance liq_base short [skipped]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+
+== binance liq_base short [sent, ordinal 1]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+
+== binance liq_base short [sent, ex Oct 15]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+
+== binance liq_biggest short [sent]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+
+== binance liq_biggest short [skipped]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+
+== binance liq_biggest short [sent, ordinal 1]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+
+== binance liq_biggest short [sent, ex Oct 15]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+
+== binance liq_cascade short [sent]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+
+== binance liq_cascade short [skipped]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+
+== binance liq_cascade short [sent, ordinal 1]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+
+== binance liq_cascade short [sent, ex Oct 15]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+
+== binance liq_cascade_biggest short [sent]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+
+== binance liq_cascade_biggest short [skipped]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+
+== binance liq_cascade_biggest short [sent, ordinal 1]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+
+== binance liq_cascade_biggest short [sent, ex Oct 15]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+
+== bybit liq_after_pump short [sent]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                       173   49.1    0.15   -0.11   -35.1       258      -991   -0.20   0.35
+  hold 1h                                        173   46.2   -0.16   -0.66   -42.2      -285     -2205   -0.36   0.20
+  hold 4h                                        173   53.2    1.81    1.68   -43.1      3123     -1603   -0.92   2.73
+  stop 5% / TP 10%, 4h                           173   27.2   -1.28   -5.20    -5.2     -2221     -2221   -0.27  -1.02
+  video: grid 3 parts, TP 5%, stop 30%, 24h      165   84.8   -1.35    1.60   -24.2     -2227     -2514   -0.31  -1.04
+  video: grid 3 parts, TP 5%, no stop, 24h       165   95.8    1.79    1.60   -39.3      2955      -769   -0.27   2.06
+
+== bybit liq_after_pump short [skipped]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+
+== bybit liq_after_pump short [sent, ordinal 1]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                       173   49.1    0.15   -0.11   -35.1       258      -991   -0.20   0.35
+  hold 1h                                        173   46.2   -0.16   -0.66   -42.2      -285     -2205   -0.36   0.20
+  hold 4h                                        173   53.2    1.81    1.68   -43.1      3123     -1603   -0.92   2.73
+  stop 5% / TP 10%, 4h                           173   27.2   -1.28   -5.20    -5.2     -2221     -2221   -0.27  -1.02
+  video: grid 3 parts, TP 5%, stop 30%, 24h      165   84.8   -1.35    1.60   -24.2     -2227     -2514   -0.31  -1.04
+  video: grid 3 parts, TP 5%, no stop, 24h       165   95.8    1.79    1.60   -39.3      2955      -769   -0.27   2.06
+
+== bybit liq_after_pump short [sent, ex Oct 15]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                       166   48.8    0.09   -0.15   -35.1       143      -991   -0.20   0.29
+  hold 1h                                        166   44.0   -0.51   -1.08   -42.2      -854     -2205   -0.37  -0.15
+  hold 4h                                        166   51.8    1.64    0.92   -43.1      2714     -1603   -0.94   2.58
+  stop 5% / TP 10%, 4h                           166   25.9   -1.47   -5.20    -5.2     -2448     -2448   -0.29  -1.18
+  video: grid 3 parts, TP 5%, stop 30%, 24h      158   84.2   -1.51    1.60   -24.2     -2386     -2673   -0.20  -1.31
+  video: grid 3 parts, TP 5%, no stop, 24h       158   95.6    1.77    2.38   -39.3      2796      -769   -0.22   1.99
+
+== bybit liq_base long [sent]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                      1019   44.3   -0.10   -0.08   -27.7     -1009     -1681   -0.24   0.14
+  hold 1h                                       1019   43.6   -0.18   -0.14   -22.2     -1828     -2556   -0.25   0.08
+  hold 4h                                       1018   50.8    0.20    0.06   -22.9      2025     -2786    0.17   0.03
+  video: stop under move, no TP, 4h              997   11.8   -0.20   -0.34   -11.6     -1957     -2092   -0.13  -0.06
+  video: stop under move, TP 2R, 4h              997   25.3   -0.17   -0.27   -11.6     -1723     -1723   -0.18   0.01
+  stop 3% / TP 6%, 4h                           1018   47.6   -0.05   -0.12    -3.2      -556     -3210   -0.16   0.11
+
+== bybit liq_base long [skipped]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+
+== bybit liq_base long [sent, ordinal 1]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                      1019   44.3   -0.10   -0.08   -27.7     -1009     -1681   -0.24   0.14
+  hold 1h                                       1019   43.6   -0.18   -0.14   -22.2     -1828     -2556   -0.25   0.08
+  hold 4h                                       1018   50.8    0.20    0.06   -22.9      2025     -2786    0.17   0.03
+  video: stop under move, no TP, 4h              997   11.8   -0.20   -0.34   -11.6     -1957     -2092   -0.13  -0.06
+  video: stop under move, TP 2R, 4h              997   25.3   -0.17   -0.27   -11.6     -1723     -1723   -0.18   0.01
+  stop 3% / TP 6%, 4h                           1018   47.6   -0.05   -0.12    -3.2      -556     -3210   -0.16   0.11
+
+== bybit liq_base long [sent, ex Oct 15]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                       954   43.0   -0.14   -0.09   -27.7     -1328     -1681   -0.27   0.13
+  hold 1h                                        954   41.8   -0.23   -0.19   -22.2     -2188     -2556   -0.30   0.07
+  hold 4h                                        953   50.6    0.17    0.06   -22.9      1576     -2786    0.15   0.02
+  video: stop under move, no TP, 4h              932   10.9   -0.23   -0.35   -11.6     -2131     -2146   -0.14  -0.08
+  video: stop under move, TP 2R, 4h              932   24.8   -0.19   -0.27   -11.6     -1744     -1744   -0.19   0.01
+  stop 3% / TP 6%, 4h                            953   47.3   -0.08   -0.13    -3.2      -802     -3210   -0.19   0.10
+
+== bybit liq_base short [sent]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                       430   34.9   -0.21   -0.20   -27.5      -885     -1461   -0.25   0.05
+  hold 1h                                        430   41.9   -0.34   -0.22   -40.2     -1466     -1833   -0.37   0.02
+  hold 4h                                        430   49.3    0.24   -0.04   -46.0      1044     -1641   -0.66   0.90
+  stop 5% / TP 10%, 4h                           430   46.3   -0.28   -0.17    -5.2     -1198     -1199   -0.33   0.06
+  video: grid 3 parts, TP 5%, stop 30%, 24h      409   70.9    0.30    0.84   -24.2      1230      -952   -0.08   0.38
+  video: grid 3 parts, TP 5%, no stop, 24h       409   72.9    0.83    1.01   -39.3      3387      -446   -0.25   1.08
+
+== bybit liq_base short [skipped]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+
+== bybit liq_base short [sent, ordinal 1]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                       430   34.9   -0.21   -0.20   -27.5      -885     -1461   -0.25   0.05
+  hold 1h                                        430   41.9   -0.34   -0.22   -40.2     -1466     -1833   -0.37   0.02
+  hold 4h                                        430   49.3    0.24   -0.04   -46.0      1044     -1641   -0.66   0.90
+  stop 5% / TP 10%, 4h                           430   46.3   -0.28   -0.17    -5.2     -1198     -1199   -0.33   0.06
+  video: grid 3 parts, TP 5%, stop 30%, 24h      409   70.9    0.30    0.84   -24.2      1230      -952   -0.08   0.38
+  video: grid 3 parts, TP 5%, no stop, 24h       409   72.9    0.83    1.01   -39.3      3387      -446   -0.25   1.08
+
+== bybit liq_base short [sent, ex Oct 15]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                       406   36.2   -0.17   -0.18   -27.5      -699     -1461   -0.23   0.06
+  hold 1h                                        406   42.6   -0.28   -0.18   -40.2     -1130     -1556   -0.32   0.04
+  hold 4h                                        406   50.7    0.40    0.05   -46.0      1640     -1332   -0.57   0.98
+  stop 5% / TP 10%, 4h                           406   47.5   -0.17   -0.11    -5.2      -704      -769   -0.27   0.09
+  video: grid 3 parts, TP 5%, stop 30%, 24h      385   73.0    0.36    0.93   -24.2      1405      -952   -0.01   0.37
+  video: grid 3 parts, TP 5%, no stop, 24h       385   75.1    0.93    1.10   -39.3      3562      -446   -0.21   1.14
+
+== bybit liq_biggest long [sent]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                       565   45.5   -0.13   -0.06   -27.7      -740     -1109   -0.18   0.05
+  hold 1h                                        565   44.4   -0.17   -0.13   -22.2      -989     -1387   -0.17  -0.01
+  hold 4h                                        565   49.7    0.12   -0.03   -22.9       678     -1365    0.38  -0.26
+  video: stop under move, no TP, 4h              554   15.0   -0.10   -0.36    -7.2      -547      -890   -0.04  -0.06
+  video: stop under move, TP 2R, 4h              554   28.7   -0.14   -0.28    -7.2      -780      -781   -0.13  -0.01
+  stop 3% / TP 6%, 4h                            565   47.3   -0.09   -0.13    -3.2      -520     -1941   -0.17   0.08
+
+== bybit liq_biggest long [skipped]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+
+== bybit liq_biggest long [sent, ordinal 1]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                       565   45.5   -0.13   -0.06   -27.7      -740     -1109   -0.18   0.05
+  hold 1h                                        565   44.4   -0.17   -0.13   -22.2      -989     -1387   -0.17  -0.01
+  hold 4h                                        565   49.7    0.12   -0.03   -22.9       678     -1365    0.38  -0.26
+  video: stop under move, no TP, 4h              554   15.0   -0.10   -0.36    -7.2      -547      -890   -0.04  -0.06
+  video: stop under move, TP 2R, 4h              554   28.7   -0.14   -0.28    -7.2      -780      -781   -0.13  -0.01
+  stop 3% / TP 6%, 4h                            565   47.3   -0.09   -0.13    -3.2      -520     -1941   -0.17   0.08
+
+== bybit liq_biggest long [sent, ex Oct 15]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                       523   43.8   -0.19   -0.08   -27.7      -977     -1109   -0.22   0.03
+  hold 1h                                        523   42.8   -0.23   -0.16   -22.2     -1216     -1387   -0.22  -0.01
+  hold 4h                                        523   50.3    0.10    0.07   -22.9       516     -1365    0.13  -0.04
+  video: stop under move, no TP, 4h              512   14.1   -0.13   -0.36    -7.2      -657      -890   -0.07  -0.06
+  video: stop under move, TP 2R, 4h              512   28.1   -0.15   -0.28    -7.2      -781      -781   -0.14  -0.01
+  stop 3% / TP 6%, 4h                            523   47.8   -0.09   -0.11    -3.2      -461     -1941   -0.17   0.08
+
+== bybit liq_biggest short [sent]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                       245   39.6    0.02   -0.14   -27.5        43      -915   -0.27   0.28
+  hold 1h                                        245   42.0   -0.07   -0.17   -32.0      -181     -1217   -0.49   0.42
+  hold 4h                                        245   52.7    0.69    0.13   -38.5      1695      -656   -1.04   1.73
+  stop 5% / TP 10%, 4h                           245   48.2   -0.29   -0.10    -5.2      -713      -858   -0.36   0.07
+  video: grid 3 parts, TP 5%, stop 30%, 24h      234   75.6    0.78    1.60   -24.2      1827      -295   -0.32   1.10
+  video: grid 3 parts, TP 5%, no stop, 24h       234   76.5    0.96    1.60   -39.3      2253      -446   -0.40   1.36
+
+== bybit liq_biggest short [skipped]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+
+== bybit liq_biggest short [sent, ordinal 1]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                       245   39.6    0.02   -0.14   -27.5        43      -915   -0.27   0.28
+  hold 1h                                        245   42.0   -0.07   -0.17   -32.0      -181     -1217   -0.49   0.42
+  hold 4h                                        245   52.7    0.69    0.13   -38.5      1695      -656   -1.04   1.73
+  stop 5% / TP 10%, 4h                           245   48.2   -0.29   -0.10    -5.2      -713      -858   -0.36   0.07
+  video: grid 3 parts, TP 5%, stop 30%, 24h      234   75.6    0.78    1.60   -24.2      1827      -295   -0.32   1.10
+  video: grid 3 parts, TP 5%, no stop, 24h       234   76.5    0.96    1.60   -39.3      2253      -446   -0.40   1.36
+
+== bybit liq_biggest short [sent, ex Oct 15]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                       240   40.0    0.02   -0.13   -27.5        57      -915   -0.27   0.29
+  hold 1h                                        240   42.1   -0.06   -0.17   -32.0      -143     -1217   -0.49   0.43
+  hold 4h                                        240   52.5    0.74    0.11   -38.5      1776      -656   -1.05   1.79
+  stop 5% / TP 10%, 4h                           240   47.9   -0.29   -0.13    -5.2      -688      -833   -0.35   0.06
+  video: grid 3 parts, TP 5%, stop 30%, 24h      229   76.4    0.80    1.60   -24.2      1842      -295   -0.32   1.12
+  video: grid 3 parts, TP 5%, no stop, 24h       229   77.3    0.99    1.60   -39.3      2268      -446   -0.40   1.39
+
+== bybit liq_cascade long [sent]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                      1864   47.0   -0.16   -0.06   -27.7     -3004     -3396   -0.19   0.03
+  hold 1h                                       1864   46.6   -0.14   -0.11   -33.5     -2650     -4111   -0.10  -0.04
+  hold 4h                                       1863   51.9    0.18    0.11   -49.7      3282     -4536    0.41  -0.24
+  video: stop under move, no TP, 4h             1831   12.9   -0.23   -0.37   -11.6     -4271     -4307   -0.05  -0.19
+  video: stop under move, TP 2R, 4h             1831   26.8   -0.20   -0.30   -11.6     -3699     -3793   -0.15  -0.05
+  stop 3% / TP 6%, 4h                           1863   47.3   -0.06   -0.16    -3.2     -1029     -5051   -0.07   0.02
+
+== bybit liq_cascade long [skipped]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+
+== bybit liq_cascade long [sent, ordinal 1]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                      1864   47.0   -0.16   -0.06   -27.7     -3004     -3396   -0.19   0.03
+  hold 1h                                       1864   46.6   -0.14   -0.11   -33.5     -2650     -4111   -0.10  -0.04
+  hold 4h                                       1863   51.9    0.18    0.11   -49.7      3282     -4536    0.41  -0.24
+  video: stop under move, no TP, 4h             1831   12.9   -0.23   -0.37   -11.6     -4271     -4307   -0.05  -0.19
+  video: stop under move, TP 2R, 4h             1831   26.8   -0.20   -0.30   -11.6     -3699     -3793   -0.15  -0.05
+  stop 3% / TP 6%, 4h                           1863   47.3   -0.06   -0.16    -3.2     -1029     -5051   -0.07   0.02
+
+== bybit liq_cascade long [sent, ex Oct 15]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                      1718   45.7   -0.22   -0.07   -27.7     -3721     -3902   -0.22   0.00
+  hold 1h                                       1718   45.2   -0.22   -0.13   -33.5     -3705     -4111   -0.14  -0.07
+  hold 4h                                       1717   51.7    0.14    0.11   -49.7      2468     -4536    0.38  -0.23
+  video: stop under move, no TP, 4h             1686   11.7   -0.28   -0.38   -11.6     -4722     -4758   -0.05  -0.23
+  video: stop under move, TP 2R, 4h             1686   26.0   -0.23   -0.30   -11.6     -3833     -3927   -0.16  -0.07
+  stop 3% / TP 6%, 4h                           1717   46.8   -0.08   -0.19    -3.2     -1292     -5051   -0.08   0.01
+
+== bybit liq_cascade short [sent]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                       849   41.0   -0.22   -0.18   -33.6     -1845     -2609   -0.23   0.01
+  hold 1h                                        849   47.1   -0.30   -0.09   -45.9     -2517     -3322   -0.31   0.02
+  hold 4h                                        847   50.8   -0.58    0.08   -74.7     -4884     -6220   -0.55  -0.02
+  stop 5% / TP 10%, 4h                           847   43.9   -0.40   -0.40    -5.2     -3428     -3762   -0.26  -0.15
+  video: grid 3 parts, TP 5%, stop 30%, 24h      809   77.3   -0.04    1.60   -24.2      -352     -4459   -0.39   0.35
+  video: grid 3 parts, TP 5%, no stop, 24h       809   79.6    0.25    1.60   -81.9      2016     -5358   -0.48   0.73
+
+== bybit liq_cascade short [skipped]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+
+== bybit liq_cascade short [sent, ordinal 1]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                       849   41.0   -0.22   -0.18   -33.6     -1845     -2609   -0.23   0.01
+  hold 1h                                        849   47.1   -0.30   -0.09   -45.9     -2517     -3322   -0.31   0.02
+  hold 4h                                        847   50.8   -0.58    0.08   -74.7     -4884     -6220   -0.55  -0.02
+  stop 5% / TP 10%, 4h                           847   43.9   -0.40   -0.40    -5.2     -3428     -3762   -0.26  -0.15
+  video: grid 3 parts, TP 5%, stop 30%, 24h      809   77.3   -0.04    1.60   -24.2      -352     -4459   -0.39   0.35
+  video: grid 3 parts, TP 5%, no stop, 24h       809   79.6    0.25    1.60   -81.9      2016     -5358   -0.48   0.73
+
+== bybit liq_cascade short [sent, ex Oct 15]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                       800   42.4   -0.17   -0.13   -33.6     -1348     -2609   -0.21   0.04
+  hold 1h                                        800   47.9   -0.28   -0.06   -45.9     -2248     -3322   -0.30   0.02
+  hold 4h                                        798   51.6   -0.56    0.14   -74.7     -4438     -5775   -0.53  -0.02
+  stop 5% / TP 10%, 4h                           798   45.4   -0.29   -0.31    -5.2     -2305     -2639   -0.21  -0.08
+  video: grid 3 parts, TP 5%, stop 30%, 24h      760   78.3   -0.08    1.60   -24.2      -616     -4459   -0.36   0.28
+  video: grid 3 parts, TP 5%, no stop, 24h       760   80.8    0.23    1.60   -81.9      1752     -5358   -0.46   0.69
+
+== bybit liq_cascade_biggest long [sent]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                       996   46.7   -0.23   -0.06   -27.7     -2263     -2743   -0.25   0.02
+  hold 1h                                        996   46.2   -0.09   -0.11   -31.5      -932     -2150   -0.14   0.04
+  hold 4h                                        996   50.1    0.02    0.00   -49.7       167     -2640    0.41  -0.39
+  video: stop under move, no TP, 4h              982   15.5   -0.23   -0.41   -11.3     -2216     -2269    0.00  -0.23
+  video: stop under move, TP 2R, 4h              982   27.1   -0.24   -0.33   -11.3     -2378     -2397   -0.13  -0.12
+  stop 3% / TP 6%, 4h                            996   45.8   -0.21   -0.29    -3.2     -2072     -3915   -0.17  -0.04
+
+== bybit liq_cascade_biggest long [skipped]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+
+== bybit liq_cascade_biggest long [sent, ordinal 1]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                       996   46.7   -0.23   -0.06   -27.7     -2263     -2743   -0.25   0.02
+  hold 1h                                        996   46.2   -0.09   -0.11   -31.5      -932     -2150   -0.14   0.04
+  hold 4h                                        996   50.1    0.02    0.00   -49.7       167     -2640    0.41  -0.39
+  video: stop under move, no TP, 4h              982   15.5   -0.23   -0.41   -11.3     -2216     -2269    0.00  -0.23
+  video: stop under move, TP 2R, 4h              982   27.1   -0.24   -0.33   -11.3     -2378     -2397   -0.13  -0.12
+  stop 3% / TP 6%, 4h                            996   45.8   -0.21   -0.29    -3.2     -2072     -3915   -0.17  -0.04
+
+== bybit liq_cascade_biggest long [sent, ex Oct 15]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                       896   44.8   -0.30   -0.08   -27.7     -2714     -2796   -0.29  -0.02
+  hold 1h                                        896   44.8   -0.19   -0.13   -31.5     -1707     -2150   -0.18  -0.01
+  hold 4h                                        896   51.0    0.02    0.06   -49.7       189     -2640    0.39  -0.37
+  video: stop under move, no TP, 4h              883   14.7   -0.26   -0.41   -11.3     -2294     -2346    0.02  -0.28
+  video: stop under move, TP 2R, 4h              883   26.8   -0.27   -0.33   -11.3     -2378     -2397   -0.14  -0.13
+  stop 3% / TP 6%, 4h                            896   46.3   -0.19   -0.25    -3.2     -1683     -3915   -0.10  -0.08
+
+== bybit liq_cascade_biggest short [sent]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                       414   41.1   -0.25   -0.20   -27.5     -1038     -1718   -0.25  -0.00
+  hold 1h                                        414   48.1   -0.07   -0.03   -40.2      -275     -1835   -0.38   0.31
+  hold 4h                                        414   51.9    0.41    0.13   -46.0      1680     -2532   -0.73   1.14
+  stop 5% / TP 10%, 4h                           414   42.8   -0.48   -0.47    -5.2     -1967     -2211   -0.29  -0.18
+  video: grid 3 parts, TP 5%, stop 30%, 24h      395   79.0    0.19    1.60   -24.2       749     -1326   -0.56   0.75
+  video: grid 3 parts, TP 5%, no stop, 24h       395   81.8    0.57    1.60   -78.6      2269     -2453   -0.63   1.20
+
+== bybit liq_cascade_biggest short [skipped]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+
+== bybit liq_cascade_biggest short [sent, ordinal 1]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                       414   41.1   -0.25   -0.20   -27.5     -1038     -1718   -0.25  -0.00
+  hold 1h                                        414   48.1   -0.07   -0.03   -40.2      -275     -1835   -0.38   0.31
+  hold 4h                                        414   51.9    0.41    0.13   -46.0      1680     -2532   -0.73   1.14
+  stop 5% / TP 10%, 4h                           414   42.8   -0.48   -0.47    -5.2     -1967     -2211   -0.29  -0.18
+  video: grid 3 parts, TP 5%, stop 30%, 24h      395   79.0    0.19    1.60   -24.2       749     -1326   -0.56   0.75
+  video: grid 3 parts, TP 5%, no stop, 24h       395   81.8    0.57    1.60   -78.6      2269     -2453   -0.63   1.20
+
+== bybit liq_cascade_biggest short [sent, ex Oct 15]
+  plan                                             n   win%    avg%    med%  worst%      $/1k    maxDD$    ctl%   edge
+  hold 15m                                       405   41.0   -0.24   -0.20   -27.5      -965     -1718   -0.25   0.01
+  hold 1h                                        405   47.7   -0.14   -0.03   -40.2      -575     -1835   -0.40   0.26
+  hold 4h                                        405   51.4    0.34    0.08   -46.0      1377     -2532   -0.77   1.11
+  stop 5% / TP 10%, 4h                           405   42.7   -0.47   -0.46    -5.2     -1884     -2128   -0.32  -0.15
+  video: grid 3 parts, TP 5%, stop 30%, 24h      386   79.0    0.14    1.60   -24.2       553     -1326   -0.55   0.69
+  video: grid 3 parts, TP 5%, no stop, 24h       386   81.9    0.54    1.60   -78.6      2073     -2453   -0.63   1.17
