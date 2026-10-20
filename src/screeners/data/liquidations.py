@@ -30,7 +30,10 @@ from .ws import WebSocket, WebSocketClosed
 
 log = logging.getLogger(__name__)
 
-BINANCE_WS = "wss://fstream.binance.com/ws/!forceOrder@arr"
+# The legacy /ws/ path still completes the handshake but never delivers a
+# frame -- the recorder sat connected for 24 days and stored zero Binance
+# liquidations. Market streams now live under /market/ (checked 2026-10-21).
+BINANCE_WS = "wss://fstream.binance.com/market/ws/!forceOrder@arr"
 BYBIT_WS = "wss://stream.bybit.com/v5/public/linear"
 
 _SCHEMA = """
